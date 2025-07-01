@@ -115,15 +115,26 @@
         <!-- Hero Section -->
         <section class="hero-bg pt-24 pb-16">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">Ein Roadtrip für die Sinne</h1>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">African Roadtrip</h1>
                 <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                    Von Kapstadt nach Port Elizabeth: Eine 16-tägige Reise vom 14. bis 30. November, 
-                    voller Natur, Wein und kulinarischer Genüsse. 
-                    Sonnenaufgang: 05:30 UhrSonnenuntergang: 19:30 Uhr, Blaue Stunde ab 20:00 Uhr.
+                    Von Kapstadt nach Port Elizabeth</p>
+                <p class="mt-2 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    17 aufregende Tage vom 14. bis 30. November 2025</p>
+                <p class="mt-2 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    Voller beeindruckender Natur, süd-afrikanischen Flair, tollem Wein und kulinarischer Überraschungen. 
+                </p>    
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    <strong>Flüge:</strong> Abflug 13.11. 21:55 → Ankunft 14.11. 10:45 | Rückflug 30.11. 18:15 → Ankunft 1.12. 05:45
+                </p>
+                <p class="mt-2 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    Sonnenaufgang: 05:30 Uhr, Sonnenuntergang: 19:30 Uhr
+                </p>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    Unsere Reise führt Sie durch die schönsten Regionen Südafrikas, von der Cape Town-Halbinsel, der Küste entlang, vom altantischen Ozean zu indischen Ozean, über einen Abstecher in die Urwälder und Gebirsketten, bis hin zum Addo-Nationalpark erleben wir die wunderschöne und atemberaubende Vielfalt Afrikas.
                 </p>
                 <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                     <div class="bg-white/70 backdrop-blur-sm p-4 rounded-xl shadow-md">
-                        <p class="text-3xl font-bold text-[#C89F93]">16</p>
+                        <p class="text-3xl font-bold text-[#C89F93]">17</p>
                         <p class="text-sm font-medium text-gray-600">Tage</p>
                     </div>
                     <div class="bg-white/70 backdrop-blur-sm p-4 rounded-xl shadow-md">
@@ -132,7 +143,7 @@
                     </div>
                     <div class="bg-white/70 backdrop-blur-sm p-4 rounded-xl shadow-md">
                         <p class="text-3xl font-bold text-[#C89F93]">3</p>
-                        <p class="text-sm font-medium text-gray-600">Kernthemen</p>
+                        <p class="text-sm font-medium text-gray-600">Themen</p>
                     </div>
                      <div class="bg-white/70 backdrop-blur-sm p-4 rounded-xl shadow-md">
                         <p class="text-3xl font-bold text-[#C89F93]">Big 7</p>
@@ -145,17 +156,26 @@
         <!-- Interactive Route Section -->
         <section class="py-16 bg-white">
             <div class="container mx-auto px-6">
-                 <h2 class="text-3xl font-bold text-center mb-2">Die Reiseroute im Überblick</h2>
+                <h2 class="text-3xl font-bold text-center mb-2">Die Reiseroute im Überblick</h2>
                 <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Klicken Sie auf eine Etappe, um direkt zu den Details zu springen. Die Route führt Sie entlang der Küste und durch das Landesinnere, um die Vielfalt Südafrikas zu erleben.</p>
-                <div class="w-full overflow-x-auto pb-4">
-                    <div class="relative w-full min-w-[800px] h-24 flex items-center">
+                
+                <!-- Horizontal Timeline -->
+                <div class="w-full overflow-x-auto pb-8">
+                    <div class="relative w-full min-w-[1200px] h-32 flex items-center">
+                        <!-- Timeline Line -->
                         <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-200 transform -translate-y-1/2"></div>
                         <div class="absolute top-1/2 left-0 w-full h-1 bg-[#C89F93] transform -translate-y-1/2" style="width: 100%;"></div>
 
-                        <div id="route-stops" class="relative w-full flex justify-between items-start">
-                            <!-- Stops will be injected here by JavaScript -->
+                        <!-- Timeline Points -->
+                        <div id="timeline-points" class="relative w-full flex justify-between items-center">
+                            <!-- Timeline points will be injected here by JavaScript -->
                         </div>
                     </div>
+                </div>
+
+                <!-- Milestone Breakouts -->
+                <div id="milestone-breakouts" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                    <!-- Milestone breakouts will be injected here by JavaScript -->
                 </div>
             </div>
         </section>

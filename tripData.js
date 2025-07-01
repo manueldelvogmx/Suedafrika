@@ -13,36 +13,42 @@ const tripData = {
         {
             id: 'kapstadt',
             title: 'Kapstadt: Metropole am Tafelberg (14. - 16. November)',
-            intro: 'Die Reise beginnt in der "Mother City" Kapstadt vom 14. bis 16. November. Sie verbringen hier drei Nächte, um die pulsierende Metropole, umgeben von majestätischer Natur, ausgiebig zu erkunden. Von der ikonischen V&A Waterfront bis zur Spitze des Tafelbergs bietet Kapstadt eine Fülle von Erlebnissen, die Kultur, Geschichte und atemberaubende Landschaften vereinen. Dieser Abschnitt führt Sie zu den unverzichtbaren Highlights und gibt Hotelempfehlungen für Ihre Übernachtungen.',
+            intro: 'Die Reise beginnt in der "Mother City" Kapstadt vom 14. bis 16. November. Sie verbringen hier 5 Nächte, um die pulsierende Metropole, umgeben von majestätischer Natur, ausgiebig zu erkunden. Von der ikonischen V&A Waterfront bis zur Spitze des Tafelbergs bietet Kapstadt eine Fülle von Erlebnissen, die Kultur, Geschichte und atemberaubende Landschaften vereinen. Dieser Abschnitt führt Sie zu den unverzichtbaren Highlights und gibt Hotelempfehlungen für Ihre Übernachtungen.',
             cards: [
                 {
-                    title: "Tag 1 Tafelberg",
+                    title: "Ankunft in Cape Town",
                     image: "https://www.geh-mal-reisen.de/wp-content/uploads/kapstadt-sehenswuerdigkeiten-highlights-tafelberg-aussicht.jpg",
-                    meta: "Anfahrt: 30 min · Aufenthalt: 90 min",
+                    meta: "Tag 1 Freitag 14. November: Ankunft und Anreise zum Hotel in Green Point",
+                    text: "Wir starten am Donnerstag um 22 Uhr und landen am Freitag um 11 Uhr in Kapstadt, dann fahren wir zu unserem zauberhaften Hotel. Wir haben 3 Nächte in Kapstadt."
+                },
+                {
+                    title: "Tafelberg",
+                    image: "https://www.geh-mal-reisen.de/wp-content/uploads/kapstadt-sehenswuerdigkeiten-highlights-tafelberg-aussicht.jpg",
+                    meta: "13 Uhr Anfahrt: 30 min · Aufenthalt: 90 min",
                     text: "Das absolute Must-Do in Kapstadt! Wir nehmen die Seilbahn hoch zum legendären Tafelberg und werden mit einem grandiosen 360°-Rundumblick über Stadt, Küste und Berge belohnt. Tickets buchen wir vorab online – dieser Ausblick ist jeden Cent wert!"
                 },
                 {
                     title: "Kirstenbosch Gärten",
                     image: "https://bridgesandballoons.com/Images/2015/11/Kirstenbosch-Botanical-Garden1-974x301@2x.jpg",
-                    meta: "Anfahrt: 20 min · Aufenthalt: 60–90 min",
+                    meta: "15 Uhr Anfahrt: 30 min · Aufenthalt: 90 min",
                     text: "Natur pur am Fuße des Tafelbergs! Wir wandeln durch einen der schönsten botanischen Gärten der Welt, überqueren die spektakuläre Baumwipfel-Hängebrücke und entdecken die einzigartige Fynbos-Vegetation. Am besten morgens – dann ist es angenehm kühl und die Fotomotive sind perfekt!"
                 },
                 {
                     title: "Abends V&A Waterfront",
                     image: "https://www.waterfront.co.za/wp-content/uploads/2023/04/THE_VA.png",
-                    meta: "Anfahrt: 15 min · Aufenthalt: variabel",
+                    meta: "18 Uhr Anfahrt: 15 min · Aufenthalt: wir feiern die Nacht durch",
                     text: "Hier schlägt das Herz von Kapstadt! Wir schlendern durch das lebhafte Hafenviertel, entdecken coole Designshops, probieren uns durch den Food Market und genießen den Hafenblick. Perfekt für entspannte Abende mit südafrikanischem Flair."
                 },
                 {
-                    title: "Tag 2 Kap Halbinsel",
+                    title: "Kap Halbinsel",
                     image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrBQmBHa2qsjVQXdpiMKVx9BaRWAEyiom46rpEznyAenmPhqKRWPXw3lt3k-1Y_4Uvd7saqbcI70yaetQwrrFiy1zpTZgM7PXXSR6uZdJtZO8vis-PfRAGPw3kpNjXHvvvOrnU=s1360-w1360-h1020",
-                    meta: "Tagesausflug: 150km Rundfahrt · Start: vormittags",
+                    meta: "Tag 2 Samstag 15. November: Tagesausflug: 150km Rundfahrt · Start: vormittags",
                     text: "Der ultimative Tagesausflug! Wir starten mit Kaffee in Muizenberg, stoppen bei Kalky's in Kalk Bay für traditionellen Fisch, besuchen die Pinguine am Boulders Beach und das berühmte Kap. Der Höhepunkt: Rückfahrt über den spektakulären Chapman's Peak Drive im goldenen Sonnenuntergangslicht – die Aussicht ist der Oberhammer!"
                 },
                 {
-                    title: "Robben Island (falls noch Zeit ist)",
-                    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&auto=format&fit=crop",
-                    meta: "Dauer: ca. 3–4 h inkl. Boot",
+                    title: "Robben Island",
+                    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTeP3n6nvedEAtGY_bRCcEgvkiQGgNgD7tJ4ysVcv78gi_YbIUhQZTzjatnNol8SaODGdcfYGJU_mcXCbWjIjcGJpL7qDDpw0ZEJm4LrQ",
+                    meta: "Dauer: ca. 3–4 h inkl. Boot (falls noch Zeit ist)",
                     text: "Eine bewegende Zeitreise in die Geschichte Südafrikas! Wir starten am Nelson Mandela Gateway und nehmen das Boot zur berühmten Gefängnisinsel. Die Tour wird oft von ehemaligen Häftlingen geführt – absolut beeindruckend und emotional. Unbedingt vorab reservieren!"
                 }
             ],
@@ -90,13 +96,13 @@ const tripData = {
                 {
                     title: "Franschhoek Wine Tram",
                     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&auto=format&fit=crop",
-                    meta: "Dauer: ganzer Tag · Start: 10:00 Uhr",
+                    meta: "Tag 3 Sonntag 16. November, Start: 10:00 Uhr",
                     text: "Das perfekte Wein-Abenteuer! Wir hüpfen entspannt von Weingut zu Weingut mit der berühmten Wine Tram durch die traumhaften Weinlande. Keine Sorgen ums Fahren – einfach genießen und verkosten! Tickets buchen wir vorab online, denn das ist der Renner bei allen Weinliebhabern."
                 },
                 {
                     title: "Stellenbosch Stadtwanderung",
                     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&auto=format&fit=crop",
-                    meta: "Anfahrt: 45 min · Aufenthalt: 2-3 h",
+                    meta: "Tag 4 Montag 17. November, Anfahrt: 45 min · Aufenthalt: 2-3 h",
                     text: "Zeitreise durch Südafrikas Weingeschichte! Wir flanieren durch die von majestätischen Eichen gesäumten Straßen der zweitältesten Stadt des Landes. Historische kapholländische Architektur, gemütliche Straßencafés und spannende Kunstgalerien warten darauf, von uns entdeckt zu werden."
                 },
                 {
@@ -151,26 +157,32 @@ const tripData = {
             intro: 'Hermanus ist vom 20. bis 21. November weltberühmt als eine der besten Destinationen für landbasierte Walbeobachtung. Kombinieren Sie dieses einmalige Naturerlebnis mit Wanderungen entlang des malerischen Cliff Path und besuchen Sie die preisgekrönten Weingüter des nahegelegenen Hemel-en-Aarde Tals, das für seinen Pinot Noir und Chardonnay bekannt ist. Hier finden Sie Empfehlungen für Ihre Übernachtung.',
             cards: [
                 {
+                    title: "Reise nach Hermanus",
+                    image: "",
+                    meta: "Tag 5 Dienstag 18. November  ca. 1,5 Stunden",
+                    text: ""
+                },
+                {
                     title: "Walbeobachtung vom Ufer",
-                    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&auto=format&fit=crop",
-                    meta: "Zeit: Juni-Dezember · beste Zeit: 11-15 Uhr",
+                    image: "https://freedomdestinations.co.uk/wp-content/uploads/Hermanus-Whales.jpg",
+                    meta: "Tag 5 Dienstag 18. November: beste Zeit: 11-15 Uhr",
                     text: "Das absolute Highlight! Wir beobachten majestätische Südkaper direkt vom Land aus – einer der besten Orte weltweit dafür. Wenn der Whale Crier sein Horn bläst, wissen wir: Showtime! Grotto Beach und der Cliff Path bieten uns die perfekten Aussichtsplätze für dieses unvergessliche Naturschauspiel."
                 },
                 {
                     title: "Cliff Path Wanderung",
-                    image: "https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?w=500&auto=format&fit=crop",
+                    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/b3/9e/41/hermanus-cliff-path-sudafrika.jpg?w=900&h=500&s=1",
                     meta: "Dauer: 2-4 h · Schwierigkeit: leicht-mittel",
                     text: "Wandern mit Wow-Faktor! Wir erobern den spektakulären 12 km langen Küstenpfad mit atemberaubenden Ausblicken und entdecken dabei die einzigartige Fynbos-Vegetation. Dank mehrerer Einstiegspunkte können wir flexibel planen. Früh starten lohnt sich – dann ist der Wind noch sanft!"
                 },
                 {
                     title: "Hemel-en-Aarde Tal",
-                    image: "https://images.unsplash.com/photo-1560963048-be1b6c1ea923?w=500&auto=format&fit=crop",
-                    meta: "Anfahrt: 15 min · Aufenthalt: halber Tag",
+                    image: "https://www.wine-searcher.com/images/region/hemel-en-aarde-valley-7121-1-1.jpg",
+                    meta: "Tag 6 Mittwoch 19. November: Anfahrt: 15 min · Aufenthalt: halber Tag",
                     text: "Willkommen im 'Himmel auf Erden'! Wir schwelgen in Weltklasse-Weinen in diesem malerischen Tal. Die Pinot Noirs und Chardonnays hier sind absolute Spitzenklasse. Creation Wines und Hamilton Russell sind unsere absoluten Favoriten – hier entstehen wahre Geschmackswunder!"
                 },
                 {
                     title: "Grotto Beach",
-                    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Grotto_Beach_-_Hermanus.jpg/1200px-Grotto_Beach_-_Hermanus.jpg",
                     meta: "Anfahrt: 10 min · Aufenthalt: beliebig",
                     text: "Traumstrand mit Blaue-Flagge-Garantie! Wir genießen 18 km makellosen weißen Sandstrand – perfekt zum Schwimmen, Entspannen und natürlich für die Walbeobachtung. Mit Restaurants und Parkplätzen direkt vor Ort können wir hier problemlos den ganzen Tag verbringen."
                 }
@@ -212,6 +224,12 @@ const tripData = {
             title: 'Die Garden Route: Natur Pur & Abenteuer (22. - 27. November)',
             intro: 'Die Garden Route, eine traumhafte Küstenstraße zwischen Kapstadt und Port Elizabeth, ist vom 22. bis 27. November Ihr Zuhause für sechs Nächte, mit Übernachtungen in Oudtshoorn, Knysna und Tsitsikamma. Diese Region ist ein Mosaik aus dichten Wäldern, ruhigen Lagunen, langen Sandstränden und dramatischen Küsten. Von den ikonischen Knysna Heads über die faszinierende Tierwelt bei Plettenberg Bay bis zum abenteuerlichen Tsitsikamma Nationalpark – die Garden Route ist ein Spielplatz für Naturliebhaber und Abenteurer und zeigt Ihnen die schönsten Facetten Südafrikas. Hier finden Sie Hotelempfehlungen für Ihre einzelnen Stopps an der Garden Route.',
             cards: [
+                {
+                    title: "Garden Route",
+                    image: "",
+                    meta: "Tag 7 Donnerstag 20. November  ca. 1,5 Stunden",
+                    text: ""
+                },
                 {
                     title: "Knysna Heads",
                     image: "https://images.unsplash.com/photo-1509735732518-c7a828fc0ab8?w=500&auto=format&fit=crop",
@@ -407,19 +425,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // Dynamic content generation
-    const routeStopsContainer = document.getElementById('route-stops');
-    tripData.route.forEach((stop, index) => {
-        const stopElement = document.createElement('a');
-        stopElement.href = `#${stop.id}`;
-        stopElement.className = 'flex flex-col items-center group text-center px-2';
-        stopElement.innerHTML = `
-            <div class="w-5 h-5 bg-white border-2 border-[#C89F93] rounded-full transition-transform group-hover:scale-125"></div>
-            <p class="mt-2 text-sm font-semibold text-gray-700 group-hover:text-[#C89F93]">${stop.name}</p>
-            <p class="text-xs text-gray-500">${stop.days}</p>
-        `;
-        routeStopsContainer.appendChild(stopElement);
-    });
+    // Timeline Generation
+    generateTimeline();
+    generateMilestoneBreakouts();
 
     const contentContainer = document.getElementById('content-sections');
     tripData.sections.forEach(section => {
@@ -741,5 +749,132 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    }
+
+    // ===== TIMELINE FUNCTIONS =====
+    function generateTimeline() {
+        const timelineContainer = document.getElementById('timeline-points');
+        if (!timelineContainer) return;
+
+        // Generate timeline points for each day
+        const totalDays = 17;
+        const milestones = [
+            { day: 1, name: 'Kapstadt', id: 'kapstadt', icon: '🏙️' },
+            { day: 4, name: 'Weinlande', id: 'weinlande', icon: '🍷' },
+            { day: 7, name: 'Hermanus', id: 'hermanus', icon: '🐋' },
+            { day: 9, name: 'Garden Route', id: 'garden-route', icon: '🌿' },
+            { day: 15, name: 'Addo', id: 'addo', icon: '🐘' }
+        ];
+
+        for (let day = 1; day <= totalDays; day++) {
+            const pointElement = document.createElement('div');
+            pointElement.className = 'flex flex-col items-center relative';
+            
+            // Check if this day is a milestone
+            const milestone = milestones.find(m => m.day === day);
+            
+            if (milestone) {
+                // Milestone point
+                pointElement.innerHTML = `
+                    <div class="w-6 h-6 bg-[#C89F93] border-4 border-white rounded-full shadow-lg transition-transform hover:scale-125 cursor-pointer" 
+                         onclick="scrollToSection('${milestone.id}')"></div>
+                    <div class="mt-2 text-center">
+                        <div class="text-lg mb-1">${milestone.icon}</div>
+                        <p class="text-xs font-semibold text-gray-700">${milestone.name}</p>
+                        <p class="text-xs text-gray-500">Tag ${day}</p>
+                    </div>
+                `;
+            } else {
+                // Regular day point
+                pointElement.innerHTML = `
+                    <div class="w-3 h-3 bg-gray-400 border-2 border-white rounded-full shadow-sm"></div>
+                    <p class="mt-1 text-xs text-gray-400">${day}</p>
+                `;
+            }
+            
+            timelineContainer.appendChild(pointElement);
+        }
+    }
+
+    function generateMilestoneBreakouts() {
+        const breakoutsContainer = document.getElementById('milestone-breakouts');
+        if (!breakoutsContainer) return;
+
+        const milestones = [
+            {
+                id: 'kapstadt',
+                name: 'Kapstadt',
+                icon: '🏙️',
+                days: '14.-16. Nov.',
+                description: 'Die "Mother City" mit Tafelberg, V&A Waterfront und Kap-Halbinsel',
+                highlights: ['Tafelberg', 'V&A Waterfront', 'Kap der Guten Hoffnung', 'Kirstenbosch Gärten']
+            },
+            {
+                id: 'weinlande',
+                name: 'Weinlande',
+                icon: '🍷',
+                days: '17.-19. Nov.',
+                description: 'Weinregion mit Stellenbosch, Franschhoek und Weltklasse-Weingütern',
+                highlights: ['Franschhoek Wine Tram', 'Stellenbosch', 'Babylonstoren', 'Delaire Graff']
+            },
+            {
+                id: 'hermanus',
+                name: 'Hermanus',
+                icon: '🐋',
+                days: '20.-21. Nov.',
+                description: 'Walbeobachtung und Küstenpfade am Indischen Ozean',
+                highlights: ['Walbeobachtung', 'Cliff Path', 'Hemel-en-Aarde Tal', 'Grotto Beach']
+            },
+            {
+                id: 'garden-route',
+                name: 'Garden Route',
+                icon: '🌿',
+                days: '22.-28. Nov.',
+                description: 'Naturwunder von Oudtshoorn bis Plettenberg Bay',
+                highlights: ['Oudtshoorn', 'Cango Caves', 'Knysna Heads', 'Plettenberg Bay']
+            },
+            {
+                id: 'addo',
+                name: 'Addo & Abreise',
+                icon: '🐘',
+                days: '29.-30. Nov.',
+                description: 'Safari im Addo Elephant Park und Abschied von Südafrika',
+                highlights: ['Addo Elephant Park', 'Jeffreys Bay', 'Port Elizabeth']
+            }
+        ];
+
+        milestones.forEach(milestone => {
+            const breakoutElement = document.createElement('div');
+            breakoutElement.className = 'bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer';
+            breakoutElement.onclick = () => scrollToSection(milestone.id);
+            
+            breakoutElement.innerHTML = `
+                <div class="flex items-center mb-4">
+                    <div class="text-3xl mr-3">${milestone.icon}</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">${milestone.name}</h3>
+                        <p class="text-sm text-[#C89F93] font-semibold">${milestone.days}</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">${milestone.description}</p>
+                <div class="space-y-1">
+                    ${milestone.highlights.map(highlight => `
+                        <div class="flex items-center text-xs text-gray-500">
+                            <div class="w-1 h-1 bg-[#C89F93] rounded-full mr-2"></div>
+                            ${highlight}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            breakoutsContainer.appendChild(breakoutElement);
+        });
+    }
+
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 });
