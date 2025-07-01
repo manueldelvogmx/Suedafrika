@@ -158,8 +158,16 @@
         <!-- Route Map Section -->
         <section id="route-map" class="py-16 bg-gray-50">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-2">Unsere Reise</h2>
-                <iframe src="https://www.google.com/maps/d/embed?mid=1IpI82fry8o6NssQUWz3AVY_7rpKdtgM&ehbc=2E312F" width="640" height="480"></iframe>
+                <h2 class="text-3xl font-bold text-center mb-2">Ihre Reise auf der Karte</h2>
+                <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">Diese vereinfachte Karte zeigt die wichtigsten Stationen Ihres Roadtrips entlang der südlichen Küste Südafrikas. Für eine detaillierte Navigation können Sie die Route in Google Maps öffnen.</p>
+                <div class="chart-container border border-gray-200 rounded-lg shadow-md bg-white">
+                    <canvas id="routeMapCanvas"></canvas>
+                </div>
+                <div class="text-center mt-8">
+                    <button id="openGoogleMaps" class="bg-[#C89F93] text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors shadow-lg">
+                        Route in Google Maps öffnen
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -185,8 +193,6 @@
             </div>
         </section>
 
-        
-
         <!-- Dynamic Content Sections -->
         <div id="content-sections" class="bg-white">
              <!-- Sections will be injected here by JavaScript -->
@@ -198,7 +204,8 @@
     <footer class="bg-gray-800 text-white mt-16">
         <div class="container mx-auto px-6 py-8 text-center">
             <p class="font-bold text-lg mb-2">Südafrika Roadtrip Planer</p>
-              <div class="mt-4">
+            <p class="text-gray-400 text-sm">Eine interaktive Aufbereitung basierend auf dem Reiseplan. Alle Empfehlungen und Daten stammen aus dem bereitgestellten Bericht. Dies ist ein Entwurf und keine Buchungsplattform.</p>
+             <div class="mt-4">
                 <a href="#header" class="text-gray-300 hover:text-white transition-colors">Zurück zum Anfang</a>
             </div>
         </div>
@@ -219,44 +226,6 @@
                     id: 'kapstadt',
                     title: 'Kapstadt: Metropole am Tafelberg (14. - 16. November)',
                     intro: 'Die Reise beginnt in der "Mother City" Kapstadt vom 14. bis 16. November. Sie verbringen hier drei Nächte, um die pulsierende Metropole, umgeben von majestätischer Natur, ausgiebig zu erkunden. Von der ikonischen V&A Waterfront bis zur Spitze des Tafelbergs bietet Kapstadt eine Fülle von Erlebnissen, die Kultur, Geschichte und atemberaubende Landschaften vereinen. Dieser Abschnitt führt Sie zu den unverzichtbaren Highlights und gibt Hotelempfehlungen für Ihre Übernachtungen.',
-                    cards: [
-    {
-      title: "Tafelberg",
-      image: "https://cdn.dertour.de/GardenRoute_Tafelberg.jpg",
-      meta: "Anfahrt: 30 min · Aufenthalt: 90 min",
-      text: "Mit der Seilbahn hoch zum berühmten Tafelberg – grandioser Rundumblick über Stadt, Küste und Berge. Parken an der Talstation, Tickets am besten online vorbuchen. Idealer Startpunkt für das Kapstadt-Erlebnis."
-    },
-    {
-      title: "V&A Waterfront",
-      image: "https://cdn.dertour.de/VAndA_Waterfront.jpg",
-      meta: "Anfahrt: 15 min · Aufenthalt: variabel",
-      text: "Lebhaftes Hafenviertel mit Cafés, Designshops, Food Market und Blick auf den Hafen. Gute Parkmöglichkeiten und zu Fuß erreichbar, ideal für einen entspannten Abend."
-    },
-    {
-      title: "Kap der Guten Hoffnung",
-      image: "https://cdn.dertour.de/GardenRoute_Coast.jpg",
-      meta: "Anfahrt: 90 min · Aufenthalt: 90 min",
-      text: "Über die spektakuläre Chapman’s Peak Drive erreichen wir das Kap. Kurze Wanderung zum Leuchtturm oder per Zahnradbahn. Wildromantisch, windig – unvergesslich."
-    },
-    {
-      title: "Boulders Beach",
-      image: "https://cdn.dertour.de/GardenRoute_Penguins.jpg",
-      meta: "Anfahrt: 30 min · Aufenthalt: 60 min",
-      text: "Pinguine hautnah erleben – die Kolonie ist geschützt, aber gut über Holzstege zugänglich. Eintritt notwendig. Früh da sein lohnt sich!"
-    },
-    {
-      title: "Kirstenbosch Gärten",
-      image: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Kirstenbosch_Boomslang_Canopy_Walkway.jpg",
-      meta: "Anfahrt: 20 min · Aufenthalt: 60–90 min",
-      text: "Botanischer Garten am Hang des Tafelbergs mit Hängebrücke und gepflegten Pfaden. Ideal für Naturfans – besonders morgens angenehm."
-    },
-    {
-      title: "Robben Island (optional)",
-      image: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Robben_Island_Prison_Cell.jpg",
-      meta: "Dauer: ca. 3–4 h inkl. Boot",
-      text: "Ein Ort der Erinnerung: Die Tour beginnt am Nelson Mandela Gateway an der Waterfront, mit Boot und geführter Besichtigung der Gefängnisanlagen. Nur mit Vorreservierung."
-    }
-  ]
                     tabs: [
                         {
                             name: 'Highlights',
@@ -444,23 +413,6 @@
             ]
         };
 
-        function generateCardsHtmlFromSection(section) {
-  if (!section.cards || section.cards.length === 0) return '';
-
-  return `
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-      ${section.cards.map(card => `
-        <div class="bg-white rounded-2xl shadow p-4 flex flex-col">
-          <img src="${card.image}" alt="${card.title}" class="w-full h-48 object-cover rounded-lg mb-4" />
-          <h3 class="text-xl font-bold mb-1">${card.title}</h3>
-          <div class="text-sm text-gray-500 mb-2">${card.meta}</div>
-          <p class="text-gray-700">${card.text}</p>
-        </div>
-      `).join('')}
-    </div>
-  `;
-}
-
         document.addEventListener('DOMContentLoaded', function() {
             const header = document.getElementById('header');
             const navLinks = document.querySelectorAll('.nav-link');
@@ -498,7 +450,6 @@
             const contentContainer = document.getElementById('content-sections');
             tripData.sections.forEach(section => {
                 const sectionElement = document.createElement('section');
-                const cardsHtml = generateCardsHtmlFromSection(section);
                 sectionElement.id = section.id;
                 sectionElement.className = 'py-16 scroll-mt-20';
 
@@ -546,7 +497,6 @@
                     <div class="container mx-auto px-6">
                         <h2 class="text-3xl font-bold text-center mb-2">${section.title}</h2>
                         <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">${section.intro}</p>
-                        ${cardsHtml}
                         ${tabsHtml}
                         ${tabContentsHtml}
                     </div>
@@ -804,24 +754,8 @@
                         let chatHistory = [];
                         chatHistory.push({ role: "user", parts: [{ text: prompt }] });
                         const payload = { contents: chatHistory };
-                        const apiKey = "";
-                        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-                        const response = await fetch(apiUrl, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-
-                        const result = await response.json();
-                        if (result.candidates && result.candidates.length > 0 &&
-                            result.candidates[0].content && result.candidates[0].content.parts &&
-                            result.candidates[0].content.parts.length > 0) {
-                            const text = result.candidates[0].content.parts[0].text;
-                            outputElement.textContent = text;
-                        } else {
-                            outputElement.textContent = 'Konnte keinen Vorschlag generieren. Bitte versuchen Sie es erneut.';
-                        }
+                        // API-Integration deaktiviert - kann später mit eigenem API-Key aktiviert werden
+                        outputElement.textContent = 'Diese Funktion benötigt einen gültigen API-Key für die KI-Integration. Bitte wenden Sie sich an den Entwickler.';
                     } catch (error) {
                         console.error('Fehler beim Generieren des Restaurantvorschlags:', error);
                         outputElement.textContent = 'Fehler beim Generieren des Vorschlags.';
