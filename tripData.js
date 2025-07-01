@@ -1,0 +1,743 @@
+// Südafrika Roadtrip - Daten und Funktionen
+// Ausgelagert für bessere Code-Organisation
+
+const tripData = {
+    route: [
+        { id: 'kapstadt', name: 'Kapstadt', days: '14.-16. Nov.', distance: 'Start (Hotel)', coords: '-33.9249,18.4241' },
+        { id: 'weinlande', name: 'Weinlande', days: '17.-19. Nov.', distance: '54 km (Hotel)', coords: '-33.9358,18.8680' },
+        { id: 'hermanus', name: 'Hermanus', days: '20.-21. Nov.', distance: '94 km (Hotel)', coords: '-34.4079,19.2346' },
+        { id: 'garden-route', name: 'Garden Route', days: '22.-27. Nov.', distance: '362 km (Hotel)', coords: '-34.0350,23.0465' },
+        { id: 'addo', name: 'Addo & Abreise', days: '28.-30. Nov.', distance: '306 km (Hotel)', coords: '-33.4704,25.7530' },
+    ],
+    sections: [
+        {
+            id: 'kapstadt',
+            title: 'Kapstadt: Metropole am Tafelberg (14. - 16. November)',
+            intro: 'Die Reise beginnt in der "Mother City" Kapstadt vom 14. bis 16. November. Sie verbringen hier drei Nächte, um die pulsierende Metropole, umgeben von majestätischer Natur, ausgiebig zu erkunden. Von der ikonischen V&A Waterfront bis zur Spitze des Tafelbergs bietet Kapstadt eine Fülle von Erlebnissen, die Kultur, Geschichte und atemberaubende Landschaften vereinen. Dieser Abschnitt führt Sie zu den unverzichtbaren Highlights und gibt Hotelempfehlungen für Ihre Übernachtungen.',
+            cards: [
+                {
+                    title: "Tag 1 Tafelberg",
+                    image: "https://www.geh-mal-reisen.de/wp-content/uploads/kapstadt-sehenswuerdigkeiten-highlights-tafelberg-aussicht.jpg",
+                    meta: "Anfahrt: 30 min · Aufenthalt: 90 min",
+                    text: "Das absolute Must-Do in Kapstadt! Wir nehmen die Seilbahn hoch zum legendären Tafelberg und werden mit einem grandiosen 360°-Rundumblick über Stadt, Küste und Berge belohnt. Tickets buchen wir vorab online – dieser Ausblick ist jeden Cent wert!"
+                },
+                {
+                    title: "Kirstenbosch Gärten",
+                    image: "https://bridgesandballoons.com/Images/2015/11/Kirstenbosch-Botanical-Garden1-974x301@2x.jpg",
+                    meta: "Anfahrt: 20 min · Aufenthalt: 60–90 min",
+                    text: "Natur pur am Fuße des Tafelbergs! Wir wandeln durch einen der schönsten botanischen Gärten der Welt, überqueren die spektakuläre Baumwipfel-Hängebrücke und entdecken die einzigartige Fynbos-Vegetation. Am besten morgens – dann ist es angenehm kühl und die Fotomotive sind perfekt!"
+                },
+                {
+                    title: "Abends V&A Waterfront",
+                    image: "https://www.waterfront.co.za/wp-content/uploads/2023/04/THE_VA.png",
+                    meta: "Anfahrt: 15 min · Aufenthalt: variabel",
+                    text: "Hier schlägt das Herz von Kapstadt! Wir schlendern durch das lebhafte Hafenviertel, entdecken coole Designshops, probieren uns durch den Food Market und genießen den Hafenblick. Perfekt für entspannte Abende mit südafrikanischem Flair."
+                },
+                {
+                    title: "Tag 2 Kap Halbinsel",
+                    image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrBQmBHa2qsjVQXdpiMKVx9BaRWAEyiom46rpEznyAenmPhqKRWPXw3lt3k-1Y_4Uvd7saqbcI70yaetQwrrFiy1zpTZgM7PXXSR6uZdJtZO8vis-PfRAGPw3kpNjXHvvvOrnU=s1360-w1360-h1020",
+                    meta: "Tagesausflug: 150km Rundfahrt · Start: vormittags",
+                    text: "Der ultimative Tagesausflug! Wir starten mit Kaffee in Muizenberg, stoppen bei Kalky's in Kalk Bay für traditionellen Fisch, besuchen die Pinguine am Boulders Beach und das berühmte Kap. Der Höhepunkt: Rückfahrt über den spektakulären Chapman's Peak Drive im goldenen Sonnenuntergangslicht – die Aussicht ist der Oberhammer!"
+                },
+                {
+                    title: "Robben Island (falls noch Zeit ist)",
+                    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&auto=format&fit=crop",
+                    meta: "Dauer: ca. 3–4 h inkl. Boot",
+                    text: "Eine bewegende Zeitreise in die Geschichte Südafrikas! Wir starten am Nelson Mandela Gateway und nehmen das Boot zur berühmten Gefängnisinsel. Die Tour wird oft von ehemaligen Häftlingen geführt – absolut beeindruckend und emotional. Unbedingt vorab reservieren!"
+                }
+            ],
+            tabs: [
+                {
+                    name: 'Highlights',
+                    icon: '🏞️',
+                    content: [
+                        { title: 'Tafelberg', description: 'Fahrt mit der Seilbahn für 360°-Panoramablicke. Ein Muss für jeden Besucher.' },
+                        { title: 'V&A Waterfront', description: 'Lebhaftes Hafenviertel mit Shops, Restaurants und dem Two Oceans Aquarium.' },
+                        { title: "Kap der Guten Hoffnung", description: 'Dramatisches Zusammentreffen zweier Ozeane und ein beeindruckendes Naturreservat.' },
+                        { title: 'Boulders Beach', description: 'Beobachten Sie die berühmte Kolonie afrikanischer Pinguine aus nächster Nähe.' },
+                        { title: 'Kirstenbosch Gärten', description: 'Weltberühmter botanischer Garten am Hang des Tafelbergs, ideal für Spaziergänge.' },
+                        { title: 'Robben Island (Optional)', description: 'Ein historisch bedeutsamer Ort, der einen tiefen Einblick in die Geschichte Südafrikas gewährt.' },
+                    ]
+                },
+                {
+                    name: 'Essen & Wein',
+                    icon: '🍷',
+                    content: [
+                        { title: 'Silk Asian Fusion', description: 'Ideal für besondere Anlässe mit einem Tapas-Special.' },
+                        { title: 'Veldt', description: 'Zelebriert die Aromen des südafrikanischen Veldt mit lokalen Zutaten.' },
+                        { title: 'Cafe du Cap', description: 'Bietet ein "Harvest Table" Mittagsangebot im Pariser Stil.' },
+                        { title: 'Lievita', description: 'Gilt als eine der besten neapolitanischen Pizzen der Stadt.' },
+                        { title: 'Zuney', description: 'Kritikerliebling für den besten Burger Kapstadts.' },
+                    ]
+                },
+                {
+                    name: 'Hotels',
+                    icon: '🏨',
+                    content: [
+                        { title: 'Gorgeous George', description: '9.2/10 | City Centre | Ab ca. 115€ | Designhotel mit Rooftop-Pool.', url: 'https://www.expedia.de/Gorgeous-George-Kapstadt.h33316049.Hotel-Details' },
+                        { title: 'The Glen Boutique Hotel & Spa', description: '9.4/10 | Sea Point | Ab ca. 170€ | Boutique-Hotel mit exzellentem Spa.', url: 'https://www.expedia.de/The-Glen-Boutique-Hotel-Spa-Kapstadt.h6734193.Hotel-Details' },
+                        { title: 'Sunsquare Cape Town City Bowl', description: '8.6/10 | City Centre | Ab ca. 125€ | Gutes Preis-Leistungs-Verhältnis und zentral gelegen.', url: 'https://www.expedia.de/Sunsquare-Cape-Town-City-Bowl-Kapstadt.h16259062.Hotel-Details' },
+                        { title: 'Protea Hotel Waterfront', description: '7.9/10 | V&A Waterfront | Ab ca. 130€ | Direkt an der belebten Waterfront.', url: 'https://www.marriott.com/en-us/hotels/cptbr-protea-hotel-cape-town-waterfront-breakwater-lodge/overview/' },
+                    ]
+                }
+            ]
+        },
+        {
+            id: 'weinlande',
+            title: 'Die Kap-Weinlande: Genuss & Landschaft (17. - 19. November)',
+            intro: 'Vom 17. bis 19. November verbringen Sie drei Nächte in den Kap-Weinlanden, die nur eine kurze Fahrt von Kapstadt entfernt liegen und das Herz des südafrikanischen Weinanbaus bilden. Entdecken Sie historische Städte wie Stellenbosch und Franschhoek, die als Gourmet-Hauptstädte bekannt sind. In diesem Abschnitt finden Sie Empfehlungen für Weltklasse-Weingüter und "Farm-to-Fork"-Kulinarik, die Ihre Sinne verzaubern werden, sowie Hotelempfehlungen für Ihre Übernachtungen.',
+            cards: [
+                {
+                    title: "Franschhoek Wine Tram",
+                    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&auto=format&fit=crop",
+                    meta: "Dauer: ganzer Tag · Start: 10:00 Uhr",
+                    text: "Das perfekte Wein-Abenteuer! Wir hüpfen entspannt von Weingut zu Weingut mit der berühmten Wine Tram durch die traumhaften Weinlande. Keine Sorgen ums Fahren – einfach genießen und verkosten! Tickets buchen wir vorab online, denn das ist der Renner bei allen Weinliebhabern."
+                },
+                {
+                    title: "Stellenbosch Stadtwanderung",
+                    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 45 min · Aufenthalt: 2-3 h",
+                    text: "Zeitreise durch Südafrikas Weingeschichte! Wir flanieren durch die von majestätischen Eichen gesäumten Straßen der zweitältesten Stadt des Landes. Historische kapholländische Architektur, gemütliche Straßencafés und spannende Kunstgalerien warten darauf, von uns entdeckt zu werden."
+                },
+                {
+                    title: "Babylonstoren",
+                    image: "https://images.unsplash.com/photo-1596249591439-d6da55150756?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 1 h · Aufenthalt: halber Tag",
+                    text: "Ein Paradies für alle Sinne! Wir tauchen ein in eines der schönsten Weingüter der Welt mit seinem legendären Garten. Im Restaurant Babel verwöhnen wir unseren Gaumen mit echter Farm-to-Table-Küche. Tischreservierung ist Pflicht – aber es lohnt sich!"
+                },
+                {
+                    title: "Delaire Graff Estate",
+                    image: "https://images.unsplash.com/photo-1558618754-fbd65c2cd2b6?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 50 min · Aufenthalt: 2-3 h",
+                    text: "Luxus pur mit Aussicht! Wir gönnen uns das absolute Premium-Erlebnis mit atemberaubenden Panoramablicken über das Tal, Weltklasse-Weinen und einer beeindruckenden Kunstsammlung. Die exklusiven Verkostungen sind jeden Cent wert – wir werden diesen Ort nie vergessen!"
+                }
+            ],
+            tabs: [
+                {
+                    name: 'Highlights',
+                    icon: '🍇',
+                    content: [
+                        { title: 'Franschhoek Wine Tram', description: 'Eine Hop-on-Hop-off-Tour, die verschiedene Weingüter auf eine einzigartige und bequeme Weise verbindet.' },
+                        { title: 'Stellenbosch Erkundung', description: 'Spazieren Sie durch die von Eichen gesäumten Straßen der zweitältesten Stadt Südafrikas.' },
+                        { title: 'Delaire Graff Estate', description: 'Bekannt für atemberaubende Ausblicke, Kunst und exzellente Weine.' },
+                        { title: 'Babylonstoren', description: 'Ein historisches Weingut mit einem berühmten Garten, Restaurant und Verkostungen.' },
+                    ]
+                },
+                {
+                    name: 'Essen & Wein',
+                    icon: '🍷',
+                    content: [
+                        { title: 'Babel at Babylonstoren', description: 'Berühmt für seine "Farm-to-Fork"-Philosophie mit saisonalen Menüs.' },
+                        { title: "Leopard's Leap", description: 'Bietet saftige Braten und Wein zu einem hervorragenden Preis-Leistungs-Verhältnis.' },
+                        { title: 'The Kraal at Joostenberg', description: 'Genießen Sie einen Slow-Farm-Lunch in einem idyllischen Innenhof.' },
+                        { title: 'Haute Cabrière', description: 'Ein ikonisches Weingut in Franschhoek, perfekt für Weinproben mit Aussicht.' },
+                    ]
+                },
+                {
+                    name: 'Hotels',
+                    icon: '🏨',
+                    content: [
+                        { title: "W-Collection L'Ermitage", description: '9.7/10 | Franschhoek | Ab ca. 210€ | Luxuriöse Villen mit Bergblick.', url: 'https://www.expedia.de/W-Collection-Franschhoek-LErmitage-Villas.h18967912.Hotel-Details' },
+                        { title: 'Petit Ermitage', description: '9.9/10 | Franschhoek | Ab ca. 120€ | Außergewöhnlich bewertet und zentral.', url: 'https://www.expedia.de/Petit-Ermitage-Franschhoek.h18967909.Hotel-Details' },
+                        { title: 'Cultivar Guest Lodge', description: '9.0/10 | Stellenbosch | Ab ca. 170€ | 4-Sterne-Lodge mit großem Pool.', url: 'https://www.expedia.de/Cultivar-Guest-Lodge-Stellenbosch.h1029280.Hotel-Details' },
+                        { title: 'The Belmont', description: '9.3/10 | Franschhoek | Ab ca. 75€ | Hervorragendes Preis-Leistungs-Verhältnis.', url: 'https://www.expedia.de/The-Belmont-Franschhoek.h18967888.Hotel-Details' },
+                    ]
+                }
+            ]
+        },
+         {
+            id: 'hermanus',
+            title: 'Hermanus: Wale, Wein & Küstenpfade (20. - 21. November)',
+            intro: 'Hermanus ist vom 20. bis 21. November weltberühmt als eine der besten Destinationen für landbasierte Walbeobachtung. Kombinieren Sie dieses einmalige Naturerlebnis mit Wanderungen entlang des malerischen Cliff Path und besuchen Sie die preisgekrönten Weingüter des nahegelegenen Hemel-en-Aarde Tals, das für seinen Pinot Noir und Chardonnay bekannt ist. Hier finden Sie Empfehlungen für Ihre Übernachtung.',
+            cards: [
+                {
+                    title: "Walbeobachtung vom Ufer",
+                    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&auto=format&fit=crop",
+                    meta: "Zeit: Juni-Dezember · beste Zeit: 11-15 Uhr",
+                    text: "Das absolute Highlight! Wir beobachten majestätische Südkaper direkt vom Land aus – einer der besten Orte weltweit dafür. Wenn der Whale Crier sein Horn bläst, wissen wir: Showtime! Grotto Beach und der Cliff Path bieten uns die perfekten Aussichtsplätze für dieses unvergessliche Naturschauspiel."
+                },
+                {
+                    title: "Cliff Path Wanderung",
+                    image: "https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?w=500&auto=format&fit=crop",
+                    meta: "Dauer: 2-4 h · Schwierigkeit: leicht-mittel",
+                    text: "Wandern mit Wow-Faktor! Wir erobern den spektakulären 12 km langen Küstenpfad mit atemberaubenden Ausblicken und entdecken dabei die einzigartige Fynbos-Vegetation. Dank mehrerer Einstiegspunkte können wir flexibel planen. Früh starten lohnt sich – dann ist der Wind noch sanft!"
+                },
+                {
+                    title: "Hemel-en-Aarde Tal",
+                    image: "https://images.unsplash.com/photo-1560963048-be1b6c1ea923?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 15 min · Aufenthalt: halber Tag",
+                    text: "Willkommen im 'Himmel auf Erden'! Wir schwelgen in Weltklasse-Weinen in diesem malerischen Tal. Die Pinot Noirs und Chardonnays hier sind absolute Spitzenklasse. Creation Wines und Hamilton Russell sind unsere absoluten Favoriten – hier entstehen wahre Geschmackswunder!"
+                },
+                {
+                    title: "Grotto Beach",
+                    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 10 min · Aufenthalt: beliebig",
+                    text: "Traumstrand mit Blaue-Flagge-Garantie! Wir genießen 18 km makellosen weißen Sandstrand – perfekt zum Schwimmen, Entspannen und natürlich für die Walbeobachtung. Mit Restaurants und Parkplätzen direkt vor Ort können wir hier problemlos den ganzen Tag verbringen."
+                }
+            ],
+            tabs: [
+                {
+                    name: 'Highlights',
+                    icon: '🐋',
+                    content: [
+                        { title: 'Walbeobachtung', description: 'Beobachten Sie Südkaper von Juni bis Dezember direkt vom Land aus. Der Whale Crier verkündet Sichtungen.' },
+                        { title: 'Cliff Path Wanderung', description: 'Ein 12 km langer Küstenpfad mit spektakulären Ausblicken und reicher Fynbos-Vegetation.' },
+                        { title: 'Hemel-en-Aarde Tal', description: 'Bedeutet "Himmel auf Erden" und ist ein Muss für Weinliebhaber.' },
+                        { title: 'Grotto Beach', description: 'Einer der schönsten Strände Südafrikas mit Blauer Flagge.' },
+                    ]
+                },
+                {
+                    name: 'Essen & Wein',
+                    icon: '🍷',
+                    content: [
+                        { title: 'Creation Wines', description: 'Hochgelobtes Weingut im Hemel-en-Aarde Tal, bekannt für seine Wein-Pairing-Erlebnisse.' },
+                        { title: 'Burgundy Seafront Restaurant', description: 'Frische Meeresfrüchte mit "Front-Row-Seats" für die Walbeobachtung.' },
+                        { title: 'Fisherman\'s Cottage', description: 'Authentische Meeresfrüchteküche in einem historischen Fischerhaus.' },
+                        { title: 'Hamilton Russell Vineyards', description: 'Ein Pionier des Weinbaus in der Region, spezialisiert auf Pinot Noir und Chardonnay.' },
+                    ]
+                },
+                {
+                    name: 'Hotels',
+                    icon: '🏨',
+                    content: [
+                        { title: 'The Marine Hermanus', description: '9.6/10 | City-Centre | Ab ca. 215€ | Legendäres 5-Sterne-Hotel mit atemberaubender Lage.', url: 'https://www.expedia.de/The-Marine-Hermanus.h1907577.Hotel-Details' },
+                        { title: 'One Marine Drive', description: '9.8/10 | Westcliff | Ab ca. 145€ | Boutique-Hotel mit herausragendem Service.', url: 'https://www.expedia.de/One-Marine-Drive-Hermanus.h18967877.Hotel-Details' },
+                        { title: 'Auberge Burgundy', description: '9.0/10 | Hermanus | Ab ca. 110€ | Charmantes Boutique-Hotel im Herzen der Stadt.', url: 'https://www.expedia.de/Auberge-Burgundy-Boutique-Hotel-Spa-Hermanus.h229671.Hotel-Details' },
+                    ]
+                }
+            ]
+        },
+        {
+            id: 'garden-route',
+            title: 'Die Garden Route: Natur Pur & Abenteuer (22. - 27. November)',
+            intro: 'Die Garden Route, eine traumhafte Küstenstraße zwischen Kapstadt und Port Elizabeth, ist vom 22. bis 27. November Ihr Zuhause für sechs Nächte, mit Übernachtungen in Oudtshoorn, Knysna und Tsitsikamma. Diese Region ist ein Mosaik aus dichten Wäldern, ruhigen Lagunen, langen Sandstränden und dramatischen Küsten. Von den ikonischen Knysna Heads über die faszinierende Tierwelt bei Plettenberg Bay bis zum abenteuerlichen Tsitsikamma Nationalpark – die Garden Route ist ein Spielplatz für Naturliebhaber und Abenteurer und zeigt Ihnen die schönsten Facetten Südafrikas. Hier finden Sie Hotelempfehlungen für Ihre einzelnen Stopps an der Garden Route.',
+            cards: [
+                {
+                    title: "Knysna Heads",
+                    image: "https://images.unsplash.com/photo-1509735732518-c7a828fc0ab8?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: Ortszentrum · Aufenthalt: 1-2 h",
+                    text: "Die Torwächter von Knysna! Wir bestaunen diese beiden majestätischen Sandsteinklippen, die wie Wächter die Lagune vom wilden Ozean trennen. Von beiden Seiten der Meerenge genießen wir atemberaubende Aussichten. Die Eastern Head erkunden wir zu Fuß, zur Western Head nehmen wir das Boot!"
+                },
+                {
+                    title: "Tsitsikamma Nationalpark",
+                    image: "https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 1 h von Plett · Aufenthalt: halber Tag",
+                    text: "Abenteuer im Urwald! Wir überqueren mutig die spektakuläre Hängebrücke über die wilde Storms River Mündung – ein echtes Erlebnis! Anschließend wandern wir durch uralte Wälder voller Geheimnisse. Im Restaurant gönnen wir uns lokale Spezialitäten mit Meerblick."
+                },
+                {
+                    title: "Robberg Nature Reserve",
+                    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 15 min von Plett · Aufenthalt: 2-4 h",
+                    text: "Wildlife-Spektakel garantiert! Wir wandern auf dieser dramatischen Halbinsel mit ihren schroffen Klippen und werden Zeuge einer riesigen Robbenkolonie. Drei verschiedene Routen stehen zur Wahl – früh starten ist unser Geheimtipp für die besten Tierbeobachtungen!"
+                },
+                {
+                    title: "Cango Caves",
+                    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 30 min von Oudtshoorn · Aufenthalt: 1-2 h",
+                    text: "Reise ins Erdinnere! Wir tauchen ab in ein faszinierendes unterirdisches Wunderland mit spektakulären Tropfsteinformationen. Die Adventure Tour ist perfekt für uns Abenteurer! Bei konstanten 18°C können wir entspannt die Millionen Jahre alte Kunst der Natur bewundern."
+                },
+                {
+                    title: "Bloukrans Bridge Bungee",
+                    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 40 min von Plett · Aufenthalt: 1-2 h",
+                    text: "Der ultimative Adrenalin-Kick! Wir wagen uns an den höchsten kommerziellen Bungee-Sprung der Welt (216m) – oder für die Vorsichtigeren unter uns: der SkyWalk bietet spektakuläre Aussichten ohne Sprung. Reservierung ist Pflicht für dieses unvergessliche Erlebnis!"
+                }
+            ],
+             tabs: [
+                {
+                    name: 'Highlights',
+                    icon: '🏞️',
+                    content: [
+                        { title: 'Knysna Heads', description: 'Zwei majestätische Sandsteinklippen, die die Lagune vom Ozean trennen. Atemberaubende Aussichtspunkte.' },
+                        { title: 'Robberg Nature Reserve', description: 'Wandern Sie auf einer Halbinsel mit dramatischen Klippen und einer großen Robbenkolonie.' },
+                        { title: 'Tsitsikamma Nationalpark', description: 'Überqueren Sie die spektakuläre Hängebrücke über die Storms River Mündung.' },
+                        { title: 'Bloukrans Bridge (Optional)', description: 'Der höchste kommerzielle Bungee-Sprung der Welt – oder ein Skywalk für die weniger Wagemutigen.' },
+                        { title: 'Oudtshoorn & Cango Caves', description: 'Erkunden Sie die "Straußenhauptstadt" und das unterirdische Wunderland der Cango Caves in der Kleinen Karoo.' },
+                    ]
+                },
+                {
+                    name: 'Essen & Wein',
+                    icon: '🍷',
+                    content: [
+                        { title: '34 South (Knysna)', description: 'Lebhaftes Restaurant an der Waterfront mit Sushi, Austern und mehr.' },
+                        { title: 'Nostalgie Restaurant (Oudtshoorn)', description: 'Spezialisiert auf traditionelle Karoo-Küche und Straußengerichte.' },
+                        { title: 'Tsitsikhaya Restaurant (Storms River)', description: 'Unprätentiöse südafrikanische Gerichte in entspannter Atmosphäre.' },
+                        { title: 'The Plettenberg', description: 'Gehobene Küche mit fantastischem Meerblick in Plettenberg Bay.' },
+                    ]
+                },
+                {
+                    name: 'Hotels',
+                    icon: '🏨',
+                    content: [
+                        { title: 'Tsala Treetop Lodge (Plett)', description: 'Einzigartiges Luxushotel in den Baumwipfeln.', url: 'https://www.expedia.de/Tsala-Treetop-Lodge-Plettenberg-Bay.h1907579.Hotel-Details' },
+                        { title: 'Hlangana Lodge (Oudtshoorn)', description: '9.4/10 | Oudtshoorn | Ab ca. 50€ | Top-bewertete Lodge mit tollem Frühstück.', url: 'https://www.expedia.de/Hlangana-Lodge-Oudtshoorn.h1029272.Hotel-Details' },
+                        { title: 'Tsitsikamma Village Inn', description: '8.6/10 | Storms River | Ab ca. 165€ | Charmantes Hotel im Herzen des Dorfes.', url: 'https://www.expedia.de/Tsitsikamma-Village-Inn-Storms-River.h1907584.Hotel-Details' },
+                        { title: 'Knysna Manor House', description: 'Historisches viktorianisches Herrenhaus mit einzigartigen Zimmern.', url: 'https://www.expedia.de/Knysna-Manor-House-Knysna.h1907575.Hotel-Details' },
+                    ]
+                }
+            ]
+        },
+        {
+            id: 'addo',
+            title: 'Addo & Abreise: Das große Safari-Finale (28. - 30. November)',
+            intro: 'Vom 28. bis 30. November erreicht die Reise ihren Höhepunkt im Addo Elephant National Park, einem malariafreien "Big 7"-Reservat. Hier verbringen Sie zwei Nächte für Ihr großes Safari-Finale. Sie haben die Chance, Elefanten, Löwen und sogar Wale und Weiße Haie zu sehen. Nach einem unvergesslichen Safari-Erlebnis geht die Reise in Port Elizabeth zu Ende, von wo aus Sie Ihren Rückflug antreten. Hier finden Sie Hotelempfehlungen für Ihre Übernachtung.',
+            cards: [
+                {
+                    title: "Addo Elephant National Park",
+                    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 1 h von PE · Aufenthalt: ganzer Tag",
+                    text: "Das große Safari-Finale! Wir erleben die legendären 'Big 7' hautnah – über 550 Elefanten warten auf uns! Ob wir selbst fahren oder eine geführte Tour machen: Frühe Morgen- und späte Nachmittag-Safaris sind unser Geheimrezept für die spektakulärsten Tierbeobachtungen. Kameras bereithalten!"
+                },
+                {
+                    title: "Jeffreys Bay Surfen",
+                    image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 45 min von Addo · Aufenthalt: halber Tag",
+                    text: "Welcome to J-Bay! Wir sind in der Welthauptstadt des Surfens angekommen, mit den perfektesten rechtsbrechenden Wellen der Welt. Egal ob wir eine Surfstunde nehmen oder einfach nur den Profis beim Wellenreiten zusehen – hier spüren wir das echte Surf-Feeling!"
+                },
+                {
+                    title: "St. Francis Bay",
+                    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 1 h von J-Bay · Aufenthalt: 2-3 h",
+                    text: "Postkartenidylle pur! Wir entdecken diesen bezaubernden Küstenort mit seinem malerischen Leuchtturm und den einzigartigen Kanälen. Bei entspannten Spaziergängen und Bootsfahrten durch die Wasserwege lassen wir die Reise gemütlich ausklingen."
+                },
+                {
+                    title: "Port Elizabeth Beachfront",
+                    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: Stadtzentrum · Aufenthalt: nach Bedarf",
+                    text: "Der perfekte Abschluss! Wir flanieren über die schöne Strandpromenade und lassen unsere Südafrika-Abenteuer Revue passieren. Im Boardwalk Casino und Entertainment Complex können wir vor dem Rückflug noch einmal richtig entspannen – mit Restaurants und Meerblick als krönender Abschluss!"
+                }
+            ],
+             tabs: [
+                {
+                    name: 'Highlights',
+                    icon: '🐘',
+                    content: [
+                        { title: 'Addo Elephant National Park', description: 'Heimat von über 550 Elefanten und den "Big 7" (Löwe, Leopard, Nashorn, Elefant, Büffel, Wal, Weißer Hai).' },
+                        { title: 'Pirschfahrten', description: 'Unternehmen Sie geführte Touren oder erkunden Sie den Park auf eigene Faust, um die Tierwelt zu entdecken.' },
+                        { title: 'Jeffreys Bay (J-Bay)', description: 'Machen Sie einen Zwischenstopp in der weltberühmten Surf-Hauptstadt und probieren Sie selbst eine Surfstunde.' },
+                        { title: 'St. Francis Bay', description: 'Besuchen Sie den malerischen Leuchtturm und die einzigartigen Kanäle.' },
+                    ]
+                },
+                {
+                    name: 'Essen & Wein',
+                    icon: '🍷',
+                    content: [
+                        { title: 'Nina\'s Real Food (J-Bay)', description: 'Vielfältige Speisekarte von gesunden Poké Bowls bis zu herzhaftem Straußensteak.' },
+                        { title: 'Walskipper (J-Bay)', description: 'Genießen Sie Meeresfrüchte direkt am Strand mit den Füßen im Sand.' },
+                        { title: 'Cattle Baron (Addo Park)', description: 'Ein zuverlässiges Steakhaus direkt im Nationalpark – perfekt nach einer langen Pirschfahrt.' },
+                         { title: 'Ocean Basket (J-Bay)', description: 'Beliebte Kette für frische Meeresfrüchte zu erschwinglichen Preisen.' },
+                    ]
+                },
+                {
+                    name: 'Hotels',
+                    icon: '🏨',
+                    content: [
+                        { title: 'Gorah Elephant Camp (Addo)', description: 'Exklusives 5-Sterne-Zeltcamp mit Blick auf ein Wasserloch im Park.', url: 'https://www.expedia.de/Gorah-Elephant-Camp-Addo-Elephant-National-Park.h1907567.Hotel-Details' },
+                        { title: 'Addo Rest Camp (SANParks)', description: 'Verschiedene Unterkünfte von Chalets bis zu Safari-Zelten direkt im Park (gutes Preis-Leistungs-Verhältnis).', url: 'https://www.sanparks.org/parks/addo/accommodation/index.php' }, // SANParks official link
+                        { title: 'CANAL GUEST HOUSE (St. Francis)', description: '9.4/10 | St. Francis Bay | Ab ca. 85€ | Luxuriöses B&B direkt am Wasser.', url: 'https://www.expedia.de/CANAL-GUEST-HOUSE-Waterfront-Luxury-B-B-St-Francis-Bay.h32128710.Hotel-Details' },
+                        { title: 'Adrift Guesthouse (St. Francis)', description: '9.1/10 | St. Francis Bay | Ab ca. 60€ | Bietet Spa-Einrichtungen in Strandnähe.', url: 'https://www.expedia.de/Adrift-Guesthouse-St-Francis-Bay.h1907565.Hotel-Details' },
+                    ]
+                }
+            ]
+        }
+    ]
+};
+
+function generateCardsHtmlFromSection(section) {
+    if (!section.cards || section.cards.length === 0) return '';
+
+    return `
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            ${section.cards.map(card => `
+                <div class="bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition-shadow duration-300">
+                    <img src="${card.image}" alt="${card.title}" class="w-full h-48 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-bold mb-1 text-gray-800">${card.title}</h3>
+                    <div class="text-sm text-gray-500 mb-2">${card.meta}</div>
+                    <p class="text-gray-700 flex-grow">${card.text}</p>
+                </div>
+            `).join('')}
+        </div>
+    `;
+}
+
+function generateMapHtmlFromSection(section) {
+    // Nur für bestimmte Sektionen eine Karte anzeigen
+    if (!section.id || section.id !== 'kapstadt') return '';
+
+    return `
+        <div class="bg-white rounded-2xl shadow-lg p-6 mb-10">
+            <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">📍 Interaktive Detailkarte</h3>
+            <p class="text-center text-gray-600 mb-6">Erkunde alle Highlights auf unserer detaillierten Google Maps Karte</p>
+            <div class="relative w-full bg-gray-100 rounded-xl overflow-hidden shadow-inner">
+                <iframe 
+                    src="https://www.google.com/maps/d/embed?mid=1IpI82fry8o6NssQUWz3AVY_7rpKdtgM&ehbc=2E312F&noprof=1" 
+                    width="100%" 
+                    height="480"
+                    style="border:0; border-radius: 12px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="w-full">
+                </iframe>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-4">💡 Tipp: Klicke auf die Markierungen für detaillierte Informationen zu jedem Highlight</p>
+        </div>
+    `;
+}
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('header');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('main section[id]');
+    
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu on link click
+    mobileMenu.addEventListener('click', (e) => {
+        if(e.target.tagName === 'A') {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+
+
+    // Dynamic content generation
+    const routeStopsContainer = document.getElementById('route-stops');
+    tripData.route.forEach((stop, index) => {
+        const stopElement = document.createElement('a');
+        stopElement.href = `#${stop.id}`;
+        stopElement.className = 'flex flex-col items-center group text-center px-2';
+        stopElement.innerHTML = `
+            <div class="w-5 h-5 bg-white border-2 border-[#C89F93] rounded-full transition-transform group-hover:scale-125"></div>
+            <p class="mt-2 text-sm font-semibold text-gray-700 group-hover:text-[#C89F93]">${stop.name}</p>
+            <p class="text-xs text-gray-500">${stop.days}</p>
+        `;
+        routeStopsContainer.appendChild(stopElement);
+    });
+
+    const contentContainer = document.getElementById('content-sections');
+    tripData.sections.forEach(section => {
+        const sectionElement = document.createElement('section');
+        sectionElement.id = section.id;
+        sectionElement.className = 'py-16 scroll-mt-20';
+
+        let tabsHtml = '<div class="flex justify-center space-x-2 sm:space-x-4 mb-8 border-b pb-2">';
+        section.tabs.forEach((tab, index) => {
+            tabsHtml += `
+                <button class="tab-button text-sm sm:text-base px-3 py-2 sm:px-4 rounded-t-lg border-b-2 border-transparent transition-colors ${index === 0 ? 'active' : ''}" data-target="${section.id}-${index}">
+                    <span class="hidden sm:inline-block mr-2">${tab.icon}</span> ${tab.name}
+                </button>`;
+        });
+        tabsHtml += '</div>';
+
+        let tabContentsHtml = '';
+        section.tabs.forEach((tab, index) => {
+            tabContentsHtml += `<div id="${section.id}-${index}" class="tab-content ${index > 0 ? 'hidden' : ''}">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">`;
+            tab.content.forEach(item => {
+                // Check if item.url exists and wrap title in <a> tag
+                const titleHtml = item.url 
+                    ? `<a href="${item.url}" target="_blank" class="hover:underline text-[#C89F93]">${item.title}</a>`
+                    : item.title;
+
+                tabContentsHtml += `
+                    <div class="section-card rounded-lg p-6 shadow-sm">
+                        <h4 class="font-bold text-lg text-gray-800">${titleHtml}</h4>
+                        <p class="text-gray-600 mt-1 text-sm">${item.description}</p>
+                    </div>`;
+            });
+             // Add LLM restaurant suggestion button only to "Essen & Wein" tab
+            if (tab.name === 'Essen & Wein') {
+                tabContentsHtml += `
+                    <div class="section-card rounded-lg p-6 shadow-sm flex flex-col items-center justify-center text-center">
+                        <h4 class="font-bold text-lg text-gray-800 mb-4">✨ Restaurantvorschlag des Tages</h4>
+                        <button class="generate-restaurant-suggestion bg-[#C89F93] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-colors shadow-md" data-region="${section.title.split(':')[0]}">
+                            Vorschlag generieren
+                        </button>
+                        <p class="restaurant-suggestion-output text-gray-700 mt-4 text-sm"></p>
+                    </div>
+                `;
+            }
+            tabContentsHtml += `</div></div>`;
+        });
+
+        sectionElement.innerHTML = `
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-2">${section.title}</h2>
+                <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">${section.intro}</p>
+                ${generateCardsHtmlFromSection(section)}
+                ${generateMapHtmlFromSection(section)}
+                ${tabsHtml}
+                ${tabContentsHtml}
+            </div>
+        `;
+        contentContainer.appendChild(sectionElement);
+    });
+
+    // Tab functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const parent = button.closest('.container');
+            parent.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            parent.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+            document.getElementById(button.dataset.target).classList.remove('hidden');
+        });
+    });
+
+
+    // Chart.js implementation
+    // Budget Pie Chart
+    const budgetCtx = document.getElementById('budgetPieChart').getContext('2d');
+    new Chart(budgetCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Hotels (€4800)', 'Essen (€2400)', 'Mietwagen & Benzin (€800)', 'Aktivitäten (€500)'],
+            datasets: [{
+                data: [4800, 2400, 800, 500],
+                backgroundColor: ['#C89F93', '#E3CFC9', '#A9A9A9', '#F4EAE6'],
+                borderColor: '#FDFBF8',
+                borderWidth: 4,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        font: {
+                           size: 12
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed !== null) {
+                                label += new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(context.parsed);
+                            }
+                            return label;
+                        }
+                    }
+                }
+            },
+            cutout: '60%'
+        }
+    });
+
+    // Hotel Bar Chart
+    const hotelCtx = document.getElementById('hotelBarChart').getContext('2d');
+    new Chart(hotelCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Kapstadt', 'Weinlande', 'Hermanus', 'Oudtshoorn', 'Garden Route', 'Addo/J-Bay'],
+            datasets: [{
+                label: 'Durchschnittliche Hotelkosten pro Nacht',
+                data: [150, 140, 130, 70, 150, 90], // Estimated average prices
+                backgroundColor: '#E3CFC9',
+                borderColor: '#C89F93',
+                borderWidth: 1,
+                borderRadius: 5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    beginAtZero: true,
+                     ticks: {
+                        callback: function(value, index, values) {
+                            return '€' + value;
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                     callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed.x !== null) {
+                                label += new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(context.parsed.x);
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        }
+    });
+    
+     // Active Nav Link on Scroll
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const allSections = document.querySelectorAll('main section[id]');
+
+        allSections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - header.offsetHeight - 20) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Route Map Canvas Drawing
+    const routeMapCanvas = document.getElementById('routeMapCanvas');
+    const ctx = routeMapCanvas.getContext('2d');
+
+    const drawMap = () => {
+        routeMapCanvas.width = routeMapCanvas.offsetWidth;
+        routeMapCanvas.height = routeMapCanvas.offsetHeight;
+        ctx.clearRect(0, 0, routeMapCanvas.width, routeMapCanvas.height);
+
+        const width = routeMapCanvas.width;
+        const height = routeMapCanvas.height;
+
+        // Define abstract points for cities relative to canvas size
+        const cityPoints = {
+            'Kapstadt': { x: width * 0.1, y: height * 0.8, label: 'Kapstadt' },
+            'Weinlande': { x: width * 0.25, y: height * 0.65, label: 'Weinlande' },
+            'Hermanus': { x: width * 0.4, y: height * 0.8, label: 'Hermanus' },
+            'Garden Route': { x: width * 0.65, y: height * 0.5, label: 'Garden Route' }, // Representing Knysna/Plett area
+            'Addo & Abreise': { x: width * 0.85, y: height * 0.4, label: 'Addo & PE' }
+        };
+
+        // Draw simplified coastline (abstract) - a bit more detailed
+        ctx.beginPath();
+        ctx.moveTo(cityPoints['Kapstadt'].x * 0.8, cityPoints['Kapstadt'].y + height * 0.1);
+        ctx.bezierCurveTo(width * 0.1, height * 0.9, width * 0.2, height * 0.95, width * 0.35, height * 0.85);
+        ctx.bezierCurveTo(width * 0.5, height * 0.7, width * 0.7, height * 0.6, width * 0.8, height * 0.3);
+        ctx.bezierCurveTo(width * 0.85, height * 0.25, width * 0.9, height * 0.2, width * 0.95, height * 0.2);
+        ctx.strokeStyle = '#A9A9A9';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        // Draw route lines
+        ctx.beginPath();
+        ctx.strokeStyle = '#C89F93';
+        ctx.lineWidth = 3;
+        let firstPoint = true;
+        tripData.route.forEach(stop => {
+            const point = cityPoints[stop.name];
+            if (point) {
+                if (firstPoint) {
+                    ctx.moveTo(point.x, point.y);
+                    firstPoint = false;
+                } else {
+                    ctx.lineTo(point.x, point.y);
+                }
+            }
+        });
+        ctx.stroke();
+
+        // Draw city markers and labels
+        ctx.fillStyle = '#3D3D3D';
+        ctx.font = `${Math.max(10, width * 0.025)}px Inter`; // Responsive font size
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        for (const key in cityPoints) {
+            const point = cityPoints[key];
+            // Draw circle marker
+            ctx.beginPath();
+            ctx.arc(point.x, point.y, Math.max(5, width * 0.012), 0, Math.PI * 2); // Responsive marker size
+            ctx.fillStyle = '#C89F93';
+            ctx.fill();
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Draw label with offset
+            let labelY = point.y - (Math.max(15, width * 0.035)); 
+            if (key === 'Addo & Abreise' || key === 'Garden Route') { // Adjust label for certain points
+                labelY = point.y + (Math.max(15, width * 0.035));
+            }
+            ctx.fillText(point.label, point.x, labelY);
+        }
+    };
+
+    // Initial draw and redraw on resize
+    drawMap();
+    window.addEventListener('resize', drawMap);
+
+    // Google Maps Integration
+    const openGoogleMapsButton = document.getElementById('openGoogleMaps');
+    openGoogleMapsButton.addEventListener('click', () => {
+        const origin = tripData.route[0].coords;
+        const destination = 'Port Elizabeth, South Africa'; // Final destination
+        
+        const waypoints = tripData.route.slice(1, -1).map(stop => stop.coords).join('|');
+
+        const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
+        window.open(googleMapsUrl, '_blank');
+    });
+
+
+    // LLM Integration for Restaurant Suggestions
+    const generateSuggestionButtons = document.querySelectorAll('.generate-restaurant-suggestion');
+    generateSuggestionButtons.forEach(button => {
+        button.addEventListener('click', async (event) => {
+            const region = event.target.dataset.region;
+            const outputElement = event.target.nextElementSibling; // The <p> tag after the button
+            outputElement.textContent = 'Einen Vorschlag generieren...';
+            event.target.disabled = true;
+
+            try {
+                let prompt = `Ich mache einen Roadtrip durch Südafrika. Ich bin gerade in der Region ${region}. Ich liebe gutes Essen und trinke gerne Wein. Schlage mir ein Restaurant in dieser Region vor, das zu meinen Vorlieben passt. Nenne nur den Namen des Restaurants und eine kurze Begründung, warum es gut passt, in einem Satz.`;
+                if (region.includes('Kapstadt')) {
+                    prompt += ` Einige der bereits erwähnten Restaurants sind Silk Asian Fusion, Veldt, Cafe du Cap, Lievita, Zuney. Bitte schlage ein anderes vor.`;
+                } else if (region.includes('Weinlande')) {
+                     prompt += ` Einige der bereits erwähnten Restaurants sind Babel at Babylonstoren, Leopard's Leap, The Kraal at Joostenberg, Haute Cabrière. Bitte schlage ein anderes vor.`;
+                } else if (region.includes('Hermanus')) {
+                     prompt += ` Einige der bereits erwähnten Restaurants sind Creation Wines, Burgundy Seafront Restaurant, Fisherman's Cottage, Hamilton Russell Vineyards. Bitte schlage ein anderes vor.`;
+                } else if (region.includes('Garden Route')) {
+                     prompt += ` Einige der bereits erwähnten Restaurants sind 34 South, Nostalgie Restaurant, Tsitsikhaya Restaurant, The Plettenberg. Bitte schlage ein anderes vor.`;
+                } else if (region.includes('Addo')) {
+                     prompt += ` Einige der bereits erwähnten Restaurants sind Nina's Real Food, Walskipper, Cattle Baron, Ocean Basket. Bitte schlage ein anderes vor.`;
+                }
+
+
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                // API-Integration deaktiviert - kann später mit eigenem API-Key aktiviert werden
+                outputElement.textContent = 'Diese Funktion benötigt einen gültigen API-Key für die KI-Integration. Bitte wenden Sie sich an den Entwickler.';
+            } catch (error) {
+                console.error('Fehler beim Generieren des Restaurantvorschlags:', error);
+                outputElement.textContent = 'Fehler beim Generieren des Vorschlags.';
+            } finally {
+                event.target.disabled = false;
+            }
+        });
+    });
+});
