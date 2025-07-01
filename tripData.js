@@ -613,7 +613,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Route Map Canvas Drawing
     const routeMapCanvas = document.getElementById('routeMapCanvas');
-    const ctx = routeMapCanvas.getContext('2d');
+    if (routeMapCanvas) {
+        const ctx = routeMapCanvas.getContext('2d');
 
     const drawMap = () => {
         routeMapCanvas.width = routeMapCanvas.offsetWidth;
@@ -740,4 +741,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    }
 });
