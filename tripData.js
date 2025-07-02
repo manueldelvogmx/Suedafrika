@@ -6,7 +6,7 @@ const tripData = {
         { id: 'kapstadt', name: 'Kapstadt', days: '14.-16. Nov.', distance: 'Start (Hotel)', coords: '-33.9249,18.4241' },
         { id: 'weinlande', name: 'Weinlande', days: '17.-19. Nov.', distance: '54 km (Hotel)', coords: '-33.9358,18.8680' },
         { id: 'hermanus', name: 'Hermanus', days: '20.-21. Nov.', distance: '94 km (Hotel)', coords: '-34.4079,19.2346' },
-        { id: 'garden-route', name: 'Garden Route', days: '22.-28. Nov.', distance: '362 km (Hotel)', coords: '-34.0350,23.0465' },
+        { id: 'garden-route', name: 'Garden Route', days: '20.-28. Nov.', distance: '362 km (Hotel)', coords: '-34.0350,23.0465' },
         { id: 'addo', name: 'Addo & Abreise', days: '29.-30. Nov.', distance: '306 km (Hotel)', coords: '-33.4704,25.7530' },
     ],
     // Neue Struktur: Cards nach Tagen organisiert
@@ -108,7 +108,7 @@ const tripData = {
                     title: "Reise nach Hermanus",
                     image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
                     meta: "Anfahrt: ca. 1,5 Stunden",
-                    text: "Wir verlassen die Weinlande und fahren zur Walbeobachtung nach Hermanus."
+                    text: "Wir verlassen die Weinlande und fahren zur Walbeobachtung nach Hermanus. Wir bleiben 2 Nächte in Hermanus."
                 },
                 {
                     title: "Walbeobachtung vom Ufer",
@@ -149,16 +149,22 @@ const tripData = {
             region: 'Garden Route',
             cards: [
                 {
-                    title: "Hermanus - Walbeobachtung",
-                    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&auto=format&fit=crop",
-                    meta: "2 Nächte in Hermanus",
-                    text: "Weltberühmt für landbasierte Walbeobachtung! Wir beobachten majestätische Südkaper direkt vom Cliff Path aus. Der Whale Crier kündigt die Ankunft der Wale an. Besuchen Sie <a href='https://www.hermanus.co.za' target='_blank' class='text-[#C89F93] hover:underline'>Hermanus Tourism</a> für aktuelle Informationen."
+                    title: "Weiterreise nach Arniston",
+                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                    meta: "Anfahrt: ca. 2:15 Stunden (ca. 160 km)",
+                    text: "Wir verlassen Hermanus und fahren entlang der Küste und durch die Overberg-Region nach Arniston. Eine Zeitreise in ein authentisches Fischerdorf! Arniston (auch Waenhuiskrans) bezaubert mit seinem weißen Sandstrand, dem historischen Leuchtturm und traditionellen Fischerbooten. Perfekt für einen ruhigen Zwischenstopp zwischen Hermanus und Oudtshoorn."
                 },
                 {
                     title: "Gansbaai - Haikäfigtauchen",
-                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop",
-                    meta: "Von Hermanus aus | Tagesausflug",
-                    text: "Adrenalin pur! In Gansbaai erleben wir das berühmte Haikäfigtauchen und beobachten Weiße Haie hautnah. Ein unvergessliches Abenteuer für Mutige!"
+                    image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/58/89.jpg",
+                    meta: "Start der Garden Route | Tagesausflug",
+                    text: "Adrenalin pur! In Gansbaai erleben wir das berühmte Haikäfigtauchen und beobachten Weiße Haie hautnah. Ein unvergessliches Abenteuer für Mutige! Die Garden Route beginnt hier mit einem echten Highlight."
+                },
+                {
+                    title: "Gansbaai - Dyer Island",
+                    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
+                    meta: "Bootstour zur Insel der Seelöwen",
+                    text: "Wir besuchen die berühmte Dyer Island, auch bekannt als 'Shark Alley'. Hier können wir Seelöwen, Pinguine und mit etwas Glück auch Weiße Haie beobachten. Eine einzigartige Meereswildnis!"
                 }
             ]
         },
@@ -168,10 +174,16 @@ const tripData = {
             region: 'Garden Route',
             cards: [
                 {
-                    title: "Hermanus - Walbeobachtung",
-                    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&auto=format&fit=crop",
-                    meta: "Letzter Tag in Hermanus",
-                    text: "Noch einmal die majestätischen Wale beobachten und die traumhafte Küste genießen, bevor wir morgen weiterreisen."
+                    title: "Kap Agulhas - Südspitze Afrikas",
+                    image: "https://img.welt.de/img/reise/Fern/mobile205570597/1940310137-ci16x9-w1200/Africa-South-Africa-Western-Cape-Cape-Agulhas-shipwreck-2.jpg",
+                    meta: "Von Arniston aus | Tagesausflug",
+                    text: "Hier treffen Atlantik und Indischer Ozean aufeinander! Wir besuchen den südlichsten Punkt Afrikas und genießen den Blick vom Leuchtturm."
+                },
+                {
+                    title: "Die Otter Beach Arniston",
+                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6m58jbQZCzyxGfhVoj6RNbVcgPFrhnTx3ZgCrfBdaPlijTt8EWvyEFhZDMgArVFHIXK8RtAxfHMD1LLXTfERFa9RWrY2QVSptEVYj-iPQpMsTWOoNEfwFh4EKtNQOspxlB5ET4OELDBM/s5184/20210308_091204200_iOS.jpg",
+                    meta: "Direkt bei Arniston",
+                    text: "Wunderschöner, ruhiger Strandabschnitt – ideal zum Baden, Spazieren und Entspannen."
                 }
             ]
         },
@@ -181,23 +193,24 @@ const tripData = {
             region: 'Garden Route',
             cards: [
                 {
-                    title: "Arniston - Fischerdorf",
-                    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
-                    meta: "1 Nacht in Arniston",
-                    text: "Zeitreise in ein authentisches Fischerdorf! Arniston (auch Waenhuiskrans) bezaubert mit seinem weißen Sandstrand, dem historischen Leuchtturm und traditionellen Fischerbooten. Perfekt für einen ruhigen Zwischenstopp zwischen Hermanus und Oudtshoorn."
+                    title: "Reise nach Oudtshoorn",
+                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                    meta: "Anfahrt: ca. 4 Stunden (ca. 300 km)",
+                    text: "Von Arniston geht es ins Landesinnere nach Oudtshoorn, der Straußenhauptstadt Südafrikas in der Kleinen Karoo."
                 },
                 {
-                    title: "Kap Agulhas - Südspitze Afrikas",
-                    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=500&auto=format&fit=crop",
-                    meta: "Von Arniston aus | Tagesausflug",
-                    text: "Hier treffen Atlantik und Indischer Ozean aufeinander! Wir besuchen den südlichsten Punkt Afrikas und genießen den Blick vom Leuchtturm."
+                    title: "Witsand – Mündung des Breede River",
+                    image: "https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00367-021-00686-8/MediaObjects/367_2021_686_Fig2_HTML.png",
+                    meta: "Zwischenstopp auf dem Weg nach Oudtshoorn",
+                    text: "Witsand ist bekannt für seine endlosen Sandstrände und die beeindruckende Mündung des Breede River. Perfekt für einen Spaziergang am Wasser oder eine kleine Pause mit Blick auf das Meer."
                 },
                 {
-                    title: "Die Otter Beach Arniston",
-                    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
-                    meta: "Direkt bei Arniston",
-                    text: "Wunderschöner, ruhiger Strandabschnitt – ideal zum Baden, Spazieren und Entspannen."
+                    title: "Mossel Bay – Historischer Hafen & Strände",
+                    image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSJnrVv-Rf6d55rPOqz1DmrmPOs_0XP31f-RVDpW4o4C1eG6mqCypRRm3wD5g9u7NbfxZIcsL-mMFQ9kVQr-vasMgilulv7wNHPVydtxQ",
+                    meta: "Zwischenstopp auf dem Weg nach Oudtshoorn",
+                    text: "Mossel Bay bietet eine charmante Mischung aus Geschichte, Stränden und leckerem Seafood. Ein Spaziergang am Hafen oder ein Besuch des Dias Museums lohnen sich!"
                 }
+               
             ]
         },
         10: {
@@ -206,16 +219,22 @@ const tripData = {
             region: 'Garden Route',
             cards: [
                 {
-                    title: "Oudtshoorn - Straußenhauptstadt",
+                    title: "Oudtshoorn",
                     image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&auto=format&fit=crop",
-                    meta: "2 Nächte in Oudtshoorn",
-                    text: "Die 'Straußenhauptstadt der Welt'! Wir erkunden die Cango Caves, besuchen Straußenfarmen und genießen die Karoo-Landschaft. Die Kleine Karoo bietet einzigartige Einblicke in die südafrikanische Kultur und Geschichte."
+                    meta: "Erkundung der Straußenfarmen und Cango Caves",
+                    text: "Weitere Erkundung der Straußenfarmen und der Cango Caves. Die Kleine Karoo bietet einzigartige Einblicke in die südafrikanische Kultur und Geschichte."
                 },
                 {
-                    title: "Mossel Bay - Surferparadies",
+                    title: "Swartberg Pass – Spektakuläre Gebirgsstraße",
+                    image: "https://www.kapstadt.de/images/stories/kapstadt-de/reisefuehrer/karoo/oudtshoorn/swartberg-pass.jpg",
+                    meta: "Tagesausflug von Oudtshoorn",
+                    text: "Eine der schönsten Passstraßen Südafrikas! Wir fahren über den Swartberg Pass nach Prince Albert und genießen atemberaubende Ausblicke, Serpentinen und die wilde Karoo-Landschaft."
+                },
+                {
+                    title: "Prince Albert – Karoo-Charme",
                     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
-                    meta: "Zwischen Arniston und Oudtshoorn",
-                    text: "Bekannt für seine Strände und das Diaz Museum. Ideal für einen Zwischenstopp auf dem Weg nach Oudtshoorn."
+                    meta: "Abstecher nach Swartberg Pass",
+                    text: "Das kleine Städtchen am Fuß des Swartberg Passes begeistert mit historischen Gebäuden, Galerien und echtem Karoo-Feeling. Perfekt für einen Lunch-Stop oder einen Bummel durch die Hauptstraße."
                 }
             ]
         },
@@ -225,61 +244,23 @@ const tripData = {
             region: 'Garden Route',
             cards: [
                 {
-                    title: "Wilderness - Lagunen & Seen",
-                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop",
-                    meta: "Wilderness",
-                    text: "Paradies für Naturliebhaber! Wir erkunden die Lagunen, Seen und endlosen Strände von Wilderness. Perfekt zum Wandern, Kanufahren und Entspannen."
-                },
-                {
-                    title: "Swartberg Pass & Prince Albert",
-                    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=500&auto=format&fit=crop",
-                    meta: "Von Oudtshoorn aus | Tagesausflug",
-                    text: "Eine der spektakulärsten Passstraßen Südafrikas! Wir fahren über den Swartberg Pass nach Prince Albert und genießen atemberaubende Ausblicke."
+                    title: "Plettenberg Bay - Küstenparadies",
+                    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&auto=format&fit=crop",
+                    meta: "",
+                    text: "Das 'Plett' - ein Küstenparadies! Wir wandern im Robberg Nature Reserve, beobachten Robben und genießen die traumhaften Strände. Die Lagune ist perfekt für Wassersport und die Restaurants servieren frische Meeresfrüchte."
                 }
             ]
         },
         12: {
-            date: '26. November 2025',
-            dayName: 'Mittwoch',
+            date: '25. November 2025',
+            dayName: 'Dienstag',
             region: 'Garden Route',
             cards: [
                 {
-                    title: "Plettenberg Bay - Küstenparadies",
-                    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&auto=format&fit=crop",
-                    meta: "2 Nächte in Plettenberg Bay",
-                    text: "Das 'Plett' - ein Küstenparadies! Wir wandern im Robberg Nature Reserve, beobachten Robben und genießen die traumhaften Strände. Die Lagune ist perfekt für Wassersport und die Restaurants servieren frische Meeresfrüchte."
-                },
-                {
-                    title: "Knysna - Lagunenstadt",
-                    image: "https://images.unsplash.com/photo-1509735732518-c7a828fc0ab8?w=500&auto=format&fit=crop",
-                    meta: "Auf dem Weg nach Plett",
-                    text: "Die berühmten Knysna Heads, Waterfront und Austern – Knysna ist ein Muss auf der Garden Route!"
-                }
-            ]
-        },
-        13: {
-            date: '27. November 2025',
-            dayName: 'Donnerstag',
-            region: 'Garden Route',
-            cards: [
-                {
-                    title: "Plettenberg Bay - Küstenparadies",
-                    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&auto=format&fit=crop",
-                    meta: "Zweiter Tag in Plettenberg Bay",
-                    text: "Weitere Erkundung des Robberg Nature Reserve und der traumhaften Strände. Die Lagune ist perfekt für Wassersport und die Restaurants servieren frische Meeresfrüchte."
-                }
-            ]
-        },
-        14: {
-            date: '28. November 2025',
-            dayName: 'Freitag',
-            region: 'Garden Route',
-            cards: [
-                {
-                    title: "Colchester - Tsitsikamma",
-                    image: "https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=500&auto=format&fit=crop",
-                    meta: "1 Nacht in Colchester",
-                    text: "Tor zum Tsitsikamma Nationalpark! Colchester liegt am Storms River und ist der perfekte Ausgangspunkt für Abenteuer. Wir überqueren die spektakuläre Hängebrücke und wandern durch uralte Wälder. Der letzte Stopp vor Addo!"
+                    title: "Weiterreise nach Plettenberg Bay",
+                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                    meta: "Anfahrt: ca. 2:15 Stunden (ca. 150 km)",
+                    text: "Wir verlassen die Karoo und fahren über den Outeniqua Pass zurück an die Küste nach Plettenberg Bay – ein Paradies für Strandliebhaber und Naturliebhaber."
                 },
                 {
                     title: "Tsitsikamma-Nationalpark",
@@ -288,29 +269,70 @@ const tripData = {
                     text: "Abenteuer im Urwald! Wir wandern durch den Tsitsikamma Nationalpark, überqueren die berühmte Hängebrücke und genießen die wilde Küste."
                 },
                 {
+                    title: "Knysna - Lagunenstadt",
+                    image: "https://images.unsplash.com/photo-1509735732518-c7a828fc0ab8?w=500&auto=format&fit=crop",
+                    meta: "Auf dem Weg nach Plett",
+                    text: "Die berühmten Knysna Heads, Waterfront und Austern – Knysna ist ein Muss auf der Garden Route!"
+                }
+                
+            ]
+        },
+        13: {
+            date: '26. November 2025',
+            dayName: 'Mittwoch',
+            region: 'Garden Route',
+            cards: [
+                {
+                    title: "Reise nach Colchester",
+                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop",
+                    meta: "2 Nächte in Plettenberg Bay",
+                    text: ""
+                },  
+                {
+                    title: "Colchester",
+                    image: "https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=500&auto=format&fit=crop",
+                    meta: "",
+                    text: ""
+                },
+                {
                     title: "Jeffreys Bay - Surfmekka",
                     image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=500&auto=format&fit=crop",
                     meta: "Auf dem Weg nach Colchester",
                     text: "Legendäre Wellen und entspannte Surfer-Atmosphäre – ein Muss für Wassersportfans!"
                 }
+               
             ]
         },
-        15: {
-            date: '29. November 2025',
-            dayName: 'Samstag',
-            region: 'Addo & Abreise',
+        14: {
+            date: '27. November 2025',
+            dayName: 'Donnerstag',
+            region: 'Garden Route',
             cards: [
                 {
                     title: "Addo Elephant National Park",
                     image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&auto=format&fit=crop",
-                    meta: "Anfahrt: 1 h von PE · Aufenthalt: ganzer Tag",
+                    meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
                     text: "Das große Safari-Finale! Wir erleben die legendären 'Big 7' hautnah – über 550 Elefanten warten auf uns! Ob wir selbst fahren oder eine geführte Tour machen: Frühe Morgen- und späte Nachmittag-Safaris sind unser Geheimrezept für die spektakulärsten Tierbeobachtungen. Kameras bereithalten!"
+                }
+                
+            ]
+        },
+        15: {
+            date: '28. November 2025',
+            dayName: 'Freitag',
+            region: 'Addo',
+            cards: [
+                {
+                    title: "Addo Elephant National Park",
+                    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
+                    text: "Gleich noch einmal die Elefanten beobachten."
                 },
                 {
-                    title: "Jeffreys Bay Surfen",
-                    image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=500&auto=format&fit=crop",
-                    meta: "Anfahrt: 45 min von Addo · Aufenthalt: halber Tag",
-                    text: "Welcome to J-Bay! Wir sind in der Welthauptstadt des Surfens angekommen, mit den perfektesten rechtsbrechenden Wellen der Welt. Egal ob wir eine Surfstunde nehmen oder einfach nur den Profis beim Wellenreiten zusehen – hier spüren wir das echte Surf-Feeling!"
+                    title: "Port Elizabeth – Die freundliche Stadt",
+                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop",
+                    meta: "",
+                    text: "Port Elizabeth, auch Gqeberha genannt, ist bekannt für ihre Strände und die entspannte Atmosphäre. Ein kurzer Stopp an der Promenade oder ein Kaffee am Strand lohnen sich auf dem Weg zum Addo Elephant Park."
                 }
             ]
         },
@@ -320,16 +342,22 @@ const tripData = {
             region: 'Addo & Abreise',
             cards: [
                 {
-                    title: "St. Francis Bay",
-                    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&auto=format&fit=crop",
-                    meta: "Anfahrt: 1 h von J-Bay · Aufenthalt: 2-3 h",
-                    text: "Postkartenidylle pur! Wir entdecken diesen bezaubernden Küstenort mit seinem malerischen Leuchtturm und den einzigartigen Kanälen. Bei entspannten Spaziergängen und Bootsfahrten durch die Wasserwege lassen wir die Reise gemütlich ausklingen."
+                    title: "Weiterreise nach Colchester (Addo Gate)",
+                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                    meta: "Anfahrt: ca. 3:30 Stunden (ca. 300 km)",
+                    text: "Von Plettenberg Bay geht es entlang der berühmten Garden Route und durch den Tsitsikamma Nationalpark bis nach Colchester, dem südlichen Eingang zum Addo Elephant Park."
                 },
                 {
-                    title: "Port Elizabeth Beachfront",
-                    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
-                    meta: "Anfahrt: Stadtzentrum · Aufenthalt: nach Bedarf",
-                    text: "Der perfekte Abschluss! Wir flanieren über die schöne Strandpromenade und lassen unsere Südafrika-Abenteuer Revue passieren. Im Boardwalk Casino und Entertainment Complex können wir vor dem Rückflug noch einmal richtig entspannen – mit Restaurants und Meerblick als krönender Abschluss!"
+                    title: "Addo Elephant National Park",
+                    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&auto=format&fit=crop",
+                    meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
+                    text: "Gleich noch einmal die Elefanten beobachten."
+                },
+                {
+                    title: "Port Elizabeth – Die freundliche Stadt",
+                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop",
+                    meta: "",
+                    text: "Port Elizabeth, auch Gqeberha genannt, ist bekannt für ihre Strände und die entspannte Atmosphäre. Ein kurzer Stopp an der Promenade oder ein Kaffee am Strand lohnen sich auf dem Weg zum Addo Elephant Park."
                 }
             ]
         },
@@ -338,12 +366,7 @@ const tripData = {
             dayName: 'Sonntag',
             region: 'Addo & Abreise',
             cards: [
-                {
-                    title: "Zurück nach Kapstadt und Heimflug",
-                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                    meta: "",
-                    text: ""
-                }
+                // ggf. weitere Cards
             ]
         }
     },
@@ -464,17 +487,24 @@ const tripData = {
         {
             id: 'garden-route',
             title: 'Die Garden Route: Natur Pur & Abenteuer',
-            intro: 'Die Garden Route, eine traumhafte Küstenstraße zwischen Kapstadt und Port Elizabeth, ist unser Zuhause für die nächsten Nächte. Wir übernachten in Hermanus, Arniston, Oudtshoorn, Wilderness, Plettenberg Bay und Colchester. Diese Region ist ein Mosaik aus dichten Wäldern, ruhigen Lagunen, langen Sandstränden und dramatischen Küsten. Von den ikonischen Knysna Heads über die faszinierende Tierwelt bei Plettenberg Bay bis zum abenteuerlichen Tsitsikamma Nationalpark – die Garden Route ist ein Spielplatz für Naturliebhaber und Abenteurer und zeigt uns die schönsten Facetten Südafrikas.',
+            intro: 'Die Garden Route, eine traumhafte Küstenstraße zwischen Kapstadt und Port Elizabeth, ist unser Zuhause für die nächsten Nächte. Wir starten in Gansbaai mit Haikäfigtauchen, übernachten in Arniston, Oudtshoorn, Wilderness, Plettenberg Bay und Colchester. Diese Region ist ein Mosaik aus dichten Wäldern, ruhigen Lagunen, langen Sandstränden und dramatischen Küsten. Von den ikonischen Knysna Heads über die faszinierende Tierwelt bei Plettenberg Bay bis zum abenteuerlichen Tsitsikamma Nationalpark – die Garden Route ist ein Spielplatz für Naturliebhaber und Abenteurer und zeigt uns die schönsten Facetten Südafrikas.',
              tabs: [
                 {
                     name: 'Highlights',
                     icon: '🏞️',
                     content: [
+                        { title: 'Gansbaai - Haikäfigtauchen', description: 'Erleben Sie das berühmte Haikäfigtauchen und beobachten Sie Weiße Haie hautnah in "Shark Alley".' },
+                        { title: 'Dyer Island', description: 'Besuchen Sie die berühmte Insel der Seelöwen und Pinguine, auch bekannt als "Shark Alley".' },
+                        { title: 'Witsand', description: 'Bekannt für die Mündung des Breede River, Sandstrände und als Hotspot für Kitesurfer und Wale.' },
+                        { title: 'Mossel Bay', description: 'Historischer Hafen, schöne Strände und das berühmte Dias Museum.' },
+                        { title: 'Swartberg Pass', description: 'Eine der spektakulärsten Passstraßen Südafrikas – ein Muss für Abenteurer und Fotografen.' },
+                        { title: 'Prince Albert', description: 'Künstlerdorf am Swartberg Pass mit viel Karoo-Charme, Cafés und Galerien.' },
                         { title: 'Knysna Heads', description: 'Zwei majestätische Sandsteinklippen, die die Lagune vom Ozean trennen. Atemberaubende Aussichtspunkte.' },
                         { title: 'Robberg Nature Reserve', description: 'Wandern Sie auf einer Halbinsel mit dramatischen Klippen und einer großen Robbenkolonie.' },
                         { title: 'Tsitsikamma Nationalpark', description: 'Überqueren Sie die spektakuläre Hängebrücke über die Storms River Mündung.' },
                         { title: 'Bloukrans Bridge (Optional)', description: 'Der höchste kommerzielle Bungee-Sprung der Welt – oder ein Skywalk für die weniger Wagemutigen.' },
                         { title: 'Oudtshoorn & Cango Caves', description: 'Erkunden Sie die "Straußenhauptstadt" und das unterirdische Wunderland der Cango Caves in der Kleinen Karoo.' },
+                        { title: 'Port Elizabeth', description: 'Die „freundliche Stadt" am Indischen Ozean – ideal für einen kurzen Stopp an der Promenade.' },
                     ]
                 },
                 {
@@ -665,6 +695,28 @@ document.addEventListener('DOMContentLoaded', function() {
             parent.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
             document.getElementById(button.dataset.target).classList.remove('hidden');
         });
+    });
+
+    // Tab functionality for days overview (delegated event handling)
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('tab-button')) {
+            const button = event.target;
+            const parent = button.closest('div'); // Find the closest parent div
+            if (parent) {
+                parent.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Find all tab-content elements within the same parent
+                const tabContents = parent.querySelectorAll('.tab-content');
+                tabContents.forEach(content => content.classList.add('hidden'));
+                
+                const targetId = button.dataset.target;
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.classList.remove('hidden');
+                }
+            }
+        }
     });
 
 
@@ -1088,15 +1140,60 @@ document.addEventListener('DOMContentLoaded', function() {
             const section = tripData.sections.find(s => s.id === regionData.sectionId);
             const introText = section ? section.intro : '';
 
-            // Erstelle Regions-Header
+            // Erstelle Regions-Header mit Tabs
             const regionHeader = document.createElement('div');
             regionHeader.className = 'mb-8';
+            
+            // Erstelle Tabs HTML
+            let tabsHtml = '<div class="flex justify-center space-x-2 sm:space-x-4 mb-8 border-b pb-2">';
+            section.tabs.forEach((tab, index) => {
+                tabsHtml += `
+                    <button class="tab-button text-sm sm:text-base px-3 py-2 sm:px-4 rounded-t-lg border-b-2 border-transparent transition-colors ${index === 0 ? 'active' : ''}" data-target="${regionData.sectionId}-days-${index}">
+                        <span class="hidden sm:inline-block mr-2">${tab.icon}</span> ${tab.name}
+                    </button>`;
+            });
+            tabsHtml += '</div>';
+
+            // Erstelle Tab Contents HTML
+            let tabContentsHtml = '';
+            section.tabs.forEach((tab, index) => {
+                tabContentsHtml += `<div id="${regionData.sectionId}-days-${index}" class="tab-content ${index > 0 ? 'hidden' : ''}">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">`;
+                tab.content.forEach(item => {
+                    // Check if item.url exists and wrap title in <a> tag
+                    const titleHtml = item.url 
+                        ? `<a href="${item.url}" target="_blank" class="hover:underline text-[#C89F93]">${item.title}</a>`
+                        : item.title;
+
+                    tabContentsHtml += `
+                        <div class="section-card rounded-lg p-6 shadow-sm">
+                            <h4 class="font-bold text-lg text-gray-800">${titleHtml}</h4>
+                            <p class="text-gray-600 mt-1 text-sm">${item.description}</p>
+                        </div>`;
+                });
+                // Add LLM restaurant suggestion button only to "Essen & Wein" tab
+                if (tab.name === 'Essen & Wein') {
+                    tabContentsHtml += `
+                        <div class="section-card rounded-lg p-6 shadow-sm flex flex-col items-center justify-center text-center">
+                            <h4 class="font-bold text-lg text-gray-800 mb-4">✨ Restaurantvorschlag des Tages</h4>
+                            <button class="generate-restaurant-suggestion bg-[#C89F93] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-colors shadow-md" data-region="${regionData.region}">
+                                Vorschlag generieren
+                            </button>
+                            <p class="restaurant-suggestion-output text-gray-700 mt-4 text-sm"></p>
+                        </div>
+                    `;
+                }
+                tabContentsHtml += `</div></div>`;
+            });
+
             regionHeader.innerHTML = `
                 <div class="text-center mb-8">
                     <div class="text-4xl mb-4">${regionData.icon}</div>
                     <h2 class="text-3xl font-bold text-gray-800 mb-2">${regionData.region}</h2>
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto">${introText}</p>
                 </div>
+                ${tabsHtml}
+                ${tabContentsHtml}
             `;
             daysContainer.appendChild(regionHeader);
 
