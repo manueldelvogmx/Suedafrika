@@ -244,8 +244,14 @@ const tripData = {
             region: 'Garden Route',
             cards: [
                 {
-                    title: "Plettenberg Bay - Küstenparadies",
-                    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&auto=format&fit=crop",
+                    title: "Weiterreise nach Plettenberg Bay",
+                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                    meta: "Anfahrt: ca. 2:15 Stunden (ca. 150 km)",
+                    text: "Wir verlassen die Karoo und fahren über den Outeniqua Pass zurück an die Küste nach Plettenberg Bay – ein Paradies für Strandliebhaber und Naturliebhaber."
+                },
+                {
+                    title: "Plettenberg Bay Robberg Nature Reserve",
+                    image: "https://eu-images.contentstack.com/v3/assets/blte218090c2a6fb1e2/bltd0476eb7012a9555/65ee09194527a6040a6da3fe/suedafrika-garden-route-plettenberg-bay-robberg-luftaufnahme-g-622183942.jpg?auto=webp&width=1440&quality=45",
                     meta: "",
                     text: "Das 'Plett' - ein Küstenparadies! Wir wandern im Robberg Nature Reserve, beobachten Robben und genießen die traumhaften Strände. Die Lagune ist perfekt für Wassersport und die Restaurants servieren frische Meeresfrüchte."
                 }
@@ -256,12 +262,7 @@ const tripData = {
             dayName: 'Dienstag',
             region: 'Garden Route',
             cards: [
-                {
-                    title: "Weiterreise nach Plettenberg Bay",
-                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                    meta: "Anfahrt: ca. 2:15 Stunden (ca. 150 km)",
-                    text: "Wir verlassen die Karoo und fahren über den Outeniqua Pass zurück an die Küste nach Plettenberg Bay – ein Paradies für Strandliebhaber und Naturliebhaber."
-                },
+                
                 {
                     title: "Tsitsikamma-Nationalpark",
                     image: "https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=500&auto=format&fit=crop",
