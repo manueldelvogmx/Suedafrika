@@ -7,7 +7,7 @@ const tripData = {
         { id: 'weinlande', name: 'Weinlande', days: '17.-19. Nov.', distance: '54 km (Hotel)', coords: '-33.9358,18.8680' },
         { id: 'hermanus', name: 'Hermanus', days: '20.-21. Nov.', distance: '94 km (Hotel)', coords: '-34.4079,19.2346' },
         { id: 'garden-route', name: 'Garden Route', days: '20.-28. Nov.', distance: '362 km (Hotel)', coords: '-34.0350,23.0465' },
-        { id: 'addo', name: 'Addo & Abreise', days: '29.-30. Nov.', distance: '306 km (Hotel)', coords: '-33.4704,25.7530' },
+        { id: 'addo', name: 'Addo', days: '29.-30. Nov.', distance: '306 km (Hotel)', coords: '-33.4704,25.7530' },
     ],
     // Neue Struktur: Cards nach Tagen organisiert
     tripByDays: {
@@ -39,6 +39,12 @@ const tripData = {
                     image: "https://www.waterfront.co.za/wp-content/uploads/2023/04/THE_VA.png",
                     meta: "18 Uhr Anfahrt: 15 min · Aufenthalt: den Abend genießen",
                     text: "Hier schlägt das Herz von Kapstadt! Wir schlendern durch das lebhafte Hafenviertel, entdecken coole Designshops, probieren uns durch den Food Market und genießen den Hafenblick. Perfekt für entspannte Abende mit südafrikanischem Flair."
+                },
+                {
+                    title: "Tandem-Gleitschirm-Sprung",
+                    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/e8/89/81/an-exceptional-day-for.jpg?w=500&h=500&s=1",
+                    meta: "Vom Lions Head oder Signal Hill | Optional",
+                    text: "Tipp: Spektakulärer Tandem-Gleitschirm-Sprung mit atemberaubenden Ausblicken über Kapstadt und die Küste! Ein unvergessliches Erlebnis für Abenteuerlustige."
                 }
             ]
         },
@@ -58,6 +64,12 @@ const tripData = {
                     image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTeP3n6nvedEAtGY_bRCcEgvkiQGgNgD7tJ4ysVcv78gi_YbIUhQZTzjatnNol8SaODGdcfYGJU_mcXCbWjIjcGJpL7qDDpw0ZEJm4LrQ",
                     meta: "Dauer: ca. 3–4 h inkl. Boot (falls noch Zeit ist)",
                     text: "Eine bewegende Zeitreise in die Geschichte Südafrikas! Wir starten am Nelson Mandela Gateway und nehmen das Boot zur berühmten Gefängnisinsel. Die Tour wird oft von ehemaligen Häftlingen geführt – absolut beeindruckend und emotional. Unbedingt vorab reservieren!"
+                },
+                {
+                    title: "Bay Harbor Market (Hout Bay)",
+                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop",
+                    meta: "Fr-So nachmittags | Optional",
+                    text: "Tipp: Markt mit Live-Musik, leckerem Essen und Souvenirs. Perfekt um mit Einheimischen ins Gespräch zu kommen!"
                 }
             ]
         },
@@ -140,6 +152,12 @@ const tripData = {
                     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Grotto_Beach_-_Hermanus.jpg/1200px-Grotto_Beach_-_Hermanus.jpg",
                     meta: "Anfahrt: 10 min · Aufenthalt: beliebig",
                     text: "Traumstrand mit Blaue-Flagge-Garantie! Wir genießen 18 km makellosen weißen Sandstrand – perfekt zum Schwimmen, Entspannen und natürlich für die Walbeobachtung. Mit Restaurants und Parkplätzen direkt vor Ort können wir hier problemlos den ganzen Tag verbringen."
+                },
+                {
+                    title: "Stanford - Verstecktes Juwel",
+                    image: "https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/blteb0398644c893caf/61c17d31c52c5b292ce23dc9/US_Stanford_ZA_Header.jpg",
+                    meta: "Zwischen Hermanus und Gansbaai | Tagesausflug",
+                    text: "Tipp: Kleiner Ort abseits der Tourismuspfade. Superschöne restaurierte Straßen und Häuser mit kleinen Restaurants und Cafés. Eine Flussfahrt auf dem River zum Sonnenuntergang ist ganz besonders."
                 }
             ]
         },
@@ -209,8 +227,13 @@ const tripData = {
                     image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSJnrVv-Rf6d55rPOqz1DmrmPOs_0XP31f-RVDpW4o4C1eG6mqCypRRm3wD5g9u7NbfxZIcsL-mMFQ9kVQr-vasMgilulv7wNHPVydtxQ",
                     meta: "Zwischenstopp auf dem Weg nach Oudtshoorn",
                     text: "Mossel Bay bietet eine charmante Mischung aus Geschichte, Stränden und leckerem Seafood. Ein Spaziergang am Hafen oder ein Besuch des Dias Museums lohnen sich!"
+                },
+                {
+                    title: "Elim - Fahrt ans Ende der Welt",
+                    image: "https://capeagulhas.gov.za/wp-content/uploads/2022/10/Elim.jpg",
+                    meta: "Hinterland der Wal-Küste | Tagesausflug",
+                    text: "Tipp: Das gesamte Dorf besteht aus bunt angestrichenen strohgedeckten Häusern, die alle unter Denkmalschutz stehen. Ein besonders stimmungsvoller Ort - die Fahrt dorthin ist schon ein Erlebnis."
                 }
-               
             ]
         },
         10: {
@@ -220,7 +243,7 @@ const tripData = {
             cards: [
                 {
                     title: "Oudtshoorn",
-                    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&auto=format&fit=crop",
+                    image: "https://cdn2.rhinoafrica.com/thumbnails/media/_en/destinations/root/africa/southern-africa/south-africa/garden-route/route-62/oudtshoorn/_img/57324/image-thumb__57324__background-cover/winding-road-through-mountain-in-oudtshoorn-western-cape-south-africa.cbd16995.jpg",
                     meta: "Erkundung der Straußenfarmen und Cango Caves",
                     text: "Weitere Erkundung der Straußenfarmen und der Cango Caves. Die Kleine Karoo bietet einzigartige Einblicke in die südafrikanische Kultur und Geschichte."
                 },
@@ -232,9 +255,9 @@ const tripData = {
                 },
                 {
                     title: "Prince Albert – Karoo-Charme",
-                    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
+                    image: "https://www.suedafrika-reise.net/westkap/bilder/1r.jpg",
                     meta: "Abstecher nach Swartberg Pass",
-                    text: "Das kleine Städtchen am Fuß des Swartberg Passes begeistert mit historischen Gebäuden, Galerien und echtem Karoo-Feeling. Perfekt für einen Lunch-Stop oder einen Bummel durch die Hauptstraße."
+                    text: "Das kleine Städtchen am Fuß des Swartberg Passes begeistert mit historischen Gebäuden, Galerien und echtem <a href='https://www.suedafrika-reise.net/westkap/karoo.htm' target='_blank' class='underline'>Karoo-Feeling</a>. Perfekt für einen Lunch-Stop oder einen Bummel durch die Hauptstraße."
                 }
             ]
         },
@@ -265,17 +288,28 @@ const tripData = {
                 
                 {
                     title: "Tsitsikamma-Nationalpark",
-                    image: "https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=500&auto=format&fit=crop",
+                    image: "https://kommwirmachendaseinfach.de/wp-content/uploads/2020/02/Tsitsikamma-nationalpark-suedafrika-aussicht-haengebruecke.jpg",
                     meta: "Von Colchester aus | Tagesausflug",
                     text: "Abenteuer im Urwald! Wir wandern durch den Tsitsikamma Nationalpark, überqueren die berühmte Hängebrücke und genießen die wilde Küste."
                 },
                 {
-                    title: "Knysna - Lagunenstadt",
-                    image: "https://images.unsplash.com/photo-1509735732518-c7a828fc0ab8?w=500&auto=format&fit=crop",
+                    title: "Knysna Austern",
+                    image: "https://www.ambiente-mediterran.de/wp-content/uploads/schema-and-structured-data-for-wp/Austern-Knysna-Oyster-Holzbild-756x756.jpg",
                     meta: "Auf dem Weg nach Plett",
-                    text: "Die berühmten Knysna Heads, Waterfront und Austern – Knysna ist ein Muss auf der Garden Route!"
-                }
-                
+                    text: "Die berühmten Knysna Heads, Waterfront und Austern – <a href='https://kommwirmachendaseinfach.de/knysna-in-suedafrika-sehenswuerdigkeiten-reisetipps/' target='_blank' class='underline'>Knysna</a> ist ein Muss auf der Garden Route!"
+                },
+                {
+                    title: "East Head Café",
+                    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/7e/5b/93/photo6jpg.jpg?w=1400&h=800&s=1",
+                    meta: "Direkt an den Heads | Moderate Preise",
+                    text: "Tipp: Perfekte Lage direkt an den berühmten Knysna Heads mit toller Aussicht und moderaten Preisen."
+                }  ,
+                {
+                    title: "Knysna Sunset Sailing Cruise",
+                    image: "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=620,height=400,dpr=2/tour_img/6203afeebfcf8.jpeg",
+                    meta: "Auf dem Weg nach Plett",
+                    text: "Wir bewundern die spektakuläre Landschaft von Knysna und den Sonnenuntergang an Bord einer entspannten <a href='https://www.getyourguide.de/knysna-sailing-cruise-t26361/' target='_blank' class='underline'>Segelkreuzfahrt</a> bei Sonnenuntergang. Genießen eine leckere Auswahl an Käse und Snacks, gepaart mit gekühltem Sekt."
+                }    
             ]
         },
         13: {
@@ -284,14 +318,8 @@ const tripData = {
             region: 'Garden Route',
             cards: [
                 {
-                    title: "Reise nach Colchester",
-                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop",
-                    meta: "2 Nächte in Plettenberg Bay",
-                    text: ""
-                },  
-                {
-                    title: "Colchester",
-                    image: "https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=500&auto=format&fit=crop",
+                    title: "Weiterreise nach Colchester",
+                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
                     meta: "",
                     text: ""
                 },
@@ -307,11 +335,11 @@ const tripData = {
         14: {
             date: '27. November 2025',
             dayName: 'Donnerstag',
-            region: 'Garden Route',
+            region: 'Addo',
             cards: [
                 {
                     title: "Addo Elephant National Park",
-                    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&auto=format&fit=crop",
+                    image: "https://www.ventertours.de/fileadmin/_processed_/6/1/csm_Addo-Ludwig-Heilmaier_c371212f0b.jpg",
                     meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
                     text: "Das große Safari-Finale! Wir erleben die legendären 'Big 7' hautnah – über 550 Elefanten warten auf uns! Ob wir selbst fahren oder eine geführte Tour machen: Frühe Morgen- und späte Nachmittag-Safaris sind unser Geheimrezept für die spektakulärsten Tierbeobachtungen. Kameras bereithalten!"
                 }
@@ -324,50 +352,50 @@ const tripData = {
             region: 'Addo',
             cards: [
                 {
-                    title: "Addo Elephant National Park",
-                    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&auto=format&fit=crop",
+                    title: "Addo Elephant National Park Teil 2",
+                    image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/1f/8d/d6.jpg",
                     meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
-                    text: "Gleich noch einmal die Elefanten beobachten."
+                    text: "Noch einmal :-)"
                 },
                 {
-                    title: "Port Elizabeth – Die freundliche Stadt",
-                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop",
-                    meta: "",
-                    text: "Port Elizabeth, auch Gqeberha genannt, ist bekannt für ihre Strände und die entspannte Atmosphäre. Ein kurzer Stopp an der Promenade oder ein Kaffee am Strand lohnen sich auf dem Weg zum Addo Elephant Park."
+                    title: "Bloukrans Bungee Jump",
+                    image: "https://www.garden-route-entdecken.de/wp-content/uploads/bungee-jumping-bloukrans-bridge.jpg",
+                    meta: "216m direkt an der N2 | Optional für Mutige",
+                    text: "Tipp: Der höchste kommerzielle Bungee-Sprung der Welt! Für alle, die es weniger extrem mögen, gibt es auch einen Skywalk. Reservierung der Sprungzeit empfohlen."
                 }
+                
             ]
         },
         16: {
-            date: '30. November 2025',
-            dayName: 'Sonntag',
-            region: 'Addo & Abreise',
+            date: '29. November 2025',
+            dayName: 'Samstag',
+            region: 'Addo',
             cards: [
                 {
-                    title: "Weiterreise nach Colchester (Addo Gate)",
-                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                    meta: "Anfahrt: ca. 3:30 Stunden (ca. 300 km)",
-                    text: "Von Plettenberg Bay geht es entlang der berühmten Garden Route und durch den Tsitsikamma Nationalpark bis nach Colchester, dem südlichen Eingang zum Addo Elephant Park."
-                },
-                {
-                    title: "Addo Elephant National Park",
-                    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&auto=format&fit=crop",
-                    meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
-                    text: "Gleich noch einmal die Elefanten beobachten."
-                },
-                {
                     title: "Port Elizabeth – Die freundliche Stadt",
-                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop",
+                    image: "https://lp-cms-production.imgix.net/2019-06/478157521_full.jpg?sharp=10&vib=20&w=1200&w=600&h=400",
                     meta: "",
                     text: "Port Elizabeth, auch Gqeberha genannt, ist bekannt für ihre Strände und die entspannte Atmosphäre. Ein kurzer Stopp an der Promenade oder ein Kaffee am Strand lohnen sich auf dem Weg zum Addo Elephant Park."
+                },
+                {
+                    title: "St. Francis Bay Ausflug",
+                    image: "https://iol-prod.appspot.com/image/f5b960907468e055f3f0cd7355ff7626a1707aa5=w700",
+                    meta: "Das weiße Dorf | Tagesausflug",
+                    text: "Tipp: Besuchen Sie den malerischen Leuchtturm und die einzigartigen Kanäle. Das 'weiße Dorf' über Paradies Beach ist wie das Ende der Welt."
                 }
             ]
         },
         17: {
             date: '30. November 2025',
             dayName: 'Sonntag',
-            region: 'Addo & Abreise',
+            region: 'Addo',
             cards: [
-                // ggf. weitere Cards
+                {
+                    title: "Heimflug",
+                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                    meta: "",
+                    text: "Rückfahrt nach Kapstadt und Heimflug"
+                }
             ]
         }
     },
@@ -398,6 +426,13 @@ const tripData = {
                         { title: 'Cafe du Cap', description: 'Bietet ein "Harvest Table" Mittagsangebot im Pariser Stil.' },
                         { title: 'Lievita', description: 'Gilt als eine der besten neapolitanischen Pizzen der Stadt.' },
                         { title: 'Zuney', description: 'Kritikerliebling für den besten Burger Kapstadts.' },
+                        { title: 'Foodbarn (Nordhoek)', description: 'Tipp: Mehrfach ausgezeichneter Koch in Nordhoek.' },
+                        { title: 'Dunes - Beach Restaurant (Hout Bay)', description: 'Tipp: Durchschnittliches Essen, aber ein Muss für den Sonnenuntergang.' },
+                        { title: 'Starlings Cafe (Claremont)', description: 'Tipp: Verstecktes Juwel, entspannter Garten, tolles Frühstück/Mittagessen.' },
+                        { title: 'Café Orca (Melkbowstrand)', description: 'Tipp: Holzhaus, beste Meeresfrüchte, einfach, rustikal.' },
+                        { title: 'Sirocco (Kalk Bay)', description: 'Tipp: Loungeähnliche offene Bar.' },
+                        { title: 'Kalkys (Kalk Bay)', description: 'Tipp: Berühmte Fischbude.' },
+                        { title: 'Olympia Café & Deli (Kalk Bay)', description: 'Tipp: Trendy, rustikal, bei Einheimischen beliebt.' },
                     ]
                 },
                 {
@@ -435,6 +470,13 @@ const tripData = {
                         { title: "Leopard's Leap", description: 'Bietet saftige Braten und Wein zu einem hervorragenden Preis-Leistungs-Verhältnis.' },
                         { title: 'The Kraal at Joostenberg', description: 'Genießen Sie einen Slow-Farm-Lunch in einem idyllischen Innenhof.' },
                         { title: 'Haute Cabrière', description: 'Ein ikonisches Weingut in Franschhoek, perfekt für Weinproben mit Aussicht.' },
+                        { title: 'Noblehill Wine Estate', description: 'Tipp: Mit Restaurant Cose, sehr empfehlenswert.' },
+                        { title: 'Wilderer Distillery & Ristorante Pappa Grappa', description: 'Tipp: Rustikal, toller Gin.' },
+                        { title: 'Spice Route Wines', description: 'Tipp: Mit Pizzeria/italienischem Essen auf dem Rasen.' },
+                        { title: 'Casa Mori (Stellenbosch)', description: 'Tipp: Frühstück mit Marilyn in der Küche.' },
+                        { title: 'Kunjani Wines (Stellenbosch)', description: 'Tipp: Restaurant mit tollem Ambiente und Aussicht.' },
+                        { title: 'Schoon Cafe and Eatery (Stellenbosch)', description: 'Tipp: Kaffeebar und Bäckerei, tolles Brot, Croissants, Kuchen.' },
+                        { title: 'Waterkloof (Somerset West)', description: 'Tipp: Exzellentes Essen, erstaunliche Architektur und Aussicht.' },
                     ]
                 },
                 {
@@ -445,6 +487,14 @@ const tripData = {
                         { title: 'Petit Ermitage', description: '9.9/10 | Franschhoek | Ab ca. 120€ | Außergewöhnlich bewertet und zentral.', url: 'https://www.expedia.de/Petit-Ermitage-Franschhoek.h18967909.Hotel-Details' },
                         { title: 'Cultivar Guest Lodge', description: '9.0/10 | Stellenbosch | Ab ca. 170€ | 4-Sterne-Lodge mit großem Pool.', url: 'https://www.expedia.de/Cultivar-Guest-Lodge-Stellenbosch.h1029280.Hotel-Details' },
                         { title: 'The Belmont', description: '9.3/10 | Franschhoek | Ab ca. 75€ | Hervorragendes Preis-Leistungs-Verhältnis.', url: 'https://www.expedia.de/The-Belmont-Franschhoek.h18967888.Hotel-Details' },
+                        { title: 'Grande Provence Wine Estate (Franschhoek)', description: 'Tipp: Weingut mit Unterkunft.' },
+                        { title: 'Avondrood Guesthouse (Franschhoek)', description: 'Tipp: Gemütliche Guesthouse-Atmosphäre.' },
+                        { title: 'Maison Cabriere (Franschhoek)', description: 'Tipp: Weingut mit stilvollen Zimmern.' },
+                        { title: 'Cape Vue Country House (Franschhoek)', description: 'Tipp: Country House mit schöner Aussicht.' },
+                        { title: 'The Beautiful South Guesthouse (Stellenbosch)', description: 'Tipp: Charmante Guesthouse in zentraler Lage.' },
+                        { title: 'Casa Mori (Stellenbosch)', description: 'Tipp: Ein bisschen Retro, via Airbnb.' },
+                        { title: 'De Zalze Lodge (Stellenbosch)', description: 'Tipp: Lodge mit Golfplatz.' },
+                        { title: 'Kunjani Wines (Stellenbosch)', description: 'Tipp: Mit Cottages und Blick.' },
                     ]
                 }
             ]
@@ -472,6 +522,7 @@ const tripData = {
                         { title: 'Burgundy Seafront Restaurant', description: 'Frische Meeresfrüchte mit "Front-Row-Seats" für die Walbeobachtung.' },
                         { title: 'Fisherman\'s Cottage', description: 'Authentische Meeresfrüchteküche in einem historischen Fischerhaus.' },
                         { title: 'Hamilton Russell Vineyards', description: 'Ein Pionier des Weinbaus in der Region, spezialisiert auf Pinot Noir und Chardonnay.' },
+                        { title: 'Bientang\'s Cave', description: 'Tipp: Restaurant direkt an den Klippen, chillig.' },
                     ]
                 },
                 {
@@ -506,6 +557,8 @@ const tripData = {
                         { title: 'Bloukrans Bridge (Optional)', description: 'Der höchste kommerzielle Bungee-Sprung der Welt – oder ein Skywalk für die weniger Wagemutigen.' },
                         { title: 'Oudtshoorn & Cango Caves', description: 'Erkunden Sie die "Straußenhauptstadt" und das unterirdische Wunderland der Cango Caves in der Kleinen Karoo.' },
                         { title: 'Port Elizabeth', description: 'Die „freundliche Stadt" am Indischen Ozean – ideal für einen kurzen Stopp an der Promenade.' },
+                        { title: 'Stanford - Verstecktes Juwel', description: 'Tipp: Kleiner Ort abseits der Tourismuspfade. Superschöne restaurierte Straßen und Häuser mit kleinen Restaurants und Cafés. Eine Flussfahrt auf dem River zum Sonnenuntergang ist ganz besonders.' },
+                        { title: 'Elim - Fahrt ans Ende der Welt', description: 'Tipp: Das gesamte Dorf besteht aus bunt angestrichenen strohgedeckten Häusern, die alle unter Denkmalschutz stehen. Ein besonders stimmungsvoller Ort - die Fahrt dorthin ist schon ein Erlebnis.' },
                     ]
                 },
                 {
@@ -516,6 +569,13 @@ const tripData = {
                         { title: 'Nostalgie Restaurant (Oudtshoorn)', description: 'Spezialisiert auf traditionelle Karoo-Küche und Straußengerichte.' },
                         { title: 'Tsitsikhaya Restaurant (Storms River)', description: 'Unprätentiöse südafrikanische Gerichte in entspannter Atmosphäre.' },
                         { title: 'The Plettenberg', description: 'Gehobene Küche mit fantastischem Meerblick in Plettenberg Bay.' },
+                        { title: 'Restaurant Cornuti (Knysna)', description: 'Tipp: Tolle Lage für Kaffee.' },
+                        { title: 'East Head Café (Knysna)', description: 'Tipp: Direkt an den Heads, moderate Preise.' },
+                        { title: 'The Olive Tree (Knysna)', description: 'Tipp: Tolles Essen, freundlicher Service.' },
+                        { title: 'Firefly Eating House (Knysna)', description: 'Tipp: Einzigartiges Geschmackserlebnis.' },
+                        { title: 'Restaurant Jemima\'s (Oudtshoorn)', description: 'Tipp: Gutes Essen, nette Atmosphäre.' },
+                        { title: 'Restaurant La Plume (Oudtshoorn)', description: 'Tipp: Harmonische Atmosphäre.' },
+                        { title: 'Galery Café (Prince Albert)', description: 'Tipp: Essen und Kunst kombiniert.' },
                     ]
                 },
                 {
@@ -525,14 +585,20 @@ const tripData = {
                         { title: 'The Marine Hermanus', description: '9.6/10 | Hermanus | Ab ca. 215€ | Legendäres 5-Sterne-Hotel mit Walblick.', url: 'https://www.expedia.de/The-Marine-Hermanus.h1907577.Hotel-Details' },
                         { title: 'Arniston Hotel', description: '8.8/10 | Arniston | Ab ca. 120€ | Charmantes Hotel direkt am Strand mit Restaurant.', url: 'https://www.expedia.de/Arniston-Hotel-Bredasdorp.h1907568.Hotel-Details' },
                         { title: 'Hlangana Lodge', description: '9.4/10 | Oudtshoorn | Ab ca. 50€ | Top-bewertete Lodge mit tollem Frühstück.', url: 'https://www.expedia.de/Hlangana-Lodge-Oudtshoorn.h1029272.Hotel-Details' },
+                        { title: 'Archrock Resort (Keurboomstrand)', description: 'Tipp: Resort in Keurboomstrand bei Plettenberg Bay.' },
+                        { title: 'Turbine Hotel und Spa (Knysna)', description: 'Tipp: In einem ehemaligen Kraftwerk gelegen.' },
+                        { title: 'DeZeekoe Guestfarm (Oudtshoorn)', description: 'Tipp: Authentische Guestfarm-Erfahrung.' },
+                        { title: 'The Pictures Guesthouse (Oudtshoorn)', description: 'Tipp: Sehr sauber.' },
+                        { title: 'African Relish (Prince Albert)', description: 'Tipp: Kochschule mit kleinen Unterkünften.' },
+                        { title: 'Deurdrift Cottage (Prince Albert)', description: 'Tipp: Gemütliches Cottage.' },
                     ]
                 }
             ]
         },
         {
             id: 'addo',
-            title: 'Addo & Abreise: Das große Safari-Finale (28. - 30. November)',
-            intro: 'Vom 28. bis 30. November erreicht die Reise ihren Höhepunkt im Addo Elephant National Park, einem malariafreien "Big 7"-Reservat. Hier verbringen wir zwei Nächte für unser großes Safari-Finale. Wir haben die Chance, Elefanten, Löwen und sogar Wale und Weiße Haie zu sehen. Nach einem unvergesslichen Safari-Erlebnis geht die Reise in Port Elizabeth zu Ende, von wo aus wir unseren Rückflug antreten. Hier finden wir Hotelempfehlungen für unsere Übernachtung.',
+            title: 'Addo: Das große Safari-Finale (28. - 30. November)',
+            intro: 'Die Reise erreicht ihren Höhepunkt im Addo Elephant National Park, einem malariafreien "Big 7"-Reservat. Hier verbringen wir zwei Nächte für unser großes Safari-Finale. Wir haben die Chance, Elefanten, Löwen und sogar Wale und Weiße Haie zu sehen. Nach einem unvergesslichen Safari-Erlebnis geht die Reise in Port Elizabeth zu Ende, von wo aus wir unseren Rückflug antreten. Hier finden wir Hotelempfehlungen für unsere Übernachtung.',
              tabs: [
                 {
                     name: 'Highlights',
@@ -626,96 +692,41 @@ document.addEventListener('DOMContentLoaded', function() {
     generateMilestoneBreakouts();
     generateDaysOverview();
 
-    const contentContainer = document.getElementById('content-sections');
-    tripData.sections.forEach(section => {
-        const sectionElement = document.createElement('section');
-        sectionElement.id = section.id;
-        sectionElement.className = 'py-16 scroll-mt-20';
+    // Content sections wurden entfernt - nur noch Tagesübersicht wird verwendet
 
-        let tabsHtml = '<div class="flex justify-center space-x-2 sm:space-x-4 mb-8 border-b pb-2">';
-        section.tabs.forEach((tab, index) => {
-            tabsHtml += `
-                <button class="tab-button text-sm sm:text-base px-3 py-2 sm:px-4 rounded-t-lg border-b-2 border-transparent transition-colors ${index === 0 ? 'active' : ''}" data-target="${section.id}-${index}">
-                    <span class="hidden sm:inline-block mr-2">${tab.icon}</span> ${tab.name}
-                </button>`;
-        });
-        tabsHtml += '</div>';
-
-        let tabContentsHtml = '';
-        section.tabs.forEach((tab, index) => {
-            tabContentsHtml += `<div id="${section.id}-${index}" class="tab-content ${index > 0 ? 'hidden' : ''}">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">`;
-            tab.content.forEach(item => {
-                // Check if item.url exists and wrap title in <a> tag
-                const titleHtml = item.url 
-                    ? `<a href="${item.url}" target="_blank" class="hover:underline text-[#C89F93]">${item.title}</a>`
-                    : item.title;
-
-                tabContentsHtml += `
-                    <div class="section-card rounded-lg p-6 shadow-sm">
-                        <h4 class="font-bold text-lg text-gray-800">${titleHtml}</h4>
-                        <p class="text-gray-600 mt-1 text-sm">${item.description}</p>
-                    </div>`;
-            });
-             // Add LLM restaurant suggestion button only to "Essen & Wein" tab
-            if (tab.name === 'Essen & Wein') {
-                tabContentsHtml += `
-                    <div class="section-card rounded-lg p-6 shadow-sm flex flex-col items-center justify-center text-center">
-                        <h4 class="font-bold text-lg text-gray-800 mb-4">✨ Restaurantvorschlag des Tages</h4>
-                        <button class="generate-restaurant-suggestion bg-[#C89F93] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-colors shadow-md" data-region="${section.title.split(':')[0]}">
-                            Vorschlag generieren
-                        </button>
-                        <p class="restaurant-suggestion-output text-gray-700 mt-4 text-sm"></p>
-                    </div>
-                `;
-            }
-            tabContentsHtml += `</div></div>`;
-        });
-
-        sectionElement.innerHTML = `
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-2">${section.title}</h2>
-                <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">${section.intro}</p>
-                ${generateCardsHtmlFromSection(section)}
-                ${generateMapHtmlFromSection(section)}
-                ${tabsHtml}
-                ${tabContentsHtml}
-            </div>
-        `;
-        contentContainer.appendChild(sectionElement);
-    });
-
-    // Tab functionality
-    const tabButtons = document.querySelectorAll('.tab-button');
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const parent = button.closest('.container');
-            parent.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            parent.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
-            document.getElementById(button.dataset.target).classList.remove('hidden');
-        });
-    });
-
-    // Tab functionality for days overview (delegated event handling)
+    // Tab functionality für Tagesübersicht
     document.addEventListener('click', (event) => {
         if (event.target.classList.contains('tab-button')) {
             const button = event.target;
-            const parent = button.closest('div'); // Find the closest parent div
-            if (parent) {
-                parent.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                // Find all tab-content elements within the same parent
-                const tabContents = parent.querySelectorAll('.tab-content');
-                tabContents.forEach(content => content.classList.add('hidden'));
-                
-                const targetId = button.dataset.target;
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.classList.remove('hidden');
+            const targetId = button.dataset.target;
+            
+            // Finde die Tab-Gruppe basierend auf der target-ID
+            const targetIdParts = targetId.split('-');
+            const regionId = targetIdParts.slice(0, -2).join('-'); // z.B. "kapstadt" aus "kapstadt-days-0"
+            
+            // Finde alle Tab-Buttons in derselben Region
+            const regionButtons = document.querySelectorAll(`[data-target^="${regionId}-days-"]`);
+            regionButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Verstecke den Standard-Zustand
+            const defaultElement = document.getElementById(`${regionId}-default`);
+            if (defaultElement) {
+                defaultElement.classList.add('hidden');
+            }
+            
+            // Verstecke alle Tab-Contents in derselben Region
+            for (let i = 0; i < 10; i++) { // Max 10 Tabs pro Region
+                const contentElement = document.getElementById(`${regionId}-days-${i}`);
+                if (contentElement) {
+                    contentElement.classList.add('hidden');
                 }
+            }
+            
+            // Zeige den gewählten Tab-Content
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.classList.remove('hidden');
             }
         }
     });
@@ -727,7 +738,7 @@ document.addEventListener('DOMContentLoaded', function() {
     new Chart(budgetCtx, {
         type: 'doughnut',
         data: {
-            labels: ['Hotels (€4800)', 'Essen (€2400)', 'Mietwagen & Benzin (€800)', 'Aktivitäten (€500)'],
+            labels: ['Hotels (€4800)', 'Essen (€2400)', 'Mietwagen & Benzin (€800)', 'Aktivitäten (€1000)'],
             datasets: [{
                 data: [4800, 2400, 800, 500],
                 backgroundColor: ['#C89F93', '#E3CFC9', '#A9A9A9', '#F4EAE6'],
@@ -822,10 +833,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         let current = '';
         const allSections = document.querySelectorAll('main section[id]');
+        const header = document.getElementById('header');
+        const navLinks = document.querySelectorAll('.nav-link');
 
         allSections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - header.offsetHeight - 20) {
+            if (pageYOffset >= sectionTop - (header ? header.offsetHeight : 0) - 20) {
                 current = section.getAttribute('id');
             }
         });
@@ -857,7 +870,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'Weinlande': { x: width * 0.25, y: height * 0.65, label: 'Weinlande' },
             'Hermanus': { x: width * 0.4, y: height * 0.8, label: 'Hermanus' },
             'Garden Route': { x: width * 0.65, y: height * 0.5, label: 'Garden Route' }, // Representing Knysna/Plett area
-            'Addo & Abreise': { x: width * 0.85, y: height * 0.4, label: 'Addo & PE' }
+            'Addo': { x: width * 0.85, y: height * 0.4, label: 'Addo' }
         };
 
         // Draw simplified coastline (abstract) - a bit more detailed
@@ -907,7 +920,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Draw label with offset
             let labelY = point.y - (Math.max(15, width * 0.035)); 
-            if (key === 'Addo & Abreise' || key === 'Garden Route') { // Adjust label for certain points
+            if (key === 'Addo' || key === 'Garden Route') { // Adjust label for certain points
                 labelY = point.y + (Math.max(15, width * 0.035));
             }
             ctx.fillText(point.label, point.x, labelY);
@@ -920,15 +933,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Google Maps Integration
     const openGoogleMapsButton = document.getElementById('openGoogleMaps');
-    openGoogleMapsButton.addEventListener('click', () => {
-        const origin = tripData.route[0].coords;
-        const destination = 'Port Elizabeth, South Africa'; // Final destination
-        
-        const waypoints = tripData.route.slice(1, -1).map(stop => stop.coords).join('|');
+    if (openGoogleMapsButton) {
+        openGoogleMapsButton.addEventListener('click', () => {
+            const origin = tripData.route[0].coords;
+            const destination = 'Port Elizabeth, South Africa'; // Final destination
+            
+            const waypoints = tripData.route.slice(1, -1).map(stop => stop.coords).join('|');
 
-        const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
-        window.open(googleMapsUrl, '_blank');
-    });
+            const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
+            window.open(googleMapsUrl, '_blank');
+        });
+    }
 
 
     // LLM Integration for Restaurant Suggestions
@@ -1054,7 +1069,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 id: 'addo',
-                name: 'Addo & Abreise',
+                name: 'Addo',
                 icon: '🐘',
                 days: '29.-30. Nov.',
                 description: 'Safari im Addo Elephant Park und Abschied von Südafrika',
@@ -1125,13 +1140,13 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 region: 'Garden Route',
                 icon: '🌿',
-                days: [7, 8, 9, 10, 11, 12, 13, 14, 15],
+                days: [7, 8, 9, 10, 11, 12, 13],
                 sectionId: 'garden-route'
             },
             {
-                region: 'Addo & Abreise',
+                region: 'Addo',
                 icon: '🐘',
-                days: [16, 17],
+                days: [14, 15, 16, 17],
                 sectionId: 'addo'
             }
         ];
@@ -1144,12 +1159,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // Erstelle Regions-Header mit Tabs
             const regionHeader = document.createElement('div');
             regionHeader.className = 'mb-8';
+            regionHeader.id = `${regionData.sectionId}-section`;
             
             // Erstelle Tabs HTML
             let tabsHtml = '<div class="flex justify-center space-x-2 sm:space-x-4 mb-8 border-b pb-2">';
             section.tabs.forEach((tab, index) => {
+                // Kein Tab ist standardmäßig aktiv
                 tabsHtml += `
-                    <button class="tab-button text-sm sm:text-base px-3 py-2 sm:px-4 rounded-t-lg border-b-2 border-transparent transition-colors ${index === 0 ? 'active' : ''}" data-target="${regionData.sectionId}-days-${index}">
+                    <button class="tab-button text-sm sm:text-base px-3 py-2 sm:px-4 rounded-t-lg border-b-2 border-transparent transition-colors" data-target="${regionData.sectionId}-days-${index}">
                         <span class="hidden sm:inline-block mr-2">${tab.icon}</span> ${tab.name}
                     </button>`;
             });
@@ -1158,7 +1175,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Erstelle Tab Contents HTML
             let tabContentsHtml = '';
             section.tabs.forEach((tab, index) => {
-                tabContentsHtml += `<div id="${regionData.sectionId}-days-${index}" class="tab-content ${index > 0 ? 'hidden' : ''}">
+                // Alle Tab-Inhalte sind standardmäßig versteckt
+                tabContentsHtml += `<div id="${regionData.sectionId}-days-${index}" class="tab-content hidden">
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">`;
                 tab.content.forEach(item => {
                     // Check if item.url exists and wrap title in <a> tag
@@ -1166,10 +1184,17 @@ document.addEventListener('DOMContentLoaded', function() {
                         ? `<a href="${item.url}" target="_blank" class="hover:underline text-[#C89F93]">${item.title}</a>`
                         : item.title;
 
+                    // Check if this is a Tipp item
+                    const isTipp = item.description.startsWith('Tipp:') || item.title.startsWith('Tipp:');
+                    const cardClass = isTipp ? 'section-card rounded-lg p-6 shadow-sm tipp-card' : 'section-card rounded-lg p-6 shadow-sm';
+                    const formattedDescription = item.description.startsWith('Tipp:') ? 
+                        item.description.replace('Tipp:', '<span class="tipp-badge">Tipp</span>') : 
+                        item.description;
+
                     tabContentsHtml += `
-                        <div class="section-card rounded-lg p-6 shadow-sm">
+                        <div class="${cardClass}">
                             <h4 class="font-bold text-lg text-gray-800">${titleHtml}</h4>
-                            <p class="text-gray-600 mt-1 text-sm">${item.description}</p>
+                            <p class="text-gray-600 mt-1 text-sm">${formattedDescription}</p>
                         </div>`;
                 });
                 // Add LLM restaurant suggestion button only to "Essen & Wein" tab
@@ -1194,6 +1219,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto">${introText}</p>
                 </div>
                 ${tabsHtml}
+                <div id="${regionData.sectionId}-default" class="tab-default text-center py-12">
+                </div>
                 ${tabContentsHtml}
             `;
             daysContainer.appendChild(regionHeader);
@@ -1207,17 +1234,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 daySection.id = `day-${dayNumber}`;
                 daySection.className = 'py-8 bg-white rounded-xl shadow-sm mb-6';
 
-                const cardsHtml = dayData.cards.map(card => `
-                    <div class="bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition-shadow duration-300">
-                        <img src="${card.image}" alt="${card.title}" class="w-full h-48 object-cover rounded-lg mb-4" />
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-xl font-bold text-gray-800">${card.title}</h3>
-                            <span class="bg-[#C89F93] text-white px-3 py-1 rounded-full text-xs font-semibold">${dayData.region}</span>
-                        </div>
-                        <div class="text-sm text-gray-500 mb-2">${card.meta}</div>
-                        <p class="text-gray-700 flex-grow">${card.text}</p>
-                    </div>
-                `).join('');
+                const cardsHtml = dayData.cards.map(card => {
+                    // Check if generateCardHtml function exists (from HTML), otherwise use fallback
+                    if (typeof generateCardHtml === 'function') {
+                        return generateCardHtml(card, dayData.region);
+                    } else {
+                        // Fallback für den Fall, dass die HTML-Funktion nicht verfügbar ist
+                        const isTipp = card.text.startsWith('Tipp:') || card.title.startsWith('Tipp:');
+                        const cardClass = isTipp ? 'bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition-all duration-300 tipp-card' : 'bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition-shadow duration-300';
+                        const formattedText = card.text.startsWith('Tipp:') ? card.text.replace('Tipp:', '<span class="tipp-badge">Tipp</span>') : card.text;
+                        
+                        return `
+                            <div class="${cardClass}">
+                                <img src="${card.image}" alt="${card.title}" class="w-full h-48 object-cover rounded-lg mb-4" />
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="text-xl font-bold text-gray-800">${card.title}</h3>
+                                    <span class="bg-[#C89F93] text-white px-3 py-1 rounded-full text-xs font-semibold">${dayData.region}</span>
+                                </div>
+                                <div class="text-sm text-gray-500 mb-2">${card.meta}</div>
+                                <p class="text-gray-700 flex-grow">${formattedText}</p>
+                            </div>
+                        `;
+                    }
+                }).join('');
 
                 // Bestimme die Grid-Klassen basierend auf der Anzahl der Cards
                 let gridClasses = 'grid gap-6';

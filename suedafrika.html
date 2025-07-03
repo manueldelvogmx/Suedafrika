@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roadtrip: Kapstadt nach Port Elizabeth</title>
+    <title>Kapstadt nach Port Elizabeth</title>
           <script src="https://cdn.tailwindcss.com"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src="tripData.js"></script>
@@ -71,6 +71,9 @@
             height: 300px;
             max-height: 400px;
         }
+        a {
+            text-decoration: underline;
+        }
         @media (min-width: 768px) {
             .chart-container {
                 height: 350px;
@@ -81,6 +84,32 @@
                 height: 400px;
             }
         }
+        
+        /* Tipp-Cards Styling */
+        .tipp-card {
+            border-left: 4px solid #2563eb;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
+        }
+        .tipp-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
+            transform: translateY(-2px);
+        }
+        .tipp-card .tipp-badge {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .tipp-card .tipp-badge::before {
+            content: "💡";
+            font-size: 0.875rem;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -90,23 +119,28 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-[#C89F93]">Südafrika Roadtrip</a>
             <div class="hidden md:flex space-x-6 lg:space-x-8 items-center text-sm font-medium">
-                <a href="#kapstadt" class="nav-link">Kapstadt</a>
-                <a href="#weinlande" class="nav-link">Weinlande</a>
-                <a href="#hermanus" class="nav-link">Hermanus</a>
-                <a href="#garden-route" class="nav-link">Garden Route</a>
-                <a href="#addo" class="nav-link">Addo & Abreise</a>
+                <a href="#days-overview" class="nav-link">Tagesübersicht</a>
+                <a href="#route-map" class="nav-link">Routenkarte</a>
+                <a href="#kapstadt-section" class="nav-link">Kapstadt</a>
+                <a href="#weinlande-section" class="nav-link">Weinlande</a>
+                <a href="#hermanus-section" class="nav-link">Hermanus</a>
+                <a href="#garden-route-section" class="nav-link">Garden Route</a>
+                <a href="#addo-section" class="nav-link">Addo</a>
             </div>
-            <a href="#budget" class="hidden md:inline-block bg-[#C89F93] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-colors">Budget-Analyse</a>
+           
              <button id="mobile-menu-button" class="md:hidden p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-white/90 backdrop-blur-md">
-            <a href="#kapstadt" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Kapstadt</a>
-            <a href="#weinlande" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Weinlande</a>
-            <a href="#hermanus" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Hermanus</a>
-            <a href="#garden-route" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Garden Route</a>
-            <a href="#addo" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Addo & Abreise</a>
+            <a href="#days-overview" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Tagesübersicht</a>
+            <a href="#route-map" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Routenkarte</a>
+            <a href="#kapstadt-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Kapstadt</a>
+            <a href="#weinlande-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Weinlande</a>
+            <a href="#hermanus-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Hermanus</a>
+            <a href="#garden-route-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Garden Route</a>
+            <a href="#addo-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Addo</a>
+            <a href="#budget" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Budget</a>
         </div>
     </header>
 
@@ -191,10 +225,7 @@
         <!-- Days Overview Section -->
         <section id="days-overview" class="py-16 bg-gray-50">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-2">Tagesübersicht</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                    Hier finden wir alle Aktivitäten und Erlebnisse nach Tagen geordnet. Jeder Tag zeigt die geplanten Aktivitäten mit Details und Bildern.
-                </p>
+               
                 <div id="days-sections">
                     <!-- Tagessektionen werden hier durch JavaScript generiert -->
                 </div>
@@ -204,8 +235,8 @@
         <!-- Budget Section -->
         <section id="budget" class="py-16">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-2">Interaktive Budget-Analyse</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Diese Reise ist auf Komfort und Genuss ausgelegt. Die Diagramme zeigen die geschätzte Verteilung der Kosten und wie sich die Hotelpreise pro Region unterscheiden, basierend auf einem Tagesbudget von 150€ für Restaurants und 300€ für Hotels.</p>
+                <h2 class="text-3xl font-bold text-center mb-2">Budget</h2>
+                
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <h3 class="text-xl font-semibold text-center mb-4">Geschätzte Budgetverteilung</h3>
@@ -235,6 +266,42 @@
         </div>
     </footer>
 
+    <script>
+        // JavaScript wird hier aus tripData.js geladen und ergänzt um Tipp-Card Styling
+        
+        // Erweitere die Card-Generierung um Tipp-Card Detection
+        function isTippCard(cardText, cardTitle, cardDescription) {
+            return cardText.startsWith('Tipp:') || 
+                   cardTitle.startsWith('Tipp:') || 
+                   (cardDescription && cardDescription.startsWith('Tipp:'));
+        }
+        
+        function formatTippText(text) {
+            if (text.startsWith('Tipp:')) {
+                return text.replace('Tipp:', '<span class="tipp-badge">Tipp</span>');
+            }
+            return text;
+        }
+        
+        // Diese Funktion wird von tripData.js aufgerufen und ersetzt die dortige Card-HTML-Generierung
+        function generateCardHtml(card, region) {
+            const isTipp = isTippCard(card.text, card.title, card.description);
+            const cardClass = isTipp ? 'bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition-all duration-300 tipp-card' : 'bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition-shadow duration-300';
+            const formattedText = formatTippText(card.text);
+            
+            return `
+                <div class="${cardClass}">
+                    <img src="${card.image}" alt="${card.title}" class="w-full h-48 object-cover rounded-lg mb-4" />
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">${card.title}</h3>
+                        <span class="bg-[#C89F93] text-white px-3 py-1 rounded-full text-xs font-semibold">${region}</span>
+                    </div>
+                    <div class="text-sm text-gray-500 mb-2">${card.meta}</div>
+                    <p class="text-gray-700 flex-grow">${formattedText}</p>
+                </div>
+            `;
+        }
+    </script>
 
 </body>
 </html>
