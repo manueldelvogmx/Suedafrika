@@ -29,6 +29,12 @@ const tripData = {
                     text: "Das absolute Must-Do in Kapstadt! Wir nehmen die Seilbahn hoch zum legendären Tafelberg und werden mit einem grandiosen 360°-Rundumblick über Stadt, Küste und Berge belohnt. Tickets buchen wir vorab online – dieser Ausblick ist jeden Cent wert!"
                 },
                 {
+                    title: "Hop-On-Hop-Off",
+                    image: "https://www.hop-on-hop-off-bus.de/wp-content/uploads/2020/12/kapstadt-city-sightseeing.avif",
+                    meta: "Rote Linie 90 Minuten",
+                    text: "Die rote Linie ist die wichtigste Route. Sie führt durch große Teile der Innenstadt sowie zum Tafelberg, nach Camps Bay, Seapoint, Green Point und zur V&A Waterfront. <a href='https://www.hop-on-hop-off-bus.de/kapstadt-city-sightseeing/' target='_blank' class='underline'>Kombiticket Tafelberg</a>"
+                },
+                {
                     title: "Kirstenbosch Gärten",
                     image: "https://bridgesandballoons.com/Images/2015/11/Kirstenbosch-Botanical-Garden1-974x301@2x.jpg",
                     meta: "15 Uhr Anfahrt: 30 min · Aufenthalt: 90 min",
@@ -443,6 +449,7 @@ const tripData = {
                         { title: 'The Glen Boutique Hotel & Spa', description: '9.4/10 | Sea Point | Ab ca. 170€ | Boutique-Hotel mit exzellentem Spa.', url: 'https://www.expedia.de/The-Glen-Boutique-Hotel-Spa-Kapstadt.h6734193.Hotel-Details' },
                         { title: 'Sunsquare Cape Town City Bowl', description: '8.6/10 | City Centre | Ab ca. 125€ | Gutes Preis-Leistungs-Verhältnis und zentral gelegen.', url: 'https://www.expedia.de/Sunsquare-Cape-Town-City-Bowl-Kapstadt.h16259062.Hotel-Details' },
                         { title: 'Protea Hotel Waterfront', description: '7.9/10 | V&A Waterfront | Ab ca. 130€ | Direkt an der belebten Waterfront.', url: 'https://www.marriott.com/en-us/hotels/cptbr-protea-hotel-cape-town-waterfront-breakwater-lodge/overview/' },
+                        { title: 'Breakwater Lodge', description: 'Tipp: 8.2/10 | V&A Waterfront | 823€ | Historisches 3-Sterne Hotel am Wasser mit einzigartigem Charme.', url: 'https://www.booking.com/hotel/za/breakwater-lodge.de.html?label=v3.cmcohng3r6xuh08783wf67hhw&aid=1607597&ucfs=1&checkin=2025-11-14&checkout=2025-11-18&dest_id=-1217214&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204&srpvid=252c351c506403e5&srepoch=1751614525&matching_block_id=1516310_369394327_0_42_0&atlas_src=sr_iw_title' },
                     ]
                 }
             ]
@@ -704,16 +711,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetIdParts = targetId.split('-');
             const regionId = targetIdParts.slice(0, -2).join('-'); // z.B. "kapstadt" aus "kapstadt-days-0"
             
+            // Prüfe, ob der Button bereits aktiv ist
+            const isCurrentlyActive = button.classList.contains('active');
+            
             // Finde alle Tab-Buttons in derselben Region
             const regionButtons = document.querySelectorAll(`[data-target^="${regionId}-days-"]`);
             regionButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            
-            // Verstecke den Standard-Zustand
-            const defaultElement = document.getElementById(`${regionId}-default`);
-            if (defaultElement) {
-                defaultElement.classList.add('hidden');
-            }
             
             // Verstecke alle Tab-Contents in derselben Region
             for (let i = 0; i < 10; i++) { // Max 10 Tabs pro Region
@@ -723,10 +726,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
-            // Zeige den gewählten Tab-Content
+            const defaultElement = document.getElementById(`${regionId}-default`);
             const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.classList.remove('hidden');
+            
+            if (isCurrentlyActive) {
+                // Wenn der Tab bereits aktiv war, zeige den leeren Zustand
+                if (defaultElement) {
+                    defaultElement.classList.remove('hidden');
+                }
+            } else {
+                // Wenn der Tab nicht aktiv war, aktiviere ihn und zeige den Content
+                button.classList.add('active');
+                
+                // Verstecke den Standard-Zustand
+                if (defaultElement) {
+                    defaultElement.classList.add('hidden');
+                }
+                
+                // Zeige den gewählten Tab-Content
+                if (targetElement) {
+                    targetElement.classList.remove('hidden');
+                }
             }
         }
     });
