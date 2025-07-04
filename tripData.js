@@ -2,413 +2,13 @@
 // Ausgelagert für bessere Code-Organisation
 
 const tripData = {
-    route: [
-        { id: 'kapstadt', name: 'Kapstadt', days: '14.-16. Nov.', distance: 'Start (Hotel)', coords: '-33.9249,18.4241' },
-        { id: 'weinlande', name: 'Weinlande', days: '17.-19. Nov.', distance: '54 km (Hotel)', coords: '-33.9358,18.8680' },
-        { id: 'hermanus', name: 'Hermanus', days: '20.-21. Nov.', distance: '94 km (Hotel)', coords: '-34.4079,19.2346' },
-        { id: 'garden-route', name: 'Garden Route', days: '20.-28. Nov.', distance: '362 km (Hotel)', coords: '-34.0350,23.0465' },
-        { id: 'addo', name: 'Addo', days: '29.-30. Nov.', distance: '306 km (Hotel)', coords: '-33.4704,25.7530' },
-    ],
     // Neue Struktur: Cards nach Tagen organisiert
-    tripByDays: {
-        1: {
-            date: '14. November 2025',
-            dayName: 'Freitag',
-            region: 'Kapstadt',
-            cards: [
-                {
-                    title: "Ankunft in Cape Town",
-                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEoDU8-itSVFkznLRu0fPhGCuT8N6GCQ_FEw&s",
-                    meta: "Ankunft und Anreise zum Hotel in Green Point",
-                    text: "Wir starten am Donnerstag um 22 Uhr in Frankfurt und landen am Freitag um 11 Uhr in Kapstadt, dann geht es zu unserem zauberhaften Hotel. Wir verbringen 3 Nächte in Kapstadt."
-                },
-                {
-                    title: "Tafelberg",
-                    image: "https://www.geh-mal-reisen.de/wp-content/uploads/kapstadt-sehenswuerdigkeiten-highlights-tafelberg-aussicht.jpg",
-                    meta: "13 Uhr Anfahrt: 30 min · Aufenthalt: 90 min",
-                    text: "Das absolute Must-Do in Kapstadt! Wir nehmen die Seilbahn hoch zum legendären Tafelberg und werden mit einem grandiosen 360°-Rundumblick über Stadt, Küste und Berge belohnt. Tickets buchen wir vorab online – dieser Ausblick ist jeden Cent wert!"
-                },
-                {
-                    title: "Hop-On-Hop-Off",
-                    image: "https://www.hop-on-hop-off-bus.de/wp-content/uploads/2020/12/kapstadt-city-sightseeing.avif",
-                    meta: "Rote Linie 90 Minuten",
-                    text: "Die rote Linie ist die wichtigste Route. Sie führt durch große Teile der Innenstadt sowie zum Tafelberg, nach Camps Bay, Seapoint, Green Point und zur V&A Waterfront. <a href='https://www.hop-on-hop-off-bus.de/kapstadt-city-sightseeing/' target='_blank' class='underline'>Kombiticket Tafelberg</a>"
-                },
-                {
-                    title: "Kirstenbosch Gärten",
-                    image: "https://bridgesandballoons.com/Images/2015/11/Kirstenbosch-Botanical-Garden1-974x301@2x.jpg",
-                    meta: "15 Uhr Anfahrt: 30 min · Aufenthalt: 90 min",
-                    text: "Natur pur am Fuße des Tafelbergs! Wir wandeln durch einen der schönsten botanischen Gärten der Welt, überqueren die spektakuläre Baumwipfel-Hängebrücke und entdecken die einzigartige Fynbos-Vegetation. Am besten morgens – dann ist es angenehm kühl und die Fotomotive sind perfekt!"
-                },
-                {
-                    title: "Abends V&A Waterfront",
-                    image: "https://www.waterfront.co.za/wp-content/uploads/2023/04/THE_VA.png",
-                    meta: "18 Uhr Anfahrt: 15 min · Aufenthalt: den Abend genießen",
-                    text: "Hier schlägt das Herz von Kapstadt! Wir schlendern durch das lebhafte Hafenviertel, entdecken coole Designshops, probieren uns durch den Food Market und genießen den Hafenblick. Perfekt für entspannte Abende mit südafrikanischem Flair."
-                },
-                {
-                    title: "Tandem-Gleitschirm-Sprung",
-                    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/e8/89/81/an-exceptional-day-for.jpg?w=500&h=500&s=1",
-                    meta: "Vom Lions Head oder Signal Hill | Optional",
-                    text: "Tipp: Spektakulärer Tandem-Gleitschirm-Sprung mit atemberaubenden Ausblicken über Kapstadt und die Küste! Ein unvergessliches Erlebnis für Abenteuerlustige."
-                }
-            ]
-        },
-        2: {
-            date: '15. November 2025',
-            dayName: 'Samstag',
-            region: 'Kapstadt',
-            cards: [
-                {
-                    title: "Kap Halbinsel",
-                    image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrBQmBHa2qsjVQXdpiMKVx9BaRWAEyiom46rpEznyAenmPhqKRWPXw3lt3k-1Y_4Uvd7saqbcI70yaetQwrrFiy1zpTZgM7PXXSR6uZdJtZO8vis-PfRAGPw3kpNjXHvvvOrnU=s1360-w1360-h1020",
-                    meta: "Tagesausflug: 150km Rundfahrt · Start: vormittags",
-                    text: "Der ultimative Tagesausflug! Wir starten mit Kaffee in Muizenberg, stoppen bei Kalky's in Kalk Bay für traditionellen Fisch, besuchen die Pinguine am Boulders Beach und das berühmte Kap. Der Höhepunkt: Rückfahrt über den spektakulären Chapman's Peak Drive im goldenen Sonnenuntergangslicht – die Aussicht ist der Oberhammer!"
-                },
-                {
-                    title: "Robben Island",
-                    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTeP3n6nvedEAtGY_bRCcEgvkiQGgNgD7tJ4ysVcv78gi_YbIUhQZTzjatnNol8SaODGdcfYGJU_mcXCbWjIjcGJpL7qDDpw0ZEJm4LrQ",
-                    meta: "Dauer: ca. 3–4 h inkl. Boot (falls noch Zeit ist)",
-                    text: "Eine bewegende Zeitreise in die Geschichte Südafrikas! Wir starten am Nelson Mandela Gateway und nehmen das Boot zur berühmten Gefängnisinsel. Die Tour wird oft von ehemaligen Häftlingen geführt – absolut beeindruckend und emotional. Unbedingt vorab reservieren!"
-                },
-                {
-                    title: "Bay Harbor Market (Hout Bay)",
-                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&auto=format&fit=crop",
-                    meta: "Fr-So nachmittags | Optional",
-                    text: "Tipp: Markt mit Live-Musik, leckerem Essen und Souvenirs. Perfekt um mit Einheimischen ins Gespräch zu kommen!"
-                }
-            ]
-        },
-        3: {
-            date: '16. November 2025',
-            dayName: 'Sonntag',
-            region: 'Weinlande',
-            cards: [
-                {
-                    title: "Franschhoek Wine Tram",
-                    image: "https://reise-rosinen.com/wp-content/uploads/2019/10/winetram-WL-A-2.jpg",
-                    meta: "Start: 10:00 Uhr",
-                    text: "Das perfekte Wein-Abenteuer! Wir hüpfen entspannt von Weingut zu Weingut mit der berühmten Wine Tram durch die traumhaften Weinlande. Keine Sorgen ums Fahren – einfach genießen und verkosten! Tickets buchen wir vorab online, denn das ist der Renner bei allen Weinliebhabern."
-                },
-                {
-                    title: "Stellenbosch Wanderung",
-                    image: "https://www.roxannereid.co.za/uploads/3/7/7/8/3778676/roxannereid-1l3a0009-2-20190917-2_orig.jpg",
-                    meta: "Nachmittags Anfahrt: 45 min · Aufenthalt: 2-3 h",
-                    text: "Zeitreise durch Südafrikas Weingeschichte! Wir flanieren durch die von majestätischen Eichen gesäumten Straßen der zweitältesten Stadt des Landes. Historische kapholländische Architektur, gemütliche Straßencafés und spannende Kunstgalerien warten darauf, von uns entdeckt zu werden."
-                }
-            ]
-        },
-        4: {
-            date: '17. November 2025',
-            dayName: 'Montag',
-            region: 'Weinlande',
-            cards: [
-                {
-                    title: "Babylonstoren",
-                    image: "https://wetraveltheworld.de/wp-content/uploads/2017/01/bayblonstoren_erfahrungen_suedafrika.jpg",
-                    meta: "Anfahrt: 1 h · Aufenthalt: halber Tag",
-                    text: "Ein Paradies für alle Sinne! Wir tauchen ein in eines der schönsten Weingüter der Welt mit seinem legendären Garten. Im Restaurant Babel verwöhnen wir unseren Gaumen mit echter Farm-to-Table-Küche. Tischreservierung ist Pflicht – aber es lohnt sich! <a href='https://babylonstoren.com/tasting-cellar' target='_blank'>hier buchen</a>"
-                },
-                {
-                    title: "Delaire Graff Estate",
-                    image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/37654510.jpg?k=16687b3fe1efed0fef6f86010fb6e5b457e68cf73af0b75e70215b68867ce776&o=&hp=1",
-                    meta: "Anfahrt: 25 min · Aufenthalt: 2-3 h",
-                    text: "Luxus pur mit Aussicht! Wir gönnen uns das absolute Premium-Erlebnis mit atemberaubenden Panoramablicken über das Tal, Weltklasse-Weinen und einer beeindruckenden Kunstsammlung. Die exklusiven Verkostungen sind jeden Cent wert – wir werden diesen Ort nie vergessen!"
-                }
-            ]
-        },
-        5: {
-            date: '18. November 2025',
-            dayName: 'Dienstag',
-            region: 'Hermanus',
-            cards: [
-                {
-                    title: "Reise nach Hermanus",
-                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                    meta: "Anfahrt: ca. 1,5 Stunden",
-                    text: "Wir verlassen die Weinlande und fahren zur Walbeobachtung nach Hermanus. Wir bleiben 2 Nächte in Hermanus."
-                },
-                {
-                    title: "Walbeobachtung vom Ufer",
-                    image: "https://freedomdestinations.co.uk/wp-content/uploads/Hermanus-Whales.jpg",
-                    meta: "Beste Zeit: 11-15 Uhr",
-                    text: "Das absolute Highlight! Wir beobachten majestätische Südkaper direkt vom Land aus – einer der besten Orte weltweit dafür. Wenn der Whale Crier sein Horn bläst, wissen wir: Showtime! Grotto Beach und der Cliff Path bieten uns die perfekten Aussichtsplätze für dieses unvergessliche Naturschauspiel."
-                },
-                {
-                    title: "Cliff Path Wanderung",
-                    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/b3/9e/41/hermanus-cliff-path-sudafrika.jpg?w=900&h=500&s=1",
-                    meta: "Dauer: 2-4 h · Schwierigkeit: leicht-mittel",
-                    text: "Wandern mit Wow-Faktor! Wir erobern den spektakulären 12 km langen Küstenpfad mit atemberaubenden Ausblicken und entdecken dabei die einzigartige Fynbos-Vegetation. Dank mehrerer Einstiegspunkte können wir flexibel planen. Früh starten lohnt sich – dann ist der Wind noch sanft!"
-                }
-            ]
-        },
-        6: {
-            date: '19. November 2025',
-            dayName: 'Mittwoch',
-            region: 'Hermanus',
-            cards: [
-                {
-                    title: "Hemel-en-Aarde Tal",
-                    image: "https://www.wine-searcher.com/images/region/hemel-en-aarde-valley-7121-1-1.jpg",
-                    meta: "Anfahrt: 15 min · Aufenthalt: halber Tag",
-                    text: "Willkommen im 'Himmel auf Erden'! Wir schwelgen in Weltklasse-Weinen in diesem malerischen Tal. Die Pinot Noirs und Chardonnays hier sind absolute Spitzenklasse. Creation Wines und Hamilton Russell sind unsere absoluten Favoriten – hier entstehen wahre Geschmackswunder!"
-                },
-                {
-                    title: "Grotto Beach",
-                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Grotto_Beach_-_Hermanus.jpg/1200px-Grotto_Beach_-_Hermanus.jpg",
-                    meta: "Anfahrt: 10 min · Aufenthalt: beliebig",
-                    text: "Traumstrand mit Blaue-Flagge-Garantie! Wir genießen 18 km makellosen weißen Sandstrand – perfekt zum Schwimmen, Entspannen und natürlich für die Walbeobachtung. Mit Restaurants und Parkplätzen direkt vor Ort können wir hier problemlos den ganzen Tag verbringen."
-                },
-                {
-                    title: "Stanford - Verstecktes Juwel",
-                    image: "https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/blteb0398644c893caf/61c17d31c52c5b292ce23dc9/US_Stanford_ZA_Header.jpg",
-                    meta: "Zwischen Hermanus und Gansbaai | Tagesausflug",
-                    text: "Tipp: Kleiner Ort abseits der Tourismuspfade. Superschöne restaurierte Straßen und Häuser mit kleinen Restaurants und Cafés. Eine Flussfahrt auf dem River zum Sonnenuntergang ist ganz besonders."
-                }
-            ]
-        },
-        7: {
-            date: '20. November 2025',
-            dayName: 'Donnerstag',
-            region: 'Garden Route',
-            cards: [
-                {
-                    title: "Weiterreise nach Arniston",
-                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                    meta: "Anfahrt: ca. 2:15 Stunden (ca. 160 km)",
-                    text: "Wir verlassen Hermanus und fahren entlang der Küste und durch die Overberg-Region nach Arniston. Eine Zeitreise in ein authentisches Fischerdorf! Arniston (auch Waenhuiskrans) bezaubert mit seinem weißen Sandstrand, dem historischen Leuchtturm und traditionellen Fischerbooten. Perfekt für einen ruhigen Zwischenstopp zwischen Hermanus und Oudtshoorn."
-                },
-                {
-                    title: "Gansbaai - Haikäfigtauchen",
-                    image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/58/89.jpg",
-                    meta: "Start der Garden Route | Tagesausflug",
-                    text: "Adrenalin pur! In Gansbaai erleben wir das berühmte Haikäfigtauchen und beobachten Weiße Haie hautnah. Ein unvergessliches Abenteuer für Mutige! Die Garden Route beginnt hier mit einem echten Highlight."
-                },
-                {
-                    title: "Gansbaai - Dyer Island",
-                    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
-                    meta: "Bootstour zur Insel der Seelöwen",
-                    text: "Wir besuchen die berühmte Dyer Island, auch bekannt als 'Shark Alley'. Hier können wir Seelöwen, Pinguine und mit etwas Glück auch Weiße Haie beobachten. Eine einzigartige Meereswildnis!"
-                }
-            ]
-        },
-        8: {
-            date: '21. November 2025',
-            dayName: 'Freitag',
-            region: 'Garden Route',
-            cards: [
-                {
-                    title: "Kap Agulhas - Südspitze Afrikas",
-                    image: "https://img.welt.de/img/reise/Fern/mobile205570597/1940310137-ci16x9-w1200/Africa-South-Africa-Western-Cape-Cape-Agulhas-shipwreck-2.jpg",
-                    meta: "Von Arniston aus | Tagesausflug",
-                    text: "Hier treffen Atlantik und Indischer Ozean aufeinander! Wir besuchen den südlichsten Punkt Afrikas und genießen den Blick vom Leuchtturm."
-                },
-                {
-                    title: "Die Otter Beach Arniston",
-                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6m58jbQZCzyxGfhVoj6RNbVcgPFrhnTx3ZgCrfBdaPlijTt8EWvyEFhZDMgArVFHIXK8RtAxfHMD1LLXTfERFa9RWrY2QVSptEVYj-iPQpMsTWOoNEfwFh4EKtNQOspxlB5ET4OELDBM/s5184/20210308_091204200_iOS.jpg",
-                    meta: "Direkt bei Arniston",
-                    text: "Wunderschöner, ruhiger Strandabschnitt – ideal zum Baden, Spazieren und Entspannen."
-                }
-            ]
-        },
-        9: {
-            date: '22. November 2025',
-            dayName: 'Samstag',
-            region: 'Garden Route',
-            cards: [
-                {
-                    title: "Reise nach Oudtshoorn",
-                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                    meta: "Anfahrt: ca. 4 Stunden (ca. 300 km)",
-                    text: "Von Arniston geht es ins Landesinnere nach Oudtshoorn, der Straußenhauptstadt Südafrikas in der Kleinen Karoo."
-                },
-                {
-                    title: "Witsand – Mündung des Breede River",
-                    image: "https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00367-021-00686-8/MediaObjects/367_2021_686_Fig2_HTML.png",
-                    meta: "Zwischenstopp auf dem Weg nach Oudtshoorn",
-                    text: "Witsand ist bekannt für seine endlosen Sandstrände und die beeindruckende Mündung des Breede River. Perfekt für einen Spaziergang am Wasser oder eine kleine Pause mit Blick auf das Meer."
-                },
-                {
-                    title: "Mossel Bay – Historischer Hafen & Strände",
-                    image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSJnrVv-Rf6d55rPOqz1DmrmPOs_0XP31f-RVDpW4o4C1eG6mqCypRRm3wD5g9u7NbfxZIcsL-mMFQ9kVQr-vasMgilulv7wNHPVydtxQ",
-                    meta: "Zwischenstopp auf dem Weg nach Oudtshoorn",
-                    text: "Mossel Bay bietet eine charmante Mischung aus Geschichte, Stränden und leckerem Seafood. Ein Spaziergang am Hafen oder ein Besuch des Dias Museums lohnen sich!"
-                },
-                {
-                    title: "Elim - Fahrt ans Ende der Welt",
-                    image: "https://capeagulhas.gov.za/wp-content/uploads/2022/10/Elim.jpg",
-                    meta: "Hinterland der Wal-Küste | Tagesausflug",
-                    text: "Tipp: Das gesamte Dorf besteht aus bunt angestrichenen strohgedeckten Häusern, die alle unter Denkmalschutz stehen. Ein besonders stimmungsvoller Ort - die Fahrt dorthin ist schon ein Erlebnis."
-                }
-            ]
-        },
-        10: {
-            date: '23. November 2025',
-            dayName: 'Sonntag',
-            region: 'Garden Route',
-            cards: [
-                {
-                    title: "Oudtshoorn",
-                    image: "https://cdn2.rhinoafrica.com/thumbnails/media/_en/destinations/root/africa/southern-africa/south-africa/garden-route/route-62/oudtshoorn/_img/57324/image-thumb__57324__background-cover/winding-road-through-mountain-in-oudtshoorn-western-cape-south-africa.cbd16995.jpg",
-                    meta: "Erkundung der Straußenfarmen und Cango Caves",
-                    text: "Weitere Erkundung der Straußenfarmen und der Cango Caves. Die Kleine Karoo bietet einzigartige Einblicke in die südafrikanische Kultur und Geschichte."
-                },
-                {
-                    title: "Swartberg Pass – Spektakuläre Gebirgsstraße",
-                    image: "https://www.kapstadt.de/images/stories/kapstadt-de/reisefuehrer/karoo/oudtshoorn/swartberg-pass.jpg",
-                    meta: "Tagesausflug von Oudtshoorn",
-                    text: "Eine der schönsten Passstraßen Südafrikas! Wir fahren über den Swartberg Pass nach Prince Albert und genießen atemberaubende Ausblicke, Serpentinen und die wilde Karoo-Landschaft."
-                },
-                {
-                    title: "Prince Albert – Karoo-Charme",
-                    image: "https://www.suedafrika-reise.net/westkap/bilder/1r.jpg",
-                    meta: "Abstecher nach Swartberg Pass",
-                    text: "Das kleine Städtchen am Fuß des Swartberg Passes begeistert mit historischen Gebäuden, Galerien und echtem <a href='https://www.suedafrika-reise.net/westkap/karoo.htm' target='_blank' class='underline'>Karoo-Feeling</a>. Perfekt für einen Lunch-Stop oder einen Bummel durch die Hauptstraße."
-                }
-            ]
-        },
-        11: {
-            date: '24. November 2025',
-            dayName: 'Montag',
-            region: 'Garden Route',
-            cards: [
-                {
-                    title: "Weiterreise nach Plettenberg Bay",
-                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                    meta: "Anfahrt: ca. 2:15 Stunden (ca. 150 km)",
-                    text: "Wir verlassen die Karoo und fahren über den Outeniqua Pass zurück an die Küste nach Plettenberg Bay – ein Paradies für Strandliebhaber und Naturliebhaber."
-                },
-                {
-                    title: "Plettenberg Bay Robberg Nature Reserve",
-                    image: "https://eu-images.contentstack.com/v3/assets/blte218090c2a6fb1e2/bltd0476eb7012a9555/65ee09194527a6040a6da3fe/suedafrika-garden-route-plettenberg-bay-robberg-luftaufnahme-g-622183942.jpg?auto=webp&width=1440&quality=45",
-                    meta: "",
-                    text: "Das 'Plett' - ein Küstenparadies! Wir wandern im Robberg Nature Reserve, beobachten Robben und genießen die traumhaften Strände. Die Lagune ist perfekt für Wassersport und die Restaurants servieren frische Meeresfrüchte."
-                }
-            ]
-        },
-        12: {
-            date: '25. November 2025',
-            dayName: 'Dienstag',
-            region: 'Garden Route',
-            cards: [
-                
-                {
-                    title: "Tsitsikamma-Nationalpark",
-                    image: "https://kommwirmachendaseinfach.de/wp-content/uploads/2020/02/Tsitsikamma-nationalpark-suedafrika-aussicht-haengebruecke.jpg",
-                    meta: "Von Colchester aus | Tagesausflug",
-                    text: "Abenteuer im Urwald! Wir wandern durch den Tsitsikamma Nationalpark, überqueren die berühmte Hängebrücke und genießen die wilde Küste."
-                },
-                {
-                    title: "Knysna Austern",
-                    image: "https://www.ambiente-mediterran.de/wp-content/uploads/schema-and-structured-data-for-wp/Austern-Knysna-Oyster-Holzbild-756x756.jpg",
-                    meta: "Auf dem Weg nach Plett",
-                    text: "Die berühmten Knysna Heads, Waterfront und Austern – <a href='https://kommwirmachendaseinfach.de/knysna-in-suedafrika-sehenswuerdigkeiten-reisetipps/' target='_blank' class='underline'>Knysna</a> ist ein Muss auf der Garden Route!"
-                },
-                {
-                    title: "East Head Café",
-                    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/7e/5b/93/photo6jpg.jpg?w=1400&h=800&s=1",
-                    meta: "Direkt an den Heads | Moderate Preise",
-                    text: "Tipp: Perfekte Lage direkt an den berühmten Knysna Heads mit toller Aussicht und moderaten Preisen."
-                }  ,
-                {
-                    title: "Knysna Sunset Sailing Cruise",
-                    image: "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=620,height=400,dpr=2/tour_img/6203afeebfcf8.jpeg",
-                    meta: "Auf dem Weg nach Plett",
-                    text: "Wir bewundern die spektakuläre Landschaft von Knysna und den Sonnenuntergang an Bord einer entspannten <a href='https://www.getyourguide.de/knysna-sailing-cruise-t26361/' target='_blank' class='underline'>Segelkreuzfahrt</a> bei Sonnenuntergang. Genießen eine leckere Auswahl an Käse und Snacks, gepaart mit gekühltem Sekt."
-                }    
-            ]
-        },
-        13: {
-            date: '26. November 2025',
-            dayName: 'Mittwoch',
-            region: 'Garden Route',
-            cards: [
-                {
-                    title: "Weiterreise nach Colchester",
-                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                    meta: "",
-                    text: ""
-                },
-                {
-                    title: "Jeffreys Bay - Surfmekka",
-                    image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=500&auto=format&fit=crop",
-                    meta: "Auf dem Weg nach Colchester",
-                    text: "Legendäre Wellen und entspannte Surfer-Atmosphäre – ein Muss für Wassersportfans!"
-                }
-               
-            ]
-        },
-        14: {
-            date: '27. November 2025',
-            dayName: 'Donnerstag',
-            region: 'Addo',
-            cards: [
-                {
-                    title: "Addo Elephant National Park",
-                    image: "https://www.ventertours.de/fileadmin/_processed_/6/1/csm_Addo-Ludwig-Heilmaier_c371212f0b.jpg",
-                    meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
-                    text: "Das große Safari-Finale! Wir erleben die legendären 'Big 7' hautnah – über 550 Elefanten warten auf uns! Ob wir selbst fahren oder eine geführte Tour machen: Frühe Morgen- und späte Nachmittag-Safaris sind unser Geheimrezept für die spektakulärsten Tierbeobachtungen. Kameras bereithalten!"
-                }
-                
-            ]
-        },
-        15: {
-            date: '28. November 2025',
-            dayName: 'Freitag',
-            region: 'Addo',
-            cards: [
-                {
-                    title: "Addo Elephant National Park Teil 2",
-                    image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/1f/8d/d6.jpg",
-                    meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
-                    text: "Noch einmal :-)"
-                },
-                {
-                    title: "Bloukrans Bungee Jump",
-                    image: "https://www.garden-route-entdecken.de/wp-content/uploads/bungee-jumping-bloukrans-bridge.jpg",
-                    meta: "216m direkt an der N2 | Optional für Mutige",
-                    text: "Tipp: Der höchste kommerzielle Bungee-Sprung der Welt! Für alle, die es weniger extrem mögen, gibt es auch einen Skywalk. Reservierung der Sprungzeit empfohlen."
-                }
-                
-            ]
-        },
-        16: {
-            date: '29. November 2025',
-            dayName: 'Samstag',
-            region: 'Addo',
-            cards: [
-                {
-                    title: "Port Elizabeth – Die freundliche Stadt",
-                    image: "https://lp-cms-production.imgix.net/2019-06/478157521_full.jpg?sharp=10&vib=20&w=1200&w=600&h=400",
-                    meta: "",
-                    text: "Port Elizabeth, auch Gqeberha genannt, ist bekannt für ihre Strände und die entspannte Atmosphäre. Ein kurzer Stopp an der Promenade oder ein Kaffee am Strand lohnen sich auf dem Weg zum Addo Elephant Park."
-                },
-                {
-                    title: "St. Francis Bay Ausflug",
-                    image: "https://iol-prod.appspot.com/image/f5b960907468e055f3f0cd7355ff7626a1707aa5=w700",
-                    meta: "Das weiße Dorf | Tagesausflug",
-                    text: "Tipp: Besuchen Sie den malerischen Leuchtturm und die einzigartigen Kanäle. Das 'weiße Dorf' über Paradies Beach ist wie das Ende der Welt."
-                }
-            ]
-        },
-        17: {
-            date: '30. November 2025',
-            dayName: 'Sonntag',
-            region: 'Addo',
-            cards: [
-                {
-                    title: "Heimflug",
-                    image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                    meta: "",
-                    text: "Rückfahrt nach Kapstadt und Heimflug"
-                }
-            ]
-        }
-    },
     sections: [
         {
             id: 'kapstadt',
             title: 'Kapstadt: Metropole am Tafelberg (14. - 16. November)',
+            name: 'Kapstadt',
+            icon: '🏙️',
             intro: 'Die Reise beginnt in der "Mother City" Kapstadt. Wir erkunden die pulsierende Metropole, umgeben von majestätischer Natur, ausgiebig. Von der ikonischen V&A Waterfront bis zur Spitze des Tafelbergs bietet Kapstadt eine Fülle von Erlebnissen, die Kultur, Geschichte und atemberaubende Landschaften vereinen.',
             tabs: [
                 {
@@ -452,11 +52,83 @@ const tripData = {
                         { title: 'Breakwater Lodge', description: 'Tipp: 8.2/10 | V&A Waterfront | 823€ | Historisches 3-Sterne Hotel am Wasser mit einzigartigem Charme.', url: 'https://www.booking.com/hotel/za/breakwater-lodge.de.html?label=v3.cmcohng3r6xuh08783wf67hhw&aid=1607597&ucfs=1&checkin=2025-11-14&checkout=2025-11-18&dest_id=-1217214&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204&srpvid=252c351c506403e5&srepoch=1751614525&matching_block_id=1516310_369394327_0_42_0&atlas_src=sr_iw_title' },
                     ]
                 }
-            ]
+            ],
+            Days: {
+                1: {
+                    date: '14. November 2025',
+                    dayName: 'Freitag',
+                    region: 'Kapstadt',
+                    cards: [
+                        {
+                            title: "Ankunft in Cape Town",
+                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEoDU8-itSVFkznLRu0fPhGCuT8N6GCQ_FEw&s",
+                            meta: "Ankunft und Anreise zum Hotel in Green Point",
+                            text: "Wir starten am Donnerstag um 22 Uhr in Frankfurt und landen am Freitag um 11 Uhr in Kapstadt, dann geht es zu unserem zauberhaften Hotel. Wir verbringen 3 Nächte in Kapstadt."
+                        },
+                        {
+                            title: "Tafelberg",
+                            image: "https://www.geh-mal-reisen.de/wp-content/uploads/kapstadt-sehenswuerdigkeiten-highlights-tafelberg-aussicht.jpg",
+                            meta: "13 Uhr Anfahrt: 30 min · Aufenthalt: 90 min",
+                            text: "Das absolute Must-Do in Kapstadt! Wir nehmen die Seilbahn hoch zum legendären Tafelberg und werden mit einem grandiosen 360°-Rundumblick über Stadt, Küste und Berge belohnt. Tickets buchen wir vorab online – dieser Ausblick ist jeden Cent wert!"
+                        },
+                        {
+                            title: "Hop-On-Hop-Off",
+                            image: "https://www.hop-on-hop-off-bus.de/wp-content/uploads/2020/12/kapstadt-city-sightseeing.avif",
+                            meta: "Rote Linie 90 Minuten",
+                            text: "Die rote Linie ist die wichtigste Route. Sie führt durch große Teile der Innenstadt sowie zum Tafelberg, nach Camps Bay, Seapoint, Green Point und zur V&A Waterfront. <a href='https://www.hop-on-hop-off-bus.de/kapstadt-city-sightseeing/' target='_blank' class='underline'>Kombiticket Tafelberg</a>"
+                        },
+                        {
+                            title: "Kirstenbosch Gärten",
+                            image: "https://bridgesandballoons.com/Images/2015/11/Kirstenbosch-Botanical-Garden1-974x301@2x.jpg",
+                            meta: "15 Uhr Anfahrt: 30 min · Aufenthalt: 90 min",
+                            text: "Natur pur am Fuße des Tafelbergs! Wir wandeln durch einen der schönsten botanischen Gärten der Welt, überqueren die spektakuläre Baumwipfel-Hängebrücke und entdecken die einzigartige Fynbos-Vegetation. Am besten morgens – dann ist es angenehm kühl und die Fotomotive sind perfekt!"
+                        },
+                        {
+                            title: "Abends V&A Waterfront",
+                            image: "https://www.waterfront.co.za/wp-content/uploads/2023/04/THE_VA.png",
+                            meta: "18 Uhr Anfahrt: 15 min · Aufenthalt: den Abend genießen",
+                            text: "Hier schlägt das Herz von Kapstadt! Wir schlendern durch das lebhafte Hafenviertel, entdecken coole Designshops, probieren uns durch den Food Market und genießen den Hafenblick. Perfekt für entspannte Abende mit südafrikanischem Flair."
+                        },
+                        {
+                            title: "Tandem-Gleitschirm-Sprung",
+                            image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/e8/89/81/an-exceptional-day-for.jpg?w=500&h=500&s=1",
+                            meta: "Vom Lions Head oder Signal Hill | Optional",
+                            text: "Tipp: Spektakulärer Tandem-Gleitschirm-Sprung mit atemberaubenden Ausblicken über Kapstadt und die Küste! Ein unvergessliches Erlebnis für Abenteuerlustige."
+                        }
+                    ]
+                },
+                2: {
+                    date: '15. November 2025',
+                    dayName: 'Samstag',
+                    region: 'Kapstadt',
+                    cards: [
+                        {
+                            title: "Kap Halbinsel",
+                            image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrBQmBHa2qsjVQXdpiMKVx9BaRWAEyiom46rpEznyAenmPhqKRWPXw3lt3k-1Y_4Uvd7saqbcI70yaetQwrrFiy1zpTZgM7PXXSR6uZdJtZO8vis-PfRAGPw3kpNjXHvvvOrnU=s1360-w1360-h1020",
+                            meta: "Tagesausflug: 150km Rundfahrt · Start: vormittags",
+                            text: "Der ultimative Tagesausflug! Wir starten mit Kaffee in Muizenberg, stoppen bei Kalky's in Kalk Bay für traditionellen Fisch, besuchen die Pinguine am Boulders Beach und das berühmte Kap. Der Höhepunkt: Rückfahrt über den spektakulären Chapman's Peak Drive im goldenen Sonnenuntergangslicht – die Aussicht ist der Oberhammer!"
+                        },
+                        {
+                            title: "Robben Island",
+                            image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTeP3n6nvedEAtGY_bRCcEgvkiQGgNgD7tJ4ysVcv78gi_YbIUhQZTzjatnNol8SaODGdcfYGJU_mcXCbWjIjcGJpL7qDDpw0ZEJm4LrQ",
+                            meta: "Dauer: ca. 3–4 h inkl. Boot (falls noch Zeit ist)",
+                            text: "Eine bewegende Zeitreise in die Geschichte Südafrikas! Wir starten am Nelson Mandela Gateway und nehmen das Boot zur berühmten Gefängnisinsel. Die Tour wird oft von ehemaligen Häftlingen geführt – absolut beeindruckend und emotional. Unbedingt vorab reservieren!"
+                        },
+                        {
+                            title: "Bay Harbor Market (Hout Bay)",
+                            image: "https://www.cometocapetown.com/wp-content/uploads/2019/05/Ultimate-Guide-to-Bay-Harbour-Market-Cape-Town.jpg",
+                            meta: "Fr-So nachmittags | Optional",
+                            text: "Tipp: Markt mit Live-Musik, leckerem Essen und Souvenirs. Perfekt um mit Einheimischen ins Gespräch zu kommen!"
+                        }
+                    ]
+                }
+            }
         },
         {
             id: 'weinlande',
             title: 'Die Kap-Weinlande: Genuss & Landschaft (17. - 19. November)',
+            name: 'Weinlande',
+            icon: '🍷',
             intro: 'Kap-Weinlanden liegen nur eine kurze Fahrt von Kapstadt entfernt und bilden das Herz des südafrikanischen Weinanbaus. Wir entdecken historische Städte wie Stellenbosch und Franschhoek, die als Gourmet-Hauptstädte bekannt sind. Hier finden wir Empfehlungen für Weltklasse-Weingüter und "Farm-to-Fork"-Kulinarik, die unsere Sinne verzaubern werden, sowie Hotelempfehlungen für unsere Übernachtungen.',
             tabs: [
                 {
@@ -504,11 +176,53 @@ const tripData = {
                         { title: 'Kunjani Wines (Stellenbosch)', description: 'Tipp: Mit Cottages und Blick.' },
                     ]
                 }
-            ]
+            ],
+            Days: {
+                3: {
+                    date: '16. November 2025',
+                    dayName: 'Sonntag',
+                    region: 'Weinlande',
+                    cards: [
+                        {
+                            title: "Franschhoek Wine Tram",
+                            image: "https://reise-rosinen.com/wp-content/uploads/2019/10/winetram-WL-A-2.jpg",
+                            meta: "Start: 10:00 Uhr",
+                            text: "Das perfekte Wein-Abenteuer! Wir hüpfen entspannt von Weingut zu Weingut mit der berühmten Wine Tram durch die traumhaften Weinlande. Keine Sorgen ums Fahren – einfach genießen und verkosten! Tickets buchen wir vorab online, denn das ist der Renner bei allen Weinliebhabern."
+                        },
+                        {
+                            title: "Stellenbosch Wanderung",
+                            image: "https://www.roxannereid.co.za/uploads/3/7/7/8/3778676/roxannereid-1l3a0009-2-20190917-2_orig.jpg",
+                            meta: "Nachmittags Anfahrt: 45 min · Aufenthalt: 2-3 h",
+                            text: "Zeitreise durch Südafrikas Weingeschichte! Wir flanieren durch die von majestätischen Eichen gesäumten Straßen der zweitältesten Stadt des Landes. Historische kapholländische Architektur, gemütliche Straßencafés und spannende Kunstgalerien warten darauf, von uns entdeckt zu werden."
+                        }
+                    ]
+                },
+                4: {
+                    date: '17. November 2025',
+                    dayName: 'Montag',
+                    region: 'Weinlande',
+                    cards: [
+                        {
+                            title: "Babylonstoren",
+                            image: "https://wetraveltheworld.de/wp-content/uploads/2017/01/bayblonstoren_erfahrungen_suedafrika.jpg",
+                            meta: "Anfahrt: 1 h · Aufenthalt: halber Tag",
+                            text: "Ein Paradies für alle Sinne! Wir tauchen ein in eines der schönsten Weingüter der Welt mit seinem legendären Garten. Im Restaurant Babel verwöhnen wir unseren Gaumen mit echter Farm-to-Table-Küche. Tischreservierung ist Pflicht – aber es lohnt sich! <a href='https://babylonstoren.com/tasting-cellar' target='_blank'>hier buchen</a>"
+                        },
+                        {
+                            title: "Delaire Graff Estate",
+                            image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/37654510.jpg?k=16687b3fe1efed0fef6f86010fb6e5b457e68cf73af0b75e70215b68867ce776&o=&hp=1",
+                            meta: "Anfahrt: 25 min · Aufenthalt: 2-3 h",
+                            text: "Luxus pur mit Aussicht! Wir gönnen uns das absolute Premium-Erlebnis mit atemberaubenden Panoramablicken über das Tal, Weltklasse-Weinen und einer beeindruckenden Kunstsammlung. Die exklusiven Verkostungen sind jeden Cent wert – wir werden diesen Ort nie vergessen!"
+                        }
+                    ]
+                }
+            }
         },
          {
             id: 'hermanus',
             title: 'Hermanus: Wale, Wein & Küstenpfade',
+            name: 'Hermanus',
+            icon: '🐋',
             intro: 'Hermanus ist weltberühmt als eine der besten Destinationen für landbasierte Walbeobachtung. Wir kombinieren dieses einmalige Naturerlebnis mit Wanderungen entlang des malerischen Cliff Path und besuchen die preisgekrönten Weingüter des nahegelegenen Hemel-en-Aarde Tals, das für seinen Pinot Noir und Chardonnay bekannt ist. Hier finden wir Empfehlungen für unsere Übernachtung.',
             tabs: [
                 {
@@ -537,15 +251,70 @@ const tripData = {
                     icon: '🏨',
                     content: [
                         { title: 'The Marine Hermanus', description: '9.6/10 | Hermanus | Ab ca. 215€ | Legendäres 5-Sterne-Hotel mit Walblick.', url: 'https://www.expedia.de/The-Marine-Hermanus.h1907577.Hotel-Details' },
+                        { title: 'Esplanade Hotel', description: 'Hermanus | Charmes Hotel im Herzen von Hermanus mit toller Lage.', url: 'https://www.booking.com/hotel/za/esplanade-hermanus.de.html?aid=1607597&label=v3.cmcohng3r6xuh08783wf67hhw&sid=a3308e7bedd7d9bad072d19a351258bc&all_sr_blocks=1065716017_388139523_2_0_0&checkin=2025-11-18&checkout=2025-11-20&dest_id=-1236784&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=15&highlighted_blocks=1065716017_388139523_2_0_0&hpos=15&matching_block_id=1065716017_388139523_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1065716017_388139523_2_0_0__639000&srepoch=1751615945&srpvid=ca8437f52de5062d&type=total&ucfs=1&activeTab=main' },
                         { title: 'Arniston Hotel', description: '8.8/10 | Arniston | Ab ca. 120€ | Charmantes Hotel direkt am Strand mit Restaurant.', url: 'https://www.expedia.de/Arniston-Hotel-Bredasdorp.h1907568.Hotel-Details' },
                         { title: 'Hlangana Lodge', description: '9.4/10 | Oudtshoorn | Ab ca. 50€ | Top-bewertete Lodge mit tollem Frühstück.', url: 'https://www.expedia.de/Hlangana-Lodge-Oudtshoorn.h1029272.Hotel-Details' },
                     ]
                 }
-            ]
+            ],
+            Days: {
+                5: {
+                    date: '18. November 2025',
+                    dayName: 'Dienstag',
+                    region: 'Hermanus',
+                    cards: [
+                        {
+                            title: "Reise nach Hermanus",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "Anfahrt: ca. 1,5 Stunden",
+                            text: "Wir verlassen die Weinlande und fahren zur Walbeobachtung nach Hermanus. Wir bleiben 2 Nächte in Hermanus."
+                        },
+                        {
+                            title: "Walbeobachtung vom Ufer",
+                            image: "https://freedomdestinations.co.uk/wp-content/uploads/Hermanus-Whales.jpg",
+                            meta: "Beste Zeit: 11-15 Uhr",
+                            text: "Das absolute Highlight! Wir beobachten majestätische Südkaper direkt vom Land aus – einer der besten Orte weltweit dafür. Wenn der Whale Crier sein Horn bläst, wissen wir: Showtime! Grotto Beach und der Cliff Path bieten uns die perfekten Aussichtsplätze für dieses unvergessliche Naturschauspiel."
+                        },
+                        {
+                            title: "Cliff Path Wanderung",
+                            image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/b3/9e/41/hermanus-cliff-path-sudafrika.jpg?w=900&h=500&s=1",
+                            meta: "Dauer: 2-4 h · Schwierigkeit: leicht-mittel",
+                            text: "Wandern mit Wow-Faktor! Wir erobern den spektakulären 12 km langen Küstenpfad mit atemberaubenden Ausblicken und entdecken dabei die einzigartige Fynbos-Vegetation. Dank mehrerer Einstiegspunkte können wir flexibel planen. Früh starten lohnt sich – dann ist der Wind noch sanft!"
+                        }
+                    ]
+                },
+                6: {
+                    date: '19. November 2025',
+                    dayName: 'Mittwoch',
+                    region: 'Hermanus',
+                    cards: [
+                        {
+                            title: "Hemel-en-Aarde Tal",
+                            image: "https://www.wine-searcher.com/images/region/hemel-en-aarde-valley-7121-1-1.jpg",
+                            meta: "Anfahrt: 15 min · Aufenthalt: halber Tag",
+                            text: "Willkommen im 'Himmel auf Erden'! Wir schwelgen in Weltklasse-Weinen in diesem malerischen Tal. Die Pinot Noirs und Chardonnays hier sind absolute Spitzenklasse. Creation Wines und Hamilton Russell sind unsere absoluten Favoriten – hier entstehen wahre Geschmackswunder!"
+                        },
+                        {
+                            title: "Grotto Beach",
+                            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Grotto_Beach_-_Hermanus.jpg/1200px-Grotto_Beach_-_Hermanus.jpg",
+                            meta: "Anfahrt: 10 min · Aufenthalt: beliebig",
+                            text: "Traumstrand mit Blaue-Flagge-Garantie! Wir genießen 18 km makellosen weißen Sandstrand – perfekt zum Schwimmen, Entspannen und natürlich für die Walbeobachtung. Mit Restaurants und Parkplätzen direkt vor Ort können wir hier problemlos den ganzen Tag verbringen."
+                        },
+                        {
+                            title: "Stanford - Verstecktes Juwel",
+                            image: "https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/blteb0398644c893caf/61c17d31c52c5b292ce23dc9/US_Stanford_ZA_Header.jpg",
+                            meta: "Zwischen Hermanus und Gansbaai | Tagesausflug",
+                            text: "Tipp: Kleiner Ort abseits der Tourismuspfade. Superschöne restaurierte Straßen und Häuser mit kleinen Restaurants und Cafés. Eine Flussfahrt auf dem River zum Sonnenuntergang ist ganz besonders."
+                        }
+                    ]
+                }
+            }
         },
         {
             id: 'garden-route',
             title: 'Die Garden Route: Natur Pur & Abenteuer',
+            name: 'Garden Route',
+            icon: '🌿',
             intro: 'Die Garden Route, eine traumhafte Küstenstraße zwischen Kapstadt und Port Elizabeth, ist unser Zuhause für die nächsten Nächte. Wir starten in Gansbaai mit Haikäfigtauchen, übernachten in Arniston, Oudtshoorn, Wilderness, Plettenberg Bay und Colchester. Diese Region ist ein Mosaik aus dichten Wäldern, ruhigen Lagunen, langen Sandstränden und dramatischen Küsten. Von den ikonischen Knysna Heads über die faszinierende Tierwelt bei Plettenberg Bay bis zum abenteuerlichen Tsitsikamma Nationalpark – die Garden Route ist ein Spielplatz für Naturliebhaber und Abenteurer und zeigt uns die schönsten Facetten Südafrikas.',
              tabs: [
                 {
@@ -600,11 +369,167 @@ const tripData = {
                         { title: 'Deurdrift Cottage (Prince Albert)', description: 'Tipp: Gemütliches Cottage.' },
                     ]
                 }
-            ]
+            ],
+            Days: {
+                7: {
+                    date: '20. November 2025',
+                    dayName: 'Donnerstag',
+                    region: 'Garden Route',
+                    cards: [
+                        {
+                            title: "Weiterreise nach Arniston",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "Anfahrt: ca. 2:15 Stunden (ca. 160 km)",
+                            text: "Wir verlassen Hermanus und fahren entlang der Küste und durch die Overberg-Region nach Arniston. Eine Zeitreise in ein authentisches Fischerdorf! Arniston (auch Waenhuiskrans) bezaubert mit seinem weißen Sandstrand, dem historischen Leuchtturm und traditionellen Fischerbooten. Perfekt für einen ruhigen Zwischenstopp zwischen Hermanus und Oudtshoorn."
+                        },
+                        {
+                            title: "Gansbaai - Haikäfigtauchen",
+                            image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/58/89.jpg",
+                            meta: "Start der Garden Route | Tagesausflug",
+                            text: "Adrenalin pur! In Gansbaai erleben wir das berühmte Haikäfigtauchen und beobachten Weiße Haie hautnah. Ein unvergessliches Abenteuer für Mutige! Die Garden Route beginnt hier mit einem echten Highlight."
+                        },
+                        {
+                            title: "Gansbaai - Dyer Island",
+                            image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
+                            meta: "Bootstour zur Insel der Seelöwen",
+                            text: "Wir besuchen die berühmte Dyer Island, auch bekannt als 'Shark Alley'. Hier können wir Seelöwen, Pinguine und mit etwas Glück auch Weiße Haie beobachten. Eine einzigartige Meereswildnis!"
+                        }
+                    ]
+                },
+                8: {
+                    date: '21. November 2025',
+                    dayName: 'Freitag',
+                    region: 'Garden Route',
+                    cards: [
+                        {
+                            title: "Kap Agulhas - Südspitze Afrikas",
+                            image: "https://img.welt.de/img/reise/Fern/mobile205570597/1940310137-ci16x9-w1200/Africa-South-Africa-Western-Cape-Cape-Agulhas-shipwreck-2.jpg",
+                            meta: "Von Arniston aus | Tagesausflug",
+                            text: "Hier treffen Atlantik und Indischer Ozean aufeinander! Wir besuchen den südlichsten Punkt Afrikas und genießen den Blick vom Leuchtturm."
+                        },
+                        {
+                            title: "Die Otter Beach Arniston",
+                            image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6m58jbQZCzyxGfhVoj6RNbVcgPFrhnTx3ZgCrfBdaPlijTt8EWvyEFhZDMgArVFHIXK8RtAxfHMD1LLXTfERFa9RWrY2QVSptEVYj-iPQpMsTWOoNEfwFh4EKtNQOspxlB5ET4OELDBM/s5184/20210308_091204200_iOS.jpg",
+                            meta: "Direkt bei Arniston",
+                            text: "Wunderschöner, ruhiger Strandabschnitt – ideal zum Baden, Spazieren und Entspannen."
+                        }
+                    ]
+                },
+                9: {
+                    date: '22. November 2025',
+                    dayName: 'Samstag',
+                    region: 'Garden Route',
+                    cards: [
+                        {
+                            title: "Reise nach Oudtshoorn",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "Anfahrt: ca. 4 Stunden (ca. 300 km)",
+                            text: "Von Arniston geht es ins Landesinnere nach Oudtshoorn, der Straußenhauptstadt Südafrikas in der Kleinen Karoo."
+                        },
+                        {
+                            title: "Witsand – Mündung des Breede River",
+                            image: "https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00367-021-00686-8/MediaObjects/367_2021_686_Fig2_HTML.png",
+                            meta: "Zwischenstopp auf dem Weg nach Oudtshoorn",
+                            text: "Witsand ist bekannt für seine endlosen Sandstrände und die beeindruckende Mündung des Breede River. Perfekt für einen Spaziergang am Wasser oder eine kleine Pause mit Blick auf das Meer."
+                        },
+                        {
+                            title: "Mossel Bay – Historischer Hafen & Strände",
+                            image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSJnrVv-Rf6d55rPOqz1DmrmPOs_0XP31f-RVDpW4o4C1eG6mqCypRRm3wD5g9u7NbfxZIcsL-mMFQ9kVQr-vasMgilulv7wNHPVydtxQ",
+                            meta: "Zwischenstopp auf dem Weg nach Oudtshoorn",
+                            text: "Mossel Bay bietet eine charmante Mischung aus Geschichte, Stränden und leckerem Seafood. Ein Spaziergang am Hafen oder ein Besuch des Dias Museums lohnen sich!"
+                        },
+                        {
+                            title: "Elim - Fahrt ans Ende der Welt",
+                            image: "https://capeagulhas.gov.za/wp-content/uploads/2022/10/Elim.jpg",
+                            meta: "Hinterland der Wal-Küste | Tagesausflug",
+                            text: "Tipp: Das gesamte Dorf besteht aus bunt angestrichenen strohgedeckten Häusern, die alle unter Denkmalschutz stehen. Ein besonders stimmungsvoller Ort - die Fahrt dorthin ist schon ein Erlebnis."
+                        }
+                    ]
+                },
+                10: {
+                    date: '23. November 2025',
+                    dayName: 'Sonntag',
+                    region: 'Garden Route',
+                    cards: [
+                        {
+                            title: "Oudtshoorn",
+                            image: "https://cdn2.rhinoafrica.com/thumbnails/media/_en/destinations/root/africa/southern-africa/south-africa/garden-route/route-62/oudtshoorn/_img/57324/image-thumb__57324__background-cover/winding-road-through-mountain-in-oudtshoorn-western-cape-south-africa.cbd16995.jpg",
+                            meta: "Erkundung der Straußenfarmen und Cango Caves",
+                            text: "Weitere Erkundung der Straußenfarmen und der Cango Caves. Die Kleine Karoo bietet einzigartige Einblicke in die südafrikanische Kultur und Geschichte."
+                        },
+                        {
+                            title: "Swartberg Pass – Spektakuläre Gebirgsstraße",
+                            image: "https://www.kapstadt.de/images/stories/kapstadt-de/reisefuehrer/karoo/oudtshoorn/swartberg-pass.jpg",
+                            meta: "Tagesausflug von Oudtshoorn",
+                            text: "Eine der schönsten Passstraßen Südafrikas! Wir fahren über den Swartberg Pass nach Prince Albert und genießen atemberaubende Ausblicke, Serpentinen und die wilde Karoo-Landschaft."
+                        },
+                        {
+                            title: "Prince Albert – Karoo-Charme",
+                            image: "https://www.suedafrika-reise.net/westkap/bilder/1r.jpg",
+                            meta: "Abstecher nach Swartberg Pass",
+                            text: "Das kleine Städtchen am Fuß des Swartberg Passes begeistert mit historischen Gebäuden, Galerien und echtem <a href='https://www.suedafrika-reise.net/westkap/karoo.htm' target='_blank' class='underline'>Karoo-Feeling</a>. Perfekt für einen Lunch-Stop oder einen Bummel durch die Hauptstraße."
+                        }
+                    ]
+                },
+                11: {
+                    date: '24. November 2025',
+                    dayName: 'Montag',
+                    region: 'Garden Route',
+                    cards: [
+                        {
+                            title: "Weiterreise nach Plettenberg Bay",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "Anfahrt: ca. 2:15 Stunden (ca. 150 km)",
+                            text: "Wir verlassen die Karoo und fahren über den Outeniqua Pass zurück an die Küste nach Plettenberg Bay – ein Paradies für Strandliebhaber und Naturliebhaber."
+                        },
+                        {
+                            title: "Plettenberg Bay Robberg Nature Reserve",
+                            image: "https://eu-images.contentstack.com/v3/assets/blte218090c2a6fb1e2/bltd0476eb7012a9555/65ee09194527a6040a6da3fe/suedafrika-garden-route-plettenberg-bay-robberg-luftaufnahme-g-622183942.jpg?auto=webp&width=1440&quality=45",
+                            meta: "",
+                            text: "Das 'Plett' - ein Küstenparadies! Wir wandern im Robberg Nature Reserve, beobachten Robben und genießen die traumhaften Strände. Die Lagune ist perfekt für Wassersport und die Restaurants servieren frische Meeresfrüchte."
+                        }
+                    ]
+                },
+                12: {
+                    date: '25. November 2025',
+                    dayName: 'Dienstag',
+                    region: 'Garden Route',
+                    cards: [
+                        
+                        {
+                            title: "Tsitsikamma-Nationalpark",
+                            image: "https://kommwirmachendaseinfach.de/wp-content/uploads/2020/02/Tsitsikamma-nationalpark-suedafrika-aussicht-haengebruecke.jpg",
+                            meta: "Von Colchester aus | Tagesausflug",
+                            text: "Abenteuer im Urwald! Wir wandern durch den Tsitsikamma Nationalpark, überqueren die berühmte Hängebrücke und genießen die wilde Küste."
+                        },
+                        {
+                            title: "Knysna Austern",
+                            image: "https://www.ambiente-mediterran.de/wp-content/uploads/schema-and-structured-data-for-wp/Austern-Knysna-Oyster-Holzbild-756x756.jpg",
+                            meta: "Auf dem Weg nach Plett",
+                            text: "Die berühmten Knysna Heads, Waterfront und Austern – <a href='https://kommwirmachendaseinfach.de/knysna-in-suedafrika-sehenswuerdigkeiten-reisetipps/' target='_blank' class='underline'>Knysna</a> ist ein Muss auf der Garden Route!"
+                        },
+                        {
+                            title: "East Head Café",
+                            image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/7e/5b/93/photo6jpg.jpg?w=1400&h=800&s=1",
+                            meta: "Direkt an den Heads | Moderate Preise",
+                            text: "Tipp: Perfekte Lage direkt an den berühmten Knysna Heads mit toller Aussicht und moderaten Preisen."
+                        }  ,
+                        {
+                            title: "Knysna Sunset Sailing Cruise",
+                            image: "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=620,height=400,dpr=2/tour_img/6203afeebfcf8.jpeg",
+                            meta: "Abends",
+                            text: "Wir bewundern die spektakuläre Landschaft von Knysna und den Sonnenuntergang an Bord einer entspannten <a href='https://www.getyourguide.de/knysna-sailing-cruise-t26361/' target='_blank' class='underline'>Segelkreuzfahrt</a> bei Sonnenuntergang. Genießen eine leckere Auswahl an Käse und Snacks, gepaart mit gekühltem Sekt."
+                        }    
+                    ]
+                }
+                
+            }
         },
         {
             id: 'addo',
-            title: 'Addo: Das große Safari-Finale (28. - 30. November)',
+            title: 'Addo: Das große Safari-Finale',
+            name: 'Addo',
+            icon: '🐘',
             intro: 'Die Reise erreicht ihren Höhepunkt im Addo Elephant National Park, einem malariafreien "Big 7"-Reservat. Hier verbringen wir zwei Nächte für unser großes Safari-Finale. Wir haben die Chance, Elefanten, Löwen und sogar Wale und Weiße Haie zu sehen. Nach einem unvergesslichen Safari-Erlebnis geht die Reise in Port Elizabeth zu Ende, von wo aus wir unseren Rückflug antreten. Hier finden wir Hotelempfehlungen für unsere Übernachtung.',
              tabs: [
                 {
@@ -637,7 +562,121 @@ const tripData = {
                         { title: 'Adrift Guesthouse (St. Francis)', description: '9.1/10 | St. Francis Bay | Ab ca. 60€ | Bietet Spa-Einrichtungen in Strandnähe.', url: 'https://www.expedia.de/Adrift-Guesthouse-St-Francis-Bay.h1907565.Hotel-Details' },
                     ]
                 }
-            ]
+            ],
+            Days: {
+                13: {
+                    date: '26. November 2025',
+                    dayName: 'Mittwoch',
+                    region: 'Addo',
+                    cards: [
+                        {
+                            title: "Weiterreise nach Colchester",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "270km",
+                            text: "<a href='https://maps.app.goo.gl/nAcfH9JadeNYGkdZ7' target='_blank' class='underline'>Route</a>"
+                        },{
+                            title: "St. Francis Bay - weißes Dorf",
+                            image: "https://iol-prod.appspot.com/image/f5b960907468e055f3f0cd7355ff7626a1707aa5=w700",
+                            meta: "Zwischenstop auf dem Weg nach Colchester",
+                            text: "Tipp: Wir besuchen den malerischen Leuchtturm und die einzigartigen Kanäle. Das 'weiße Dorf' über Paradies Beach ist wie das Ende der Welt."
+                        },
+                        {
+                            title: "Jeffreys Bay - Surfmekka",
+                            image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=500&auto=format&fit=crop",
+                            meta: "Zwischenstop auf dem Weg nach Colchester",
+                            text: "Legendäre Wellen und entspannte Surfer-Atmosphäre – ein Muss für Wassersportfans!"
+                        }
+                       
+                    ]
+                },
+                14: {
+                    date: '27. November 2025',
+                    dayName: 'Donnerstag',
+                    region: 'Addo',
+                    cards: [
+                        {
+                            title: "Addo Elephant National Park",
+                            image: "https://www.ventertours.de/fileadmin/_processed_/6/1/csm_Addo-Ludwig-Heilmaier_c371212f0b.jpg",
+                            meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
+                            text: "Das große Safari-Finale! Wir erleben die legendären 'Big 7' hautnah – über 550 Elefanten warten auf uns! Ob wir selbst fahren oder eine geführte Tour machen: Frühe Morgen- und späte Nachmittag-Safaris sind unser Geheimrezept für die spektakulärsten Tierbeobachtungen. Kameras bereithalten!"
+                        }
+                        
+                    ]
+                },
+                15: {
+                    date: '28. November 2025',
+                    dayName: 'Freitag',
+                    region: 'Addo',
+                    cards: [
+                        {
+                            title: "Addo Elephant National Park Teil 2",
+                            image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/1f/8d/d6.jpg",
+                            meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
+                            text: "Noch einmal :-)"
+                        },{
+                            title: "Port Elizabeth – Die freundliche Stadt",
+                            image: "https://lp-cms-production.imgix.net/2019-06/478157521_full.jpg?sharp=10&vib=20&w=1200&w=600&h=400",
+                            meta: "",
+                            text: "Port Elizabeth, auch Gqeberha genannt, ist bekannt für ihre Strände und die entspannte Atmosphäre. Ein kurzer Stopp an der Promenade oder ein Kaffee am Strand lohnen sich auf dem Weg zum Addo Elephant Park."
+                        },
+                        {
+                            title: "Bloukrans Bungee Jump",
+                            image: "https://www.garden-route-entdecken.de/wp-content/uploads/bungee-jumping-bloukrans-bridge.jpg",
+                            meta: "216m direkt an der N2 | Optional für Mutige",
+                            text: "Tipp: Der höchste kommerzielle Bungee-Sprung der Welt! Für alle, die es weniger extrem mögen, gibt es auch einen Skywalk. Reservierung der Sprungzeit empfohlen."
+                        }
+                        
+                    ]
+                },
+            }
+        },
+        {
+            id: 'rueckreise',
+            title: 'Rückreise: Abschied von Südafrika',
+            name: 'Rückreise',
+            icon: '🏠',
+            intro: 'Die letzten beiden Tage unserer unvergesslichen Südafrika-Reise. Wir fahren gemütlich von Addo zurück nach Kapstadt und genießen noch einmal die Highlights der Mother City, bevor es zum Flughafen geht.',
+            tabs: [],
+            Days: {
+                16: {
+                    date: '29. November 2025',
+                    dayName: 'Samstag',
+                    region: 'Rückreise',
+                    cards: [
+                        {
+                            title: "Rückfahrt nach Kapstadt",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "12 Stunden (ca. 800 km)",
+                            text: "Wir fahren nach <a href='https://maps.app.goo.gl/UBFypCyP8KYsoA6t8' target='_blank' class='underline'>Kapstadt</a> und übernachten dort ein letztes Mal in Südafrika.<br><br><table><thead><tr><th>Zeit</th><th>Ort</th><th>Aufenthalt</th><th>Zweck</th></tr></thead><tbody><tr><td>08:00</td><td>Start Colchester</td><td>—</td><td>Abfahrt</td></tr><tr><td>09:30</td><td>Humansdorp</td><td>15–20 min</td><td>Tanken, WC</td></tr><tr><td>12:00</td><td>Knysna Waterfront</td><td>30–45 min</td><td>Essen, Ausblick</td></tr><tr><td>14:30</td><td>Heidelberg</td><td>15 min</td><td>Tank, WC</td></tr><tr><td>16:30</td><td>Riviersonderend</td><td>15–30 min</td><td>Kaffee, Stretch</td></tr><tr><td>18:30</td><td>Ankunft Kapstadt</td><td>—</td><td>Ankunft</td></tr></tbody></table>"
+                        }
+                    ]
+                },
+                17: {
+                    date: '30. November 2025',
+                    dayName: 'Sonntag',
+                    region: 'Rückreise',
+                    cards: [
+                        {
+                            title: "Highlights Kapstadt",
+                            image: "https://www.capetown.travel/wp-content/uploads/long-street-in-cape-town.jpg",
+                            meta: "Noch einmal eintauchen in die Stadt",
+                            text: "Z.B Longstreet, St. George's Mall"
+                        },
+                        {
+                            title: "Company's Garden",
+                            image: "https://www.capetown.travel/wp-content/uploads/2022/10/Companys-Garden.png",
+                            meta: "Gärten der Holländisch - Ostindischen Handelskompanie.",
+                            text: "<a href='https://www.kapstadt.de/reisefuehrer/stadtgebiet/company-garden' target='_blank' class='underline'>Hier</a> können wir im Schatten unter großen Bäumen auf einer der vielen Bänke die flanierenden Menschen beobachten bzw. den kleinen grauen Eichhörnchen zusehen, wie sie auf den Ästen herumtoben und neugierig auf einen zukommen. Beeindruckend sind zudem der Rosengarten und die zahlreichen Skulpturen. Von hier hat man einen schönen Blick auf die 'Spitze' des Table Mountain."
+                        },
+                        {
+                            title: "Heimflug",
+                            image: "https://www.condor.com/de/fileadmin/dam/_processed_/e/5/csm_condor_airbus_A321_200_neo_sunshine_724_7d6ee5b6bd.jpg",
+                            meta: "18:15",
+                            text: "Heimflug"
+                        }
+                    ]
+                }
+            }
         }
     ]
 };
@@ -752,102 +791,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // Chart.js implementation
-    // Budget Pie Chart
-    const budgetCtx = document.getElementById('budgetPieChart').getContext('2d');
-    new Chart(budgetCtx, {
-        type: 'doughnut',
-        data: {
-            labels: ['Hotels (€4800)', 'Essen (€2400)', 'Mietwagen & Benzin (€800)', 'Aktivitäten (€1000)'],
-            datasets: [{
-                data: [4800, 2400, 800, 500],
-                backgroundColor: ['#C89F93', '#E3CFC9', '#A9A9A9', '#F4EAE6'],
-                borderColor: '#FDFBF8',
-                borderWidth: 4,
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        padding: 20,
-                        font: {
-                           size: 12
-                        }
-                    }
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            let label = context.label || '';
-                            if (label) {
-                                label += ': ';
-                            }
-                            if (context.parsed !== null) {
-                                label += new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(context.parsed);
-                            }
-                            return label;
-                        }
-                    }
-                }
-            },
-            cutout: '60%'
-        }
-    });
 
-    // Hotel Bar Chart
-    const hotelCtx = document.getElementById('hotelBarChart').getContext('2d');
-    new Chart(hotelCtx, {
-        type: 'bar',
-        data: {
-            labels: ['Kapstadt', 'Weinlande', 'Hermanus', 'Oudtshoorn', 'Garden Route', 'Addo/J-Bay'],
-            datasets: [{
-                label: 'Durchschnittliche Hotelkosten pro Nacht',
-                data: [150, 140, 130, 70, 150, 90], // Estimated average prices
-                backgroundColor: '#E3CFC9',
-                borderColor: '#C89F93',
-                borderWidth: 1,
-                borderRadius: 5
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            indexAxis: 'y',
-            scales: {
-                x: {
-                    beginAtZero: true,
-                     ticks: {
-                        callback: function(value, index, values) {
-                            return '€' + value;
-                        }
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false
-                },
-                tooltip: {
-                     callbacks: {
-                        label: function(context) {
-                            let label = context.dataset.label || '';
-                            if (label) {
-                                label += ': ';
-                            }
-                            if (context.parsed.x !== null) {
-                                label += new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(context.parsed.x);
-                            }
-                            return label;
-                        }
-                    }
-                }
-            }
-        }
-    });
     
      // Active Nav Link on Scroll
     window.addEventListener('scroll', () => {
@@ -870,101 +814,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Route Map Canvas Drawing
-    const routeMapCanvas = document.getElementById('routeMapCanvas');
-    if (routeMapCanvas) {
-        const ctx = routeMapCanvas.getContext('2d');
-
-    const drawMap = () => {
-        routeMapCanvas.width = routeMapCanvas.offsetWidth;
-        routeMapCanvas.height = routeMapCanvas.offsetHeight;
-        ctx.clearRect(0, 0, routeMapCanvas.width, routeMapCanvas.height);
-
-        const width = routeMapCanvas.width;
-        const height = routeMapCanvas.height;
-
-        // Define abstract points for cities relative to canvas size
-        const cityPoints = {
-            'Kapstadt': { x: width * 0.1, y: height * 0.8, label: 'Kapstadt' },
-            'Weinlande': { x: width * 0.25, y: height * 0.65, label: 'Weinlande' },
-            'Hermanus': { x: width * 0.4, y: height * 0.8, label: 'Hermanus' },
-            'Garden Route': { x: width * 0.65, y: height * 0.5, label: 'Garden Route' }, // Representing Knysna/Plett area
-            'Addo': { x: width * 0.85, y: height * 0.4, label: 'Addo' }
-        };
-
-        // Draw simplified coastline (abstract) - a bit more detailed
-        ctx.beginPath();
-        ctx.moveTo(cityPoints['Kapstadt'].x * 0.8, cityPoints['Kapstadt'].y + height * 0.1);
-        ctx.bezierCurveTo(width * 0.1, height * 0.9, width * 0.2, height * 0.95, width * 0.35, height * 0.85);
-        ctx.bezierCurveTo(width * 0.5, height * 0.7, width * 0.7, height * 0.6, width * 0.8, height * 0.3);
-        ctx.bezierCurveTo(width * 0.85, height * 0.25, width * 0.9, height * 0.2, width * 0.95, height * 0.2);
-        ctx.strokeStyle = '#A9A9A9';
-        ctx.lineWidth = 2;
-        ctx.stroke();
-
-        // Draw route lines
-        ctx.beginPath();
-        ctx.strokeStyle = '#C89F93';
-        ctx.lineWidth = 3;
-        let firstPoint = true;
-        tripData.route.forEach(stop => {
-            const point = cityPoints[stop.name];
-            if (point) {
-                if (firstPoint) {
-                    ctx.moveTo(point.x, point.y);
-                    firstPoint = false;
-                } else {
-                    ctx.lineTo(point.x, point.y);
-                }
-            }
-        });
-        ctx.stroke();
-
-        // Draw city markers and labels
-        ctx.fillStyle = '#3D3D3D';
-        ctx.font = `${Math.max(10, width * 0.025)}px Inter`; // Responsive font size
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-
-        for (const key in cityPoints) {
-            const point = cityPoints[key];
-            // Draw circle marker
-            ctx.beginPath();
-            ctx.arc(point.x, point.y, Math.max(5, width * 0.012), 0, Math.PI * 2); // Responsive marker size
-            ctx.fillStyle = '#C89F93';
-            ctx.fill();
-            ctx.strokeStyle = '#FFFFFF';
-            ctx.lineWidth = 2;
-            ctx.stroke();
-
-            // Draw label with offset
-            let labelY = point.y - (Math.max(15, width * 0.035)); 
-            if (key === 'Addo' || key === 'Garden Route') { // Adjust label for certain points
-                labelY = point.y + (Math.max(15, width * 0.035));
-            }
-            ctx.fillText(point.label, point.x, labelY);
-        }
-    };
-
-    // Initial draw and redraw on resize
-    drawMap();
-    window.addEventListener('resize', drawMap);
-
-    // Google Maps Integration
-    const openGoogleMapsButton = document.getElementById('openGoogleMaps');
-    if (openGoogleMapsButton) {
-        openGoogleMapsButton.addEventListener('click', () => {
-            const origin = tripData.route[0].coords;
-            const destination = 'Port Elizabeth, South Africa'; // Final destination
-            
-            const waypoints = tripData.route.slice(1, -1).map(stop => stop.coords).join('|');
-
-            const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
-            window.open(googleMapsUrl, '_blank');
-        });
-    }
-
 
     // LLM Integration for Restaurant Suggestions
     const generateSuggestionButtons = document.querySelectorAll('.generate-restaurant-suggestion');
@@ -993,17 +842,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 let chatHistory = [];
                 chatHistory.push({ role: "user", parts: [{ text: prompt }] });
                 const payload = { contents: chatHistory };
-                // API-Integration deaktiviert - kann später mit eigenem API-Key aktiviert werden
-                outputElement.textContent = 'Diese Funktion benötigt einen gültigen API-Key für die KI-Integration. Bitte wenden Sie sich an den Entwickler.';
+                
+                // Google Gemini API Integration
+                const API_KEY = 'AIzaSyC35B4RPHHKBrUpddDRDYKI001usnthmmM';
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                const suggestion = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Kein Vorschlag verfügbar.';
+                outputElement.textContent = suggestion;
             } catch (error) {
                 console.error('Fehler beim Generieren des Restaurantvorschlags:', error);
-                outputElement.textContent = 'Fehler beim Generieren des Vorschlags.';
+                outputElement.textContent = `Fehler beim Generieren des Vorschlags: ${error.message}`;
             } finally {
                 event.target.disabled = false;
             }
         });
     });
-    }
+    
 
     // ===== TIMELINE FUNCTIONS =====
     function generateTimeline() {
@@ -1012,13 +877,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Generate timeline points for each day
         const totalDays = 17;
-        const milestones = [
-            { day: 1, name: 'Kapstadt', id: 'kapstadt', icon: '🏙️' },
-            { day: 4, name: 'Weinlande', id: 'weinlande', icon: '🍷' },
-            { day: 7, name: 'Hermanus', id: 'hermanus', icon: '🐋' },
-            { day: 9, name: 'Garden Route', id: 'garden-route', icon: '🌿' },
-            { day: 15, name: 'Addo', id: 'addo', icon: '🐘' }
-        ];
+        
+        // Erstelle Milestones dynamisch aus den sections
+        const milestones = [];
+        
+        tripData.sections.forEach(section => {
+            if (section.Days && section.name && section.icon) {
+                // Finde den ersten Tag dieser Section
+                const days = Object.keys(section.Days).map(Number).sort((a, b) => a - b);
+                if (days.length > 0) {
+                    milestones.push({
+                        day: days[0],
+                        name: section.name,
+                        id: section.id,
+                        icon: section.icon
+                    });
+                }
+            }
+        });
 
         for (let day = 1; day <= totalDays; day++) {
             const pointElement = document.createElement('div');
@@ -1054,48 +930,43 @@ document.addEventListener('DOMContentLoaded', function() {
         const breakoutsContainer = document.getElementById('milestone-breakouts');
         if (!breakoutsContainer) return;
 
-        const milestones = [
-            {
-                id: 'kapstadt',
-                name: 'Kapstadt',
-                icon: '🏙️',
-                days: '14.-16. Nov.',
-                description: 'Die "Mother City" mit Tafelberg, V&A Waterfront und Kap-Halbinsel',
-                highlights: ['Tafelberg', 'V&A Waterfront', 'Kap der Guten Hoffnung', 'Kirstenbosch Gärten']
-            },
-            {
-                id: 'weinlande',
-                name: 'Weinlande',
-                icon: '🍷',
-                days: '17.-19. Nov.',
-                description: 'Weinregion mit Stellenbosch, Franschhoek und Weltklasse-Weingütern',
-                highlights: ['Franschhoek Wine Tram', 'Stellenbosch', 'Babylonstoren', 'Delaire Graff']
-            },
-            {
-                id: 'hermanus',
-                name: 'Hermanus',
-                icon: '🐋',
-                days: '20.-21. Nov.',
-                description: 'Walbeobachtung und Küstenpfade am Indischen Ozean',
-                highlights: ['Walbeobachtung', 'Cliff Path', 'Hemel-en-Aarde Tal', 'Grotto Beach']
-            },
-            {
-                id: 'garden-route',
-                name: 'Garden Route',
-                icon: '🌿',
-                days: '22.-28. Nov.',
-                description: 'Naturwunder von Hermanus bis Colchester mit 5 Übernachtungsstopps',
-                highlights: ['Hermanus', 'Arniston', 'Oudtshoorn', 'Plettenberg Bay', 'Colchester']
-            },
-            {
-                id: 'addo',
-                name: 'Addo',
-                icon: '🐘',
-                days: '29.-30. Nov.',
-                description: 'Safari im Addo Elephant Park und Abschied von Südafrika',
-                highlights: ['Addo Elephant Park', 'Jeffreys Bay', 'Port Elizabeth']
+        const milestones = tripData.sections.map(section => {
+            if (!section.name || !section.icon || !section.Days) return null;
+            
+            // Berechne dynamisch first und last day aus den Days
+            const dayNumbers = Object.keys(section.Days).map(Number).sort((a, b) => a - b);
+            let daysString = '';
+            
+            if (dayNumbers.length > 0) {
+                const firstDay = section.Days[dayNumbers[0]];
+                const lastDay = section.Days[dayNumbers[dayNumbers.length - 1]];
+                
+                if (firstDay && lastDay) {
+                    // Extrahiere nur Tag und Monat aus den Daten
+                    const firstDate = firstDay.date.split(' ')[0] + '. ' + firstDay.date.split(' ')[1].substring(0, 3) + '.';
+                    const lastDate = lastDay.date.split(' ')[0] + '. ' + lastDay.date.split(' ')[1].substring(0, 3) + '.';
+                    
+                    if (firstDate === lastDate) {
+                        daysString = firstDate;
+                    } else {
+                        daysString = `${firstDate}-${lastDate}`;
+                    }
+                }
             }
-        ];
+            
+            // Extrahiere erste 4 Highlights aus dem Highlights-Tab
+            const highlightsTab = section.tabs.find(tab => tab.name === 'Highlights');
+            const highlights = highlightsTab ? highlightsTab.content.slice(0, 4).map(item => item.title) : [];
+            
+            return {
+                id: section.id,
+                name: section.name,
+                icon: section.icon,
+                days: daysString,
+                description: section.intro.substring(0, 120) + '...',
+                highlights: highlights
+            };
+        }).filter(Boolean);
 
         milestones.forEach(milestone => {
             const breakoutElement = document.createElement('div');
@@ -1137,56 +1008,25 @@ document.addEventListener('DOMContentLoaded', function() {
         const daysContainer = document.getElementById('days-sections');
         if (!daysContainer) return;
 
-        // Definiere die Regionen mit ihren zugehörigen Tagen
-        const regionDays = [
-            {
-                region: 'Kapstadt',
-                icon: '🏙️',
-                days: [1, 2],
-                sectionId: 'kapstadt'
-            },
-            {
-                region: 'Weinlande',
-                icon: '🍷',
-                days: [3, 4],
-                sectionId: 'weinlande'
-            },
-            {
-                region: 'Hermanus',
-                icon: '🐋',
-                days: [5, 6],
-                sectionId: 'hermanus'
-            },
-            {
-                region: 'Garden Route',
-                icon: '🌿',
-                days: [7, 8, 9, 10, 11, 12, 13],
-                sectionId: 'garden-route'
-            },
-            {
-                region: 'Addo',
-                icon: '🐘',
-                days: [14, 15, 16, 17],
-                sectionId: 'addo'
-            }
-        ];
-
-        regionDays.forEach(regionData => {
-            // Finde die entsprechende Sektion für das intro
-            const section = tripData.sections.find(s => s.id === regionData.sectionId);
+        tripData.sections.forEach(section => {
+            // Prüfe ob Section die notwendigen Felder hat
+            if (!section.name || !section.icon) return;
+            
+            // Extrahiere die Tagnummern aus den Days-Objekten der Section
+            const days = section.Days ? Object.keys(section.Days).map(Number).sort((a, b) => a - b) : [];
             const introText = section ? section.intro : '';
 
             // Erstelle Regions-Header mit Tabs
             const regionHeader = document.createElement('div');
             regionHeader.className = 'mb-8';
-            regionHeader.id = `${regionData.sectionId}-section`;
+            regionHeader.id = `${section.id}-section`;
             
             // Erstelle Tabs HTML
             let tabsHtml = '<div class="flex justify-center space-x-2 sm:space-x-4 mb-8 border-b pb-2">';
             section.tabs.forEach((tab, index) => {
                 // Kein Tab ist standardmäßig aktiv
                 tabsHtml += `
-                    <button class="tab-button text-sm sm:text-base px-3 py-2 sm:px-4 rounded-t-lg border-b-2 border-transparent transition-colors" data-target="${regionData.sectionId}-days-${index}">
+                    <button class="tab-button text-sm sm:text-base px-3 py-2 sm:px-4 rounded-t-lg border-b-2 border-transparent transition-colors" data-target="${section.id}-days-${index}">
                         <span class="hidden sm:inline-block mr-2">${tab.icon}</span> ${tab.name}
                     </button>`;
             });
@@ -1196,7 +1036,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let tabContentsHtml = '';
             section.tabs.forEach((tab, index) => {
                 // Alle Tab-Inhalte sind standardmäßig versteckt
-                tabContentsHtml += `<div id="${regionData.sectionId}-days-${index}" class="tab-content hidden">
+                tabContentsHtml += `<div id="${section.id}-days-${index}" class="tab-content hidden">
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">`;
                 tab.content.forEach(item => {
                     // Check if item.url exists and wrap title in <a> tag
@@ -1222,7 +1062,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     tabContentsHtml += `
                         <div class="section-card rounded-lg p-6 shadow-sm flex flex-col items-center justify-center text-center">
                             <h4 class="font-bold text-lg text-gray-800 mb-4">✨ Restaurantvorschlag des Tages</h4>
-                            <button class="generate-restaurant-suggestion bg-[#C89F93] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-colors shadow-md" data-region="${regionData.region}">
+                            <button class="generate-restaurant-suggestion bg-[#C89F93] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-colors shadow-md" data-region="${section.name}">
                                 Vorschlag generieren
                             </button>
                             <p class="restaurant-suggestion-output text-gray-700 mt-4 text-sm"></p>
@@ -1234,20 +1074,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
             regionHeader.innerHTML = `
                 <div class="text-center mb-8">
-                    <div class="text-4xl mb-4">${regionData.icon}</div>
-                    <h2 class="text-3xl font-bold text-gray-800 mb-2">${regionData.region}</h2>
+                    <div class="text-4xl mb-4">${section.icon}</div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">${section.name}</h2>
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto">${introText}</p>
                 </div>
                 ${tabsHtml}
-                <div id="${regionData.sectionId}-default" class="tab-default text-center py-12">
+                <div id="${section.id}-default" class="tab-default text-center py-12">
                 </div>
                 ${tabContentsHtml}
             `;
             daysContainer.appendChild(regionHeader);
 
-            // Erstelle Tagessektionen für diese Region
-            regionData.days.forEach(dayNumber => {
-                const dayData = tripData.tripByDays[dayNumber];
+            // Erstelle Tagessektionen für diese Region - NEUE LOGIK FÜR GEÄNDERTE DATENSTRUKTUR
+            days.forEach(dayNumber => {
+                // Finde die Tagesdaten in der neuen Struktur (innerhalb der section.Days)
+                const dayData = section && section.Days ? section.Days[dayNumber] : null;
                 if (!dayData) return;
 
                 const daySection = document.createElement('section');
@@ -1303,10 +1144,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 daysContainer.appendChild(daySection);
             });
 
-            // Füge einen Abstand zwischen den Regionen hinzu
-            if (regionData !== regionDays[regionDays.length - 1]) {
+            // Füge einen Abstand zwischen den Regionen hinzu (außer bei der letzten)
+            const isLastSection = tripData.sections.indexOf(section) === tripData.sections.length - 1;
+            if (!isLastSection) {
                 const spacer = document.createElement('div');
-                spacer.className = 'py-8';
+                spacer.className = 'py-4';
                 daysContainer.appendChild(spacer);
             }
         });
