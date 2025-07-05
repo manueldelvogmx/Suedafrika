@@ -120,7 +120,7 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-[#C89F93]">Südafrika Roadtrip</a>
             <div class="hidden md:flex space-x-6 lg:space-x-8 items-center text-sm font-medium">
-                <a href="#days-overview" class="nav-link">Tagesübersicht</a>
+                
                 <a href="#route-map" class="nav-link">Routenkarte</a>
                 <a href="#kapstadt-section" class="nav-link">Kapstadt</a>
                 <a href="#weinlande-section" class="nav-link">Weinlande</a>
@@ -134,7 +134,7 @@
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-white/90 backdrop-blur-md">
-            <a href="#days-overview" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Tagesübersicht</a>
+            
             <a href="#route-map" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Routenkarte</a>
             <a href="#kapstadt-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Kapstadt</a>
             <a href="#weinlande-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Weinlande</a>
@@ -180,12 +180,7 @@
                         <p class="text-sm font-medium text-gray-600">Safari-Ziel</p>
                     </div>
                 </div>
-                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                    <strong>Flüge:</strong> Abflug 13.11. 21:55 → Ankunft 14.11. 10:45 | Rückflug 30.11. 18:15 → Ankunft 1.12. 05:45
-                </p>
-                <p class="mt-2 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                    Sonnenaufgang: 05:30 Uhr, Sonnenuntergang: 19:30 Uhr
-                </p>
+                
             </div>
         </section>
         
@@ -193,7 +188,11 @@
         <section class="py-16 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-2">Die Reiseroute im Überblick</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Klicken Sie auf eine Etappe, um direkt zu den Details zu springen. Die Route führt Sie entlang der Küste und durch das Landesinnere, um die Vielfalt Südafrikas zu erleben.</p>
+                <div class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    <p style="text-align: center;" class="text-sm text-[#C89F93] font-semibold">Hinflug 13.11. 21:55 → Ankunft 14.11. 10:45</p> 
+                    <p style="text-align: center;" class="text-sm text-[#C89F93] font-semibold">Rückflug 30.11. 18:15 → Ankunft 1.12. 05:45</p>
+                    <p style="text-align: center;" class="text-sm text-[#C89F93] font-semibold">Sonnenaufgang: 05:30 Uhr,Sonnenuntergang: 19:30 Uhr</p>
+                </div>
                 
                 <!-- Horizontal Timeline -->
                 <div class="w-full overflow-x-auto pb-8">
@@ -237,20 +236,41 @@
         <!-- Budget Section -->
         <section id="budget" class="py-16">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-2">Budget</h2>
+                <h2 class="text-3xl font-bold text-center mb-2">Budget & Gesamtkosten</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Vollständige Übersicht aller Reisekosten von Flügen bis zu Aktivitäten</p>
                 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-xl font-semibold text-center mb-4">Geschätzte Budgetverteilung</h3>
+                <div class="flex justify-center">
+                    <div class="w-full max-w-2xl">
+                        <h3 class="text-xl font-semibold text-center mb-4">Budgetverteilung nach Kategorien</h3>
                          <div class="chart-container">
                             <canvas id="budgetPieChart"></canvas>
                         </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-center mb-4">Durchschn. Hotelkosten pro Region (€)</h3>
-                         <div class="chart-container">
-                            <canvas id="hotelBarChart"></canvas>
+                </div>
+                
+                <!-- Vollständige Kostenübersicht -->
+                <div class="mt-16 bg-gray-50 rounded-2xl p-8">
+                    <h3 class="text-3xl font-bold text-center mb-2 text-gray-800">💰 Vollständige Reisekosten</h3>
+                    <p class="text-center text-gray-600 mb-8">Detaillierte Aufschlüsselung aller Ausgaben für die 17-tägige Südafrika-Reise</p>
+                    
+                    <!-- Gesamtkosten Highlight -->
+                    <div class="mb-12 p-8 bg-gradient-to-r from-[#C89F93] to-[#E3CFC9] rounded-2xl text-white text-center shadow-xl">
+                        <h4 class="text-2xl font-bold mb-2">🎯 Gesamtkosten der Reise</h4>
+                        <p id="grand-total-cost" class="text-5xl font-bold mb-2">€0</p>
+                        <p class="text-lg opacity-90">für 2 Personen • 17 Tage • 6 Regionen</p>
+                        <div class="mt-4 text-sm opacity-80">
+                            <span class="mx-2">✈️ Flüge</span> • 
+                            <span class="mx-2">🚗 Transport</span> • 
+                            <span class="mx-2">🏨 Hotels</span> • 
+                            <span class="mx-2">🍷 Essen</span> • 
+                            <span class="mx-2">🎯 Aktivitäten</span> • 
+                            <span class="mx-2">📋 Sonstiges</span>
                         </div>
+                    </div>
+                    
+                    <!-- Detaillierte Kostenaufschlüsselung -->
+                    <div id="full-cost-breakdown" class="grid md:grid-cols-2 gap-8">
+                        <!-- Wird dynamisch durch JavaScript gefüllt -->
                     </div>
                 </div>
             </div>
@@ -288,15 +308,25 @@
         // Diese Funktion wird von tripData.js aufgerufen und ersetzt die dortige Card-HTML-Generierung
         function generateCardHtml(card, region) {
             const isTipp = isTippCard(card.text, card.title, card.description);
+            const isStarred = card.starred === true;
             const cardClass = isTipp ? 'bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition-all duration-300 tipp-card' : 'bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition-shadow duration-300';
             const formattedText = formatTippText(card.text);
+            
+            // Create star and price display for cards
+            const starHtml = isStarred ? '<span class="text-yellow-500 text-xl mr-2">⭐</span>' : '';
+            const priceHtml = card.price ? `<span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold ml-2">${card.price}</span>` : '';
             
             return `
                 <div class="${cardClass}">
                     <img src="${card.image}" alt="${card.title}" class="w-full h-48 object-cover rounded-lg mb-4" />
                     <div class="flex items-center justify-between mb-2">
-                        <h3 class="text-xl font-bold text-gray-800">${card.title}</h3>
-                        <span class="bg-[#C89F93] text-white px-3 py-1 rounded-full text-xs font-semibold">${region}</span>
+                        <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                            ${starHtml}${card.title}
+                        </h3>
+                        <div class="flex items-center">
+                            ${priceHtml}
+                            <span class="bg-[#C89F93] text-white px-3 py-1 rounded-full text-xs font-semibold ml-2">${region}</span>
+                        </div>
                     </div>
                     <div class="text-sm text-gray-500 mb-2">${card.meta}</div>
                     <p class="text-gray-700 flex-grow">${formattedText}</p>

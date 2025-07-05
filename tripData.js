@@ -2,6 +2,31 @@
 // Ausgelagert für bessere Code-Organisation
 
 const tripData = {
+    // Gesamtkosten der Reise
+    totalCosts: {
+        flights: {
+            outbound: { description: 'Hinflug Frankfurt → Kapstadt', cost: 1500, details: '13.11. 22:00 → 14.11. 10:45' },
+            return: { description: 'Rückflug Kapstadt → Frankfurt', cost: 1500, details: '30.11. 18:15 → 01.12. 05:45' }
+        },
+        transport: {
+            carRental: { description: 'Mietwagen 17 Tage', cost: 600, details: 'SUV mit Vollkasko' },
+            fuel: { description: 'Benzin ~2500km', cost: 250, details: 'Geschätzt für gesamte Route' }
+        },
+        accommodation: {
+            // Wird dynamisch aus Stern-Hotels berechnet
+        },
+        food: {
+            restaurants: { description: 'Restaurants & Fine Dining', cost: 1700, details: 'Ca. €100/Tag für 2 Personen' }
+        },
+        activities: {
+            tafelberg: { description: 'Hop-On & Tafelberg Seilbahn', cost: 70, details: '2x €35' },
+            haikaefig: { description: 'Haikäfigtauchen Gansbaai', cost: 280, details: '2x €140' },
+            wine: { description: 'Weinverkostungen', cost: 300, details: 'Diverse Weingüter' },
+            nationalparks: { description: 'Nationalpark Eintritte', cost: 150, details: 'Addo, Tsitsikamma, etc.' },
+            misc: { description: 'Sonstige Aktivitäten', cost: 200, details: 'Museen, Touren, etc.' }
+        }
+    },
+    
     // Neue Struktur: Cards nach Tagen organisiert
     sections: [
         {
@@ -15,11 +40,11 @@ const tripData = {
                     name: 'Highlights',
                     icon: '🏞️',
                     content: [
-                        { title: 'Tafelberg', description: 'Fahrt mit der Seilbahn für 360°-Panoramablicke. Ein Muss für jeden Besucher.' },
-                        { title: 'V&A Waterfront', description: 'Lebhaftes Hafenviertel mit Shops, Restaurants und dem Two Oceans Aquarium.' },
-                        { title: "Kap der Guten Hoffnung", description: 'Dramatisches Zusammentreffen zweier Ozeane und ein beeindruckendes Naturreservat.' },
-                        { title: 'Boulders Beach', description: 'Beobachten Sie die berühmte Kolonie afrikanischer Pinguine aus nächster Nähe.' },
-                        { title: 'Kirstenbosch Gärten', description: 'Weltberühmter botanischer Garten am Hang des Tafelbergs, ideal für Spaziergänge.' },
+                        { title: 'Tafelberg', description: 'Fahrt mit der Seilbahn für 360°-Panoramablicke. Ein Muss für jeden Besucher.', starred: false },
+                        { title: 'V&A Waterfront', description: 'Lebhaftes Hafenviertel mit Shops, Restaurants und dem Two Oceans Aquarium.', starred: true },
+                        { title: "Kap der Guten Hoffnung", description: 'Dramatisches Zusammentreffen zweier Ozeane und ein beeindruckendes Naturreservat.',  },
+                        { title: 'Boulders Beach', description: 'Beobachten Sie die berühmte Kolonie afrikanischer Pinguine aus nächster Nähe.', starred: false },
+                        { title: 'Kirstenbosch Gärten', description: 'Weltberühmter botanischer Garten am Hang des Tafelbergs, ideal für Spaziergänge.',  },
                         { title: 'Robben Island (Optional)', description: 'Ein historisch bedeutsamer Ort, der einen tiefen Einblick in die Geschichte Südafrikas gewährt.' },
                     ]
                 },
@@ -27,11 +52,11 @@ const tripData = {
                     name: 'Essen & Wein',
                     icon: '🍷',
                     content: [
-                        { title: 'Silk Asian Fusion', description: 'Ideal für besondere Anlässe mit einem Tapas-Special.' },
-                        { title: 'Veldt', description: 'Zelebriert die Aromen des südafrikanischen Veldt mit lokalen Zutaten.' },
-                        { title: 'Cafe du Cap', description: 'Bietet ein "Harvest Table" Mittagsangebot im Pariser Stil.' },
-                        { title: 'Lievita', description: 'Gilt als eine der besten neapolitanischen Pizzen der Stadt.' },
-                        { title: 'Zuney', description: 'Kritikerliebling für den besten Burger Kapstadts.' },
+                        { title: 'Silk Asian Fusion', description: 'Ideal für besondere Anlässe mit einem Tapas-Special.', starred: false },
+                        { title: 'Veldt', description: 'Zelebriert die Aromen des südafrikanischen Veldt mit lokalen Zutaten.', starred: false },
+                        { title: 'Cafe du Cap', description: 'Bietet ein "Harvest Table" Mittagsangebot im Pariser Stil.',  },
+                        { title: 'Lievita', description: 'Gilt als eine der besten neapolitanischen Pizzen der Stadt.',  },
+                        { title: 'Zuney', description: 'Kritikerliebling für den besten Burger Kapstadts.', starred: false },
                         { title: 'Foodbarn (Nordhoek)', description: 'Tipp: Mehrfach ausgezeichneter Koch in Nordhoek.' },
                         { title: 'Dunes - Beach Restaurant (Hout Bay)', description: 'Tipp: Durchschnittliches Essen, aber ein Muss für den Sonnenuntergang.' },
                         { title: 'Starlings Cafe (Claremont)', description: 'Tipp: Verstecktes Juwel, entspannter Garten, tolles Frühstück/Mittagessen.' },
@@ -45,11 +70,11 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: 'Gorgeous George', description: '9.2/10 | City Centre | Ab ca. 115€ | Designhotel mit Rooftop-Pool.', url: 'https://www.expedia.de/Gorgeous-George-Kapstadt.h33316049.Hotel-Details' },
-                        { title: 'The Glen Boutique Hotel & Spa', description: '9.4/10 | Sea Point | Ab ca. 170€ | Boutique-Hotel mit exzellentem Spa.', url: 'https://www.expedia.de/The-Glen-Boutique-Hotel-Spa-Kapstadt.h6734193.Hotel-Details' },
-                        { title: 'Sunsquare Cape Town City Bowl', description: '8.6/10 | City Centre | Ab ca. 125€ | Gutes Preis-Leistungs-Verhältnis und zentral gelegen.', url: 'https://www.expedia.de/Sunsquare-Cape-Town-City-Bowl-Kapstadt.h16259062.Hotel-Details' },
-                        { title: 'Protea Hotel Waterfront', description: '7.9/10 | V&A Waterfront | Ab ca. 130€ | Direkt an der belebten Waterfront.', url: 'https://www.marriott.com/en-us/hotels/cptbr-protea-hotel-cape-town-waterfront-breakwater-lodge/overview/' },
-                        { title: 'Breakwater Lodge', description: 'Tipp: 8.2/10 | V&A Waterfront | 823€ | Historisches 3-Sterne Hotel am Wasser mit einzigartigem Charme.', url: 'https://www.booking.com/hotel/za/breakwater-lodge.de.html?label=v3.cmcohng3r6xuh08783wf67hhw&aid=1607597&ucfs=1&checkin=2025-11-14&checkout=2025-11-18&dest_id=-1217214&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204&srpvid=252c351c506403e5&srepoch=1751614525&matching_block_id=1516310_369394327_0_42_0&atlas_src=sr_iw_title' },
+                        { title: 'Gorgeous George', description: '9.2/10 | City Centre |  Designhotel mit Rooftop-Pool.', starred: false },
+                        { title: 'The Glen Boutique Hotel & Spa', description: '9.4/10 | Sea Point |  Boutique-Hotel mit exzellentem Spa.', starred: false },
+                        { title: 'Sunsquare Cape Town City Bowl', description: '8.6/10 | City Centre |  Gutes Preis-Leistungs-Verhältnis und zentral gelegen.' },
+                        { title: 'Protea Hotel Waterfront', description: '7.9/10 | V&A Waterfront |  Direkt an der belebten Waterfront.', url: 'https://www.marriott.com/en-us/hotels/cptbr-protea-hotel-cape-town-waterfront-breakwater-lodge/overview/' },
+                        { title: 'Breakwater Lodge', description: 'Tipp: 8.2/10 | V&A Waterfront | 823€ | Historisches 3-Sterne Hotel am Wasser mit einzigartigem Charme.', url: 'https://www.booking.com/hotel/za/breakwater-lodge.de.html?label=v3.cmcohng3r6xuh08783wf67hhw&aid=1607597&ucfs=1&checkin=2025-11-14&checkout=2025-11-18&dest_id=-1217214&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204&srpvid=252c351c506403e5&srepoch=1751614525&matching_block_id=1516310_369394327_0_42_0&atlas_src=sr_iw_title', starred: true, price: 330},
                     ]
                 }
             ],
@@ -63,13 +88,7 @@ const tripData = {
                             title: "Ankunft in Cape Town",
                             image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEoDU8-itSVFkznLRu0fPhGCuT8N6GCQ_FEw&s",
                             meta: "Ankunft und Anreise zum Hotel in Green Point",
-                            text: "Wir starten am Donnerstag um 22 Uhr in Frankfurt und landen am Freitag um 11 Uhr in Kapstadt, dann geht es zu unserem zauberhaften Hotel. Wir verbringen 3 Nächte in Kapstadt."
-                        },
-                        {
-                            title: "Tafelberg",
-                            image: "https://www.geh-mal-reisen.de/wp-content/uploads/kapstadt-sehenswuerdigkeiten-highlights-tafelberg-aussicht.jpg",
-                            meta: "13 Uhr Anfahrt: 30 min · Aufenthalt: 90 min",
-                            text: "Das absolute Must-Do in Kapstadt! Wir nehmen die Seilbahn hoch zum legendären Tafelberg und werden mit einem grandiosen 360°-Rundumblick über Stadt, Küste und Berge belohnt. Tickets buchen wir vorab online – dieser Ausblick ist jeden Cent wert!"
+                            text: "Wir starten am Donnerstag um 22 Uhr in Frankfurt und landen am Freitag um 11 Uhr in Kapstadt, holen uns unseren Mietwagen, dann geht es zu unserem zauberhaften Hotel. Wir verbringen 3 Nächte in Kapstadt."
                         },
                         {
                             title: "Hop-On-Hop-Off",
@@ -77,6 +96,15 @@ const tripData = {
                             meta: "Rote Linie 90 Minuten",
                             text: "Die rote Linie ist die wichtigste Route. Sie führt durch große Teile der Innenstadt sowie zum Tafelberg, nach Camps Bay, Seapoint, Green Point und zur V&A Waterfront. <a href='https://www.hop-on-hop-off-bus.de/kapstadt-city-sightseeing/' target='_blank' class='underline'>Kombiticket Tafelberg</a>"
                         },
+                        {
+                            title: "Tafelberg",
+                            image: "https://www.geh-mal-reisen.de/wp-content/uploads/kapstadt-sehenswuerdigkeiten-highlights-tafelberg-aussicht.jpg",
+                            meta: "13 Uhr Anfahrt: 30 min · Aufenthalt: 90 min",
+                            text: "Das absolute Must-Do in Kapstadt! Wir nehmen die Seilbahn hoch zum legendären Tafelberg und werden mit einem grandiosen 360°-Rundumblick über Stadt, Küste und Berge belohnt. Tickets buchen wir vorab online – dieser Ausblick ist jeden Cent wert!",
+                            starred: true,
+                            price: "€35"
+                        },
+                        
                         {
                             title: "Kirstenbosch Gärten",
                             image: "https://bridgesandballoons.com/Images/2015/11/Kirstenbosch-Botanical-Garden1-974x301@2x.jpg",
@@ -162,11 +190,11 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: "W-Collection L'Ermitage", description: '9.7/10 | Franschhoek | Ab ca. 210€ | Luxuriöse Villen mit Bergblick.', url: 'https://www.expedia.de/W-Collection-Franschhoek-LErmitage-Villas.h18967912.Hotel-Details' },
-                        { title: 'Petit Ermitage', description: '9.9/10 | Franschhoek | Ab ca. 120€ | Außergewöhnlich bewertet und zentral.', url: 'https://www.expedia.de/Petit-Ermitage-Franschhoek.h18967909.Hotel-Details' },
-                        { title: 'Cultivar Guest Lodge', description: '9.0/10 | Stellenbosch | Ab ca. 170€ | 4-Sterne-Lodge mit großem Pool.', url: 'https://www.expedia.de/Cultivar-Guest-Lodge-Stellenbosch.h1029280.Hotel-Details' },
-                        { title: 'The Belmont', description: '9.3/10 | Franschhoek | Ab ca. 75€ | Hervorragendes Preis-Leistungs-Verhältnis.', url: 'https://www.expedia.de/The-Belmont-Franschhoek.h18967888.Hotel-Details' },
-                        { title: 'Grande Provence Wine Estate (Franschhoek)', description: 'Tipp: Weingut mit Unterkunft.' },
+                        { title: "W-Collection L'Ermitage", description: '9.7/10 | Franschhoek |  Luxuriöse Villen mit Bergblick.' },
+                        { title: 'Petit Ermitage', description: '9.9/10 | Franschhoek |  Außergewöhnlich bewertet und zentral.' },
+                        { title: 'Cultivar Guest Lodge', description: '9.0/10 | Stellenbosch |  4-Sterne-Lodge mit großem Pool.' },
+                        { title: 'The Belmont', description: '9.3/10 | Franschhoek |  Hervorragendes Preis-Leistungs-Verhältnis.' },
+                        { title: '<a href="https://book.nightsbridge.com/15800?_ga=2.256709315.935787942.1751700526-2028448925.1751610940" target=_blank class="underline">Grande Provence Wine Estate (Franschhoek)</a> ', description: 'Tipp: Weingut mit Unterkunft.' , starred: true, price: 890},
                         { title: 'Avondrood Guesthouse (Franschhoek)', description: 'Tipp: Gemütliche Guesthouse-Atmosphäre.' },
                         { title: 'Maison Cabriere (Franschhoek)', description: 'Tipp: Weingut mit stilvollen Zimmern.' },
                         { title: 'Cape Vue Country House (Franschhoek)', description: 'Tipp: Country House mit schöner Aussicht.' },
@@ -250,10 +278,10 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: 'The Marine Hermanus', description: '9.6/10 | Hermanus | Ab ca. 215€ | Legendäres 5-Sterne-Hotel mit Walblick.', url: 'https://www.expedia.de/The-Marine-Hermanus.h1907577.Hotel-Details' },
-                        { title: 'Esplanade Hotel', description: 'Hermanus | Charmes Hotel im Herzen von Hermanus mit toller Lage.', url: 'https://www.booking.com/hotel/za/esplanade-hermanus.de.html?aid=1607597&label=v3.cmcohng3r6xuh08783wf67hhw&sid=a3308e7bedd7d9bad072d19a351258bc&all_sr_blocks=1065716017_388139523_2_0_0&checkin=2025-11-18&checkout=2025-11-20&dest_id=-1236784&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=15&highlighted_blocks=1065716017_388139523_2_0_0&hpos=15&matching_block_id=1065716017_388139523_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1065716017_388139523_2_0_0__639000&srepoch=1751615945&srpvid=ca8437f52de5062d&type=total&ucfs=1&activeTab=main' },
-                        { title: 'Arniston Hotel', description: '8.8/10 | Arniston | Ab ca. 120€ | Charmantes Hotel direkt am Strand mit Restaurant.', url: 'https://www.expedia.de/Arniston-Hotel-Bredasdorp.h1907568.Hotel-Details' },
-                        { title: 'Hlangana Lodge', description: '9.4/10 | Oudtshoorn | Ab ca. 50€ | Top-bewertete Lodge mit tollem Frühstück.', url: 'https://www.expedia.de/Hlangana-Lodge-Oudtshoorn.h1029272.Hotel-Details' },
+                        { title: 'The Marine Hermanus', description: '9.6/10 | Hermanus |  Legendäres 5-Sterne-Hotel mit Walblick.' },
+                        { title: 'Esplanade Hotel', description: 'Hermanus | Charmes Hotel im Herzen von Hermanus mit toller Lage.', url: 'https://www.booking.com/hotel/za/esplanade-hermanus.de.html?aid=1607597&label=v3.cmcohng3r6xuh08783wf67hhw&sid=a3308e7bedd7d9bad072d19a351258bc&all_sr_blocks=1065716017_388139523_2_0_0&checkin=2025-11-18&checkout=2025-11-20&dest_id=-1236784&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=15&highlighted_blocks=1065716017_388139523_2_0_0&hpos=15&matching_block_id=1065716017_388139523_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1065716017_388139523_2_0_0__639000&srepoch=1751615945&srpvid=ca8437f52de5062d&type=total&ucfs=1&activeTab=main', starred: true, price: 385 },
+                        
+                       
                     ]
                 }
             ],
@@ -358,15 +386,16 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: 'The Marine Hermanus', description: '9.6/10 | Hermanus | Ab ca. 215€ | Legendäres 5-Sterne-Hotel mit Walblick.', url: 'https://www.expedia.de/The-Marine-Hermanus.h1907577.Hotel-Details' },
-                        { title: 'Arniston Hotel', description: '8.8/10 | Arniston | Ab ca. 120€ | Charmantes Hotel direkt am Strand mit Restaurant.', url: 'https://www.expedia.de/Arniston-Hotel-Bredasdorp.h1907568.Hotel-Details' },
-                        { title: 'Hlangana Lodge', description: '9.4/10 | Oudtshoorn | Ab ca. 50€ | Top-bewertete Lodge mit tollem Frühstück.', url: 'https://www.expedia.de/Hlangana-Lodge-Oudtshoorn.h1029272.Hotel-Details' },
+                        { title: 'Arniston Hotel', description: '8.8/10 | Arniston |  Charmantes Hotel direkt am Strand mit Restaurant.', starred: true, price:207 },
+                        
+                        { title: 'Hlangana Lodge', description: '9.4/10 | Oudtshoorn |  Top-bewertete Lodge mit tollem Frühstück.', starred: true, price:180 },
                         { title: 'Archrock Resort (Keurboomstrand)', description: 'Tipp: Resort in Keurboomstrand bei Plettenberg Bay.' },
                         { title: 'Turbine Hotel und Spa (Knysna)', description: 'Tipp: In einem ehemaligen Kraftwerk gelegen.' },
                         { title: 'DeZeekoe Guestfarm (Oudtshoorn)', description: 'Tipp: Authentische Guestfarm-Erfahrung.' },
                         { title: 'The Pictures Guesthouse (Oudtshoorn)', description: 'Tipp: Sehr sauber.' },
                         { title: 'African Relish (Prince Albert)', description: 'Tipp: Kochschule mit kleinen Unterkünften.' },
                         { title: 'Deurdrift Cottage (Prince Albert)', description: 'Tipp: Gemütliches Cottage.' },
+                        { title: 'The Bungalow Plettenberg', description: 'Der perfekte Ort zum Abschalten und Genießen. Die Lage ist einfach unschlagbar – direkt am Strand', starred: true, price: 585 }
                     ]
                 }
             ],
@@ -386,7 +415,7 @@ const tripData = {
                             title: "Gansbaai - Haikäfigtauchen",
                             image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/58/89.jpg",
                             meta: "Start der Garden Route | Tagesausflug",
-                            text: "Adrenalin pur! In Gansbaai erleben wir das berühmte Haikäfigtauchen und beobachten Weiße Haie hautnah. Ein unvergessliches Abenteuer für Mutige! Die Garden Route beginnt hier mit einem echten Highlight."
+                            text: "Adrenalin pur! In Gansbaai erleben wir das berühmte Haikäfigtauchen und beobachten Weiße Haie hautnah. Ein unvergessliches Abenteuer für Mutige! Die Garden Route beginnt hier mit einem echten Highlight.", starred: false
                         },
                         {
                             title: "Gansbaai - Dyer Island",
@@ -556,10 +585,10 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: 'Gorah Elephant Camp (Addo)', description: 'Exklusives 5-Sterne-Zeltcamp mit Blick auf ein Wasserloch im Park.', url: 'https://www.expedia.de/Gorah-Elephant-Camp-Addo-Elephant-National-Park.h1907567.Hotel-Details' },
-                        { title: 'Addo Rest Camp (SANParks)', description: 'Verschiedene Unterkünfte von Chalets bis zu Safari-Zelten direkt im Park (gutes Preis-Leistungs-Verhältnis).', url: 'https://www.sanparks.org/parks/addo/accommodation/index.php' }, // SANParks official link
-                        { title: 'CANAL GUEST HOUSE (St. Francis)', description: '9.4/10 | St. Francis Bay | Ab ca. 85€ | Luxuriöses B&B direkt am Wasser.', url: 'https://www.expedia.de/CANAL-GUEST-HOUSE-Waterfront-Luxury-B-B-St-Francis-Bay.h32128710.Hotel-Details' },
-                        { title: 'Adrift Guesthouse (St. Francis)', description: '9.1/10 | St. Francis Bay | Ab ca. 60€ | Bietet Spa-Einrichtungen in Strandnähe.', url: 'https://www.expedia.de/Adrift-Guesthouse-St-Francis-Bay.h1907565.Hotel-Details' },
+                        { title: 'Gorah Elephant Camp (Addo)', description: 'Exklusives 5-Sterne-Zeltcamp mit Blick auf ein Wasserloch im Park.', price: 2700 },
+                        { title: 'CANAL GUEST HOUSE (St. Francis)', description: '9.4/10 | St. Francis Bay |  Luxuriöses B&B direkt am Wasser.' },
+                        { title: 'Adrift Guesthouse (St. Francis)', description: '9.1/10 | St. Francis Bay |  Bietet Spa-Einrichtungen in Strandnähe.' },
+                        { title: 'Stellenhof Country Estate', description: '9.1/10 | Überragendes Essen bis hin zum grandiosen Gamedrive!', url: 'https://www.booking.com/hotel/za/stellenhof-country-house.de.html?label=v3.cmcohng3r6xuh08783wf67hhw&sid=a3308e7bedd7d9bad072d19a351258bc&aid=1607597&ucfs=1&checkin=2025-11-26&checkout=2025-11-28&dest_id=-1206217&dest_type=city&group_adults=2&no_rooms=1&group_children=0&srpvid=916b37b6e0dd058e&srepoch=1751702147&matching_block_id=224975304_388007373_2_1_0&atlas_src=sr_iw_title#tab-main', price: 536, starred: true },
                     ]
                 }
             ],
@@ -595,10 +624,10 @@ const tripData = {
                     region: 'Addo',
                     cards: [
                         {
-                            title: "Addo Elephant National Park",
-                            image: "https://www.ventertours.de/fileadmin/_processed_/6/1/csm_Addo-Ludwig-Heilmaier_c371212f0b.jpg",
-                            meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
-                            text: "Das große Safari-Finale! Wir erleben die legendären 'Big 7' hautnah – über 550 Elefanten warten auf uns! Ob wir selbst fahren oder eine geführte Tour machen: Frühe Morgen- und späte Nachmittag-Safaris sind unser Geheimrezept für die spektakulärsten Tierbeobachtungen. Kameras bereithalten!"
+                            title: "Addo Elephant National Park Game Drive",
+                            image: "https://www.go2africa.com/wp-content/uploads/2024/11/eagles-crag-Shamwari-Private-Game-Reserve.jpg",
+                            meta: "Anfahrt: 10 Minuten · Aufenthalt: 10 - 16 Uhr",
+                            text: "Das große Safari-Finale! Mit einem erfahrenen Guide vom Stellenhof Country Estate wird die geführte Pirschfahrt durch die Savanne im offenen Geländewagen zu einem intensiven Naturerlebnis – Mit Glück erleben wir die legendären 'Big 5' hautnah. Über 550 Elefanten warten auf uns! "
                         }
                         
                     ]
@@ -609,20 +638,21 @@ const tripData = {
                     region: 'Addo',
                     cards: [
                         {
-                            title: "Addo Elephant National Park Teil 2",
-                            image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/1f/8d/d6.jpg",
-                            meta: "Anfahrt: 10 Minuten · Aufenthalt: ganzer Tag",
-                            text: "Noch einmal :-)"
-                        },{
                             title: "Port Elizabeth – Die freundliche Stadt",
                             image: "https://lp-cms-production.imgix.net/2019-06/478157521_full.jpg?sharp=10&vib=20&w=1200&w=600&h=400",
-                            meta: "",
+                            meta: "vormittags",
                             text: "Port Elizabeth, auch Gqeberha genannt, ist bekannt für ihre Strände und die entspannte Atmosphäre. Ein kurzer Stopp an der Promenade oder ein Kaffee am Strand lohnen sich auf dem Weg zum Addo Elephant Park."
+                        },
+                        {
+                            title: "Addo Elephant National Park Episode 2",
+                            image: "https://www.ventertours.de/fileadmin/_processed_/6/1/csm_Addo-Ludwig-Heilmaier_c371212f0b.jpg",
+                            meta: "Anfahrt: 10 Minuten · Aufenthalt: 17-19 Uhr",
+                            text: "Diesmal fahren wir selbst! Die Stunden vor Sonnenuntergang sind die eindrucksvollste Zeit im Addo Elephant Park: Wenn die Hitze nachlässt, werden Elefanten, Büffel und Antilopen ab 17 Uhr wieder aktiv – oft direkt an den Wasserlöchern. In warmem, goldenen Licht entstehen unvergessliche Fotos, während die Wege spürbar leerer werden. Weniger Fahrzeuge, mehr Natur, maximale Safari-Atmosphäre – perfekt für alle, die den Park bis zum letzten Lichtmoment erleben wollen."
                         },
                         {
                             title: "Bloukrans Bungee Jump",
                             image: "https://www.garden-route-entdecken.de/wp-content/uploads/bungee-jumping-bloukrans-bridge.jpg",
-                            meta: "216m direkt an der N2 | Optional für Mutige",
+                            meta: "216m direkt an der N2 | Ein Muss für Alle!",
                             text: "Tipp: Der höchste kommerzielle Bungee-Sprung der Welt! Für alle, die es weniger extrem mögen, gibt es auch einen Skywalk. Reservierung der Sprungzeit empfohlen."
                         }
                         
@@ -636,7 +666,25 @@ const tripData = {
             name: 'Rückreise',
             icon: '🏠',
             intro: 'Die letzten beiden Tage unserer unvergesslichen Südafrika-Reise. Wir fahren gemütlich von Addo zurück nach Kapstadt und genießen noch einmal die Highlights der Mother City, bevor es zum Flughafen geht.',
-            tabs: [],
+            tabs: [
+                {
+                    name: 'Highlights',
+                    icon: '🐘',
+                    content: []
+                },
+                {
+                    name: 'Essen & Wein',
+                    icon: '🍷',
+                    content: []
+                },
+                {
+                    name: 'Hotels',
+                    icon: '🏨',
+                    content: [
+                        { title: 'Kloof Street Hotel - Lion Roars Hotels & Lodges', description: 'Mitten im pulsierenden Kloof-Street-Viertel gelegen, überzeugt das Hotel durch modernes, naturinspiriertes Design, freundlichen Service und beeindruckende Ausblicke auf den Tafelberg. Zur Ausstattung zählen Rooftop-Pool, stylishes Restaurant, Coworking-Bereich, sichere Parkplätze ', url: '', starred: true, price: 115 },
+                    ]
+                }
+            ],
             Days: {
                 16: {
                     date: '29. November 2025',
@@ -648,6 +696,12 @@ const tripData = {
                             image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
                             meta: "12 Stunden (ca. 800 km)",
                             text: "Wir fahren nach <a href='https://maps.app.goo.gl/UBFypCyP8KYsoA6t8' target='_blank' class='underline'>Kapstadt</a> und übernachten dort ein letztes Mal in Südafrika.<br><br><table><thead><tr><th>Zeit</th><th>Ort</th><th>Aufenthalt</th><th>Zweck</th></tr></thead><tbody><tr><td>08:00</td><td>Start Colchester</td><td>—</td><td>Abfahrt</td></tr><tr><td>09:30</td><td>Humansdorp</td><td>15–20 min</td><td>Tanken, WC</td></tr><tr><td>12:00</td><td>Knysna Waterfront</td><td>30–45 min</td><td>Essen, Ausblick</td></tr><tr><td>14:30</td><td>Heidelberg</td><td>15 min</td><td>Tank, WC</td></tr><tr><td>16:30</td><td>Riviersonderend</td><td>15–30 min</td><td>Kaffee, Stretch</td></tr><tr><td>18:30</td><td>Ankunft Kapstadt</td><td>—</td><td>Ankunft</td></tr></tbody></table>"
+                        },
+                        {
+                            title: "Kloof-Street-Viertel",
+                            image: "https://www.sa-venues.com/visit/kloofstreethotel/26g.jpg",
+                            meta: "",
+                            text: "Abendessen und City-Life im pulsierenden Kloof-Street-Viertel"
                         }
                     ]
                 },
@@ -1047,14 +1101,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     // Check if this is a Tipp item
                     const isTipp = item.description.startsWith('Tipp:') || item.title.startsWith('Tipp:');
+                    const isStarred = item.starred === true;
                     const cardClass = isTipp ? 'section-card rounded-lg p-6 shadow-sm tipp-card' : 'section-card rounded-lg p-6 shadow-sm';
                     const formattedDescription = item.description.startsWith('Tipp:') ? 
                         item.description.replace('Tipp:', '<span class="tipp-badge">Tipp</span>') : 
                         item.description;
 
+                    // Create star and price display
+                    const starHtml = isStarred ? '<span class="text-yellow-500 text-xl mr-2">⭐</span>' : '';
+                    const priceHtml = item.price ? `<span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold ml-2">${item.price}€</span>` : '';
+
                     tabContentsHtml += `
                         <div class="${cardClass}">
-                            <h4 class="font-bold text-lg text-gray-800">${titleHtml}</h4>
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-lg text-gray-800 flex items-center">
+                                    ${starHtml}${titleHtml}
+                                </h4>
+                                ${priceHtml}
+                            </div>
                             <p class="text-gray-600 mt-1 text-sm">${formattedDescription}</p>
                         </div>`;
                 });
@@ -1080,7 +1144,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto">${introText}</p>
                 </div>
                 ${tabsHtml}
-                <div id="${section.id}-default" class="tab-default text-center py-12">
+                <div id="${section.id}-default" class="tab-default text-center">
                 </div>
                 ${tabContentsHtml}
             `;
@@ -1103,15 +1167,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     } else {
                         // Fallback für den Fall, dass die HTML-Funktion nicht verfügbar ist
                         const isTipp = card.text.startsWith('Tipp:') || card.title.startsWith('Tipp:');
+                        const isStarred = card.starred === true;
                         const cardClass = isTipp ? 'bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition-all duration-300 tipp-card' : 'bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition-shadow duration-300';
                         const formattedText = card.text.startsWith('Tipp:') ? card.text.replace('Tipp:', '<span class="tipp-badge">Tipp</span>') : card.text;
+                        
+                        // Create star and price display for cards
+                        const starHtml = isStarred ? '<span class="text-yellow-500 text-xl mr-2">⭐</span>' : '';
+                        const priceHtml = card.price ? `<span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold ml-2">${card.price}€</span>` : '';
                         
                         return `
                             <div class="${cardClass}">
                                 <img src="${card.image}" alt="${card.title}" class="w-full h-48 object-cover rounded-lg mb-4" />
                                 <div class="flex items-center justify-between mb-2">
-                                    <h3 class="text-xl font-bold text-gray-800">${card.title}</h3>
-                                    <span class="bg-[#C89F93] text-white px-3 py-1 rounded-full text-xs font-semibold">${dayData.region}</span>
+                                    <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                                        ${starHtml}${card.title}
+                                    </h3>
+                                    <div class="flex items-center">
+                                        ${priceHtml}
+                                        <span class="bg-[#C89F93] text-white px-3 py-1 rounded-full text-xs font-semibold ml-2">${dayData.region}</span>
+                                    </div>
                                 </div>
                                 <div class="text-sm text-gray-500 mb-2">${card.meta}</div>
                                 <p class="text-gray-700 flex-grow">${formattedText}</p>
