@@ -206,7 +206,7 @@ const tripData = {
                             title: "Babylonstoren",
                             image: "https://wetraveltheworld.de/wp-content/uploads/2017/01/bayblonstoren_erfahrungen_suedafrika.jpg",
                             meta: "Anfahrt: 1 h · Aufenthalt: halber Tag",
-                            text: "Ein Paradies für alle Sinne! Wir tauchen ein in eines der schönsten Weingüter der Welt mit seinem legendären Garten. Im Restaurant Babel verwöhnen wir unseren Gaumen mit echter Farm-to-Table-Küche. Tischreservierung ist Pflicht – aber es lohnt sich! <a href='https://babylonstoren.com/tasting-cellar' target='_blank'>hier buchen</a>"
+                            text: "Ein Paradies für alle Sinne! Wir tauchen ein in eines der schönsten Weingüter der Welt mit seinem legendären Garten. Im Restaurant Babel verwöhnen wir unseren Gaumen mit echter Farm-to-Table-Küche. Tischreservierung ist Pflicht – aber es lohnt sich! <a href='https://babylonstoren.com/tasting-cellar' target='_blank' class='underline'>hier buchen</a>"
                         },
                         {
                             title: "Delaire Graff Estate",
@@ -223,7 +223,7 @@ const tripData = {
             title: 'Hermanus: Wale, Wein & Küstenpfade',
             name: 'Hermanus',
             icon: '🐋',
-            intro: 'Hermanus ist weltberühmt als eine der besten Destinationen für landbasierte Walbeobachtung. Wir kombinieren dieses einmalige Naturerlebnis mit Wanderungen entlang des malerischen Cliff Path und besuchen die preisgekrönten Weingüter des nahegelegenen Hemel-en-Aarde Tals, das für seinen Pinot Noir und Chardonnay bekannt ist. Hier finden wir Empfehlungen für unsere Übernachtung.',
+            intro: 'Hermanus ist weltberühmt als eine der besten Destinationen für landbasierte Walbeobachtung. Wir kombinieren dieses einmalige Naturerlebnis mit Wanderungen entlang des malerischen Cliff Path und besuchen die preisgekrönten Weingüter des nahegelegenen Hemel-en-Aarde Tals, das für seinen Pinot Noir und Chardonnay bekannt ist.',
             tabs: [
                 {
                     name: 'Highlights',
@@ -671,8 +671,8 @@ const tripData = {
                         {
                             title: "Heimflug",
                             image: "https://www.condor.com/de/fileadmin/dam/_processed_/e/5/csm_condor_airbus_A321_200_neo_sunshine_724_7d6ee5b6bd.jpg",
-                            meta: "18:15",
-                            text: "Heimflug"
+                            meta: "16:15",
+                            text: "Ab zu FlughafenMietwagen zurückgeben, einchecken und Heimflug 18:15 Uhr."
                         }
                     ]
                 }
@@ -845,10 +845,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Google Gemini API Integration
                 const API_KEY = 'AIzaSyC35B4RPHHKBrUpddDRDYKI001usnthmmM';
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`, {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'x-goog-api-key': API_KEY
                     },
                     body: JSON.stringify(payload)
                 });
