@@ -369,6 +369,7 @@ const tripData = {
                     name: 'Essen & Wein',
                     icon: '🍷',
                     content: [
+                        { title: '<a href="https://www.kaai4.co.za/" target="_blank" class="underline">Kaai 4</a>', description: 'Ein Muss für alle, die echte südafrikanische Braai-Kultur direkt am Meer erleben wollen – mit rauchigem Grillduft in der Luft, fangfrischem Hake und fluffigem „roosterkoek“ direkt vom Feuer!', starred: true },
                         { title: '34 South (Knysna)', description: 'Lebhaftes Restaurant an der Waterfront mit Sushi, Austern und mehr.' },
                         { title: 'Nostalgie Restaurant (Oudtshoorn)', description: 'Spezialisiert auf traditionelle Karoo-Küche und Straußengerichte.' },
                         { title: 'Tsitsikhaya Restaurant (Storms River)', description: 'Unprätentiöse südafrikanische Gerichte in entspannter Atmosphäre.' },
