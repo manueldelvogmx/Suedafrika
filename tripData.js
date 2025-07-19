@@ -369,7 +369,7 @@ const tripData = {
                     name: 'Essen & Wein',
                     icon: '🍷',
                     content: [
-                        { title: '<a href="https://www.kaai4.co.za/" target="_blank" class="underline">Kaai 4</a>', description: 'Ein Muss für alle, die echte südafrikanische Braai-Kultur direkt am Meer erleben wollen – mit rauchigem Grillduft in der Luft, fangfrischem Hake und fluffigem „roosterkoek“ direkt vom Feuer!', starred: true },
+                        { title: '<a href="https://www.kaai4.co.za/" target="_blank" class="underline">Kaai 4</a>', description: 'Ein Muss für alle, die echte südafrikanische Braai-Kultur direkt am Meer erleben wollen – mit rauchigem Grillduft in der Luft, fangfrischem Hake und fluffigem „roosterkoek" direkt vom Feuer!', starred: true },
                         { title: '34 South (Knysna)', description: 'Lebhaftes Restaurant an der Waterfront mit Sushi, Austern und mehr.' },
                         { title: 'Nostalgie Restaurant (Oudtshoorn)', description: 'Spezialisiert auf traditionelle Karoo-Küche und Straußengerichte.' },
                         { title: 'Tsitsikhaya Restaurant (Storms River)', description: 'Unprätentiöse südafrikanische Gerichte in entspannter Atmosphäre.' },
@@ -556,40 +556,32 @@ const tripData = {
             }
         },
         {
-            id: 'addo',
-            title: 'Addo: Das große Safari-Finale',
-            name: 'Addo',
-            icon: '🐘',
-            intro: 'Die Reise erreicht ihren Höhepunkt im Addo Elephant National Park, einem malariafreien "Big 7"-Reservat. Hier verbringen wir zwei Nächte für unser großes Safari-Finale. Wir haben die Chance, Elefanten, Löwen und sogar Wale und Weiße Haie zu sehen. Nach einem unvergesslichen Safari-Erlebnis geht die Reise in Port Elizabeth zu Ende, von wo aus wir unseren Rückflug antreten. Hier finden wir Hotelempfehlungen für unsere Übernachtung.',
+            id: 'gondwana',
+            title: 'Gondwana: Safari-Paradies in der Western Cape',
+            name: 'Gondwana',
+            icon: '🦁',
+            intro: 'Die Reise erreicht ihren Höhepunkt im Gondwana Game Reserve, einem malariafreien Privatreservat in der Western Cape. Hier verbringen wir zwei Nächte für unser großes Safari-Finale. Das Reservat ist Heimat der Big 5 und bietet atemberaubende Ausblicke auf die Outeniqua Mountains.',
              tabs: [
                 {
                     name: 'Highlights',
-                    icon: '🐘',
+                    icon: '🦁',
                     content: [
-                        { title: 'Addo Elephant National Park', description: 'Heimat von über 550 Elefanten und den "Big 7" (Löwe, Leopard, Nashorn, Elefant, Büffel, Wal, Weißer Hai).' },
-                        { title: 'Pirschfahrten', description: 'Unternehmen Sie geführte Touren oder erkunden Sie den Park auf eigene Faust, um die Tierwelt zu entdecken.' },
-                        { title: 'Jeffreys Bay (J-Bay)', description: 'Machen Sie einen Zwischenstopp in der weltberühmten Surf-Hauptstadt und probieren Sie selbst eine Surfstunde.' },
-                        { title: 'St. Francis Bay', description: 'Besuchen Sie den malerischen Leuchtturm und die einzigartigen Kanäle.' },
+                        { title: 'Gondwana Game Reserve', description: 'Malariafreies Privatreservat mit Big 5 (Löwe, Leopard, Nashorn, Elefant, Büffel) und atemberaubenden Bergausblicken.' },
+                        { title: 'Geführte Pirschfahrten', description: 'Professionelle Safari-Touren am Morgen und Abend mit erfahrenen Guides in offenen Geländewagen.' }
                     ]
                 },
                 {
                     name: 'Essen & Wein',
                     icon: '🍷',
                     content: [
-                        { title: 'Nina\'s Real Food (J-Bay)', description: 'Vielfältige Speisekarte von gesunden Poké Bowls bis zu herzhaftem Straußensteak.' },
-                        { title: 'Walskipper (J-Bay)', description: 'Genießen Sie Meeresfrüchte direkt am Strand mit den Füßen im Sand.' },
-                        { title: 'Cattle Baron (Addo Park)', description: 'Ein zuverlässiges Steakhaus direkt im Nationalpark – perfekt nach einer langen Pirschfahrt.' },
-                         { title: 'Ocean Basket (J-Bay)', description: 'Beliebte Kette für frische Meeresfrüchte zu erschwinglichen Preisen.' },
+                        { title: 'Gondwana Lodge Restaurant', description: 'Gourmet-Küche mit lokalen Zutaten und atemberaubendem Bergblick direkt im Reservat.' }
                     ]
                 },
                 {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: 'Gorah Elephant Camp (Addo)', description: 'Exklusives 5-Sterne-Zeltcamp mit Blick auf ein Wasserloch im Park.', price: 2700 },
-                        { title: 'CANAL GUEST HOUSE (St. Francis)', description: '9.4/10 | St. Francis Bay |  Luxuriöses B&B direkt am Wasser.' },
-                        { title: 'Adrift Guesthouse (St. Francis)', description: '9.1/10 | St. Francis Bay |  Bietet Spa-Einrichtungen in Strandnähe.' },
-                        { title: 'Stellenhof Country Estate', description: '9.1/10 | Überragendes Essen bis hin zum grandiosen Gamedrive!', url: 'https://www.booking.com/hotel/za/stellenhof-country-house.de.html?label=v3.cmcohng3r6xuh08783wf67hhw&sid=a3308e7bedd7d9bad072d19a351258bc&aid=1607597&ucfs=1&checkin=2025-11-26&checkout=2025-11-28&dest_id=-1206217&dest_type=city&group_adults=2&no_rooms=1&group_children=0&srpvid=916b37b6e0dd058e&srepoch=1751702147&matching_block_id=224975304_388007373_2_1_0&atlas_src=sr_iw_title#tab-main', price: 536, starred: true },
+                        { title: '<a href="https://www.booking.com/hotel/za/gondwana-game-reserve.de.html?label=gog235jc-1DCAso-wFCFW1hcmF0YWJhLXNhZmFyaS1sb2RnZUgHWANoO4gBAZgBB7gBB8gBDdgBA-gBAfgBAogCAagCA7gCh5nUwwbAAgHSAiRjNTA3MTQ0Mi02YTUzLTQwMDEtOTI4Yy1iOTY5ZWFjM2M0MDnYAgTgAgE&sid=d8e72b6f4d23102b9f4d6d68baf6805d&aid=356980&ucfs=1&arphpl=1&checkin=2025-11-28&checkout=2025-11-30&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&all_sr_blocks=44385202_338413931_2_21_0&highlighted_blocks=44385202_338413931_2_21_0&matching_block_id=44385202_338413931_2_21_0&sr_pri_blocks=44385202_338413931_2_21_0&from_list=1" target="_blank" class="underline">Gondwana Game Reserve</a>', description: 'Luxuriöses Safari-Lodge mit Big 5 und atemberaubenden Bergausblicken. Vollpension inklusive geführter Pirschfahrten.', starred: true, price: 890 }
                     ]
                 }
             ],
@@ -597,24 +589,30 @@ const tripData = {
                 13: {
                     date: '26. November 2025',
                     dayName: 'Mittwoch',
-                    region: 'Addo',
+                    region: 'Gondwana',
                     cards: [
                         {
-                            title: "Weiterreise nach Colchester",
+                            title: "Weiterreise nach Gondwana",
                             image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                            meta: "270km",
-                            text: "<a href='https://maps.app.goo.gl/nAcfH9JadeNYGkdZ7' target='_blank' class='underline'>Route</a>"
-                        },{
-                            title: "St. Francis Bay - weißes Dorf",
-                            image: "https://iol-prod.appspot.com/image/f5b960907468e055f3f0cd7355ff7626a1707aa5=w700",
-                            meta: "Zwischenstop auf dem Weg nach Colchester",
-                            text: "Tipp: Wir besuchen den malerischen Leuchtturm und die einzigartigen Kanäle. Das 'weiße Dorf' über Paradies Beach ist wie das Ende der Welt."
+                            meta: "ca. 2 Stunden (ca. 160 km)",
+                            text: "Wir verlassen Plettenberg Bay und nehmen eine spektakuläre Route ins Landesinnere zum Gondwana Game Reserve. Über Wilderness, Oudtshoorn und die Cango Caves führt uns der Weg durch die faszinierende Western Cape Landschaft mit atemberaubenden Bergausblicken."
                         },
                         {
-                            title: "Jeffreys Bay - Surfmekka",
-                            image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=500&auto=format&fit=crop",
-                            meta: "Zwischenstop auf dem Weg nach Colchester",
-                            text: "Legendäre Wellen und entspannte Surfer-Atmosphäre – ein Muss für Wassersportfans!"
+                            title: "Wilderness - Strandparadies",
+                            image: "https://elelaafrica.com/wp-content/uploads/2024/04/Wilderness-Beach-Elela-Africa.jpg",
+                            meta: "Zwischenstop für Strandspaziergang",
+                            text: "Tipp: Letzter Strandstopp! Wilderness ist ein verstecktes Juwel mit kilometerlangen Sandstränden und der malerischen Kaaiman's River Lagune. Perfekt für einen letzten Spaziergang am Meer vor der Safari."
+                        },                        {
+                            title: "Gondwana Game Reserve - Ankunft",
+                            image: "https://cdn2.rhinoafrica.com/thumbnails/objects/service-providers/gondwana-game-reserve/_img/2024/58573/image-thumb__58573__background-cover/gondwana-game-reserve-kwena-lodge-aerial-view-01.37f1c984.jpg",
+                            meta: "Check-in und Lodge-Entdeckung",
+                            text: "Willkommen im Safari-Paradies! Nach dem Check-in in der luxuriösen Gondwana Lodge erkunden wir unsere neue Heimat für die nächsten zwei Tage. Die Lodge bietet atemberaubende Ausblicke auf die Outeniqua Mountains und wir genießen die ersten Momente in der afrikanischen Savanne."
+                        },
+                        {
+                            title: "Abendliche Pirschfahrt",
+                            image: "https://www.perfectgolftravel.de/pglive/wp-content/uploads/2019/03/pgt-big5-sa-gondwana.jpg",
+                            meta: "17:00 - 19:30 Uhr",
+                            text: "Die Abendsafari im Gondwana ist ein magisches Erlebnis! Wir starten mit Sundowner-Getränken und beobachten, wie die Sonne hinter den Outeniqua Mountains versinkt. Die Tiere werden wieder aktiv – Löwen erwachen aus ihrem Tagesschlaf, Elefantenherden ziehen zu den Wasserlöchern und mit etwas Glück sehen wir Leoparden auf der Jagd. Die dramatische Abendstimmung mit dem afrikanischen Sternenhimmel macht diese Safari unvergesslich."
                         }
                        
                     ]
@@ -622,13 +620,26 @@ const tripData = {
                 14: {
                     date: '27. November 2025',
                     dayName: 'Donnerstag',
-                    region: 'Addo',
+                    region: 'Gondwana',
                     cards: [
+                        
                         {
-                            title: "Addo Elephant National Park Game Drive",
-                            image: "https://www.go2africa.com/wp-content/uploads/2024/11/eagles-crag-Shamwari-Private-Game-Reserve.jpg",
-                            meta: "Anfahrt: 10 Minuten · Aufenthalt: 10 - 16 Uhr",
-                            text: "Das große Safari-Finale! Mit einem erfahrenen Guide vom Stellenhof Country Estate wird die geführte Pirschfahrt durch die Savanne im offenen Geländewagen zu einem intensiven Naturerlebnis – Mit Glück erleben wir die legendären 'Big 5' hautnah. Über 550 Elefanten warten auf uns! "
+                            title: "Frühmorgendliche Pirschfahrt",
+                            image: "https://viel-unterwegs.de/wp-content/uploads/2024/09/gondwana-game-reserve-pirschfahrten-1200x750.jpg",
+                            meta: "06:00 - 09:00 Uhr",
+                            text: "Erleben wir die besondere Atmosphäre der Morgendämmerung im Gondwana! Wir starten bei Sonnenaufgang mit heißem Kaffee und frischen Muffins. Die Morgensafari führt uns durch die Fynbos-Vegetation und offene Savanne. Mit etwas Glück beobachten wir Löwen beim Jagen, Elefanten an den Wasserlöchern oder Nashörner in der goldenen Morgensonne. Die Outeniqua Mountains bilden einen dramatischen Hintergrund für unvergessliche Fotos."
+                        },
+                        {
+                            title: "Nachmittag im Reservat",
+                            image: "https://y.cdrst.com/foto/hotel-sf/12dcbd11/granderesp/foto-hotel-12dcb267.jpg",
+                            meta: "Nachmittags - Entspannung",
+                            text: "Nach der Safari genießen wir die luxuriösen Annehmlichkeiten der Lodge. Entspannen am Infinity-Pool mit Bergblick, Wellness-Behandlungen oder ein Buch im Schatten der alten Bäume. Die Lodge bietet auch geführte Wanderungen oder Vogelbeobachtung an."
+                        },
+                        {
+                            title: "African Dinner",
+                            image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/490279409.jpg?k=759d23a05a39577ade61b19b6630ffdda561c4b593872d7b642a7c36d2b1b038&o=&hp=1",
+                            meta: "19:30 Uhr - Abendessen",
+                            text: "Gourmet-Erlebnis unter afrikanischem Himmel! Das Abendessen in der Lodge ist ein kulinarisches Highlight mit lokalen Zutaten und atemberaubendem Bergblick. Bei klarem Himmel können wir die Sterne der Südhalbkugel bewundern."
                         }
                         
                     ]
@@ -636,25 +647,25 @@ const tripData = {
                 15: {
                     date: '28. November 2025',
                     dayName: 'Freitag',
-                    region: 'Addo',
+                    region: 'Gondwana',
                     cards: [
                         {
-                            title: "Port Elizabeth – Die freundliche Stadt",
-                            image: "https://lp-cms-production.imgix.net/2019-06/478157521_full.jpg?sharp=10&vib=20&w=1200&w=600&h=400",
-                            meta: "vormittags",
-                            text: "Port Elizabeth, auch Gqeberha genannt, ist bekannt für ihre Strände und die entspannte Atmosphäre. Ein kurzer Stopp an der Promenade oder ein Kaffee am Strand lohnen sich auf dem Weg zum Addo Elephant Park."
+                            title: "Abschieds-Morgensafari",
+                            image: "https://viel-unterwegs.de/wp-content/uploads/2024/09/unterschied-nationalparks-game-reserves-suedafrika-1200x729.jpg",
+                            meta: "06:00 - 09:00 Uhr",
+                            text: "Unser letztes Safari-Erlebnis im Gondwana! Bei der Abschieds-Morgensafari erleben wir die Savanne ein letztes Mal im goldenen Morgenlicht. Mit erfahrenen Guides suchen wir nach den Big 5 und genießen die letzten Momente in der afrikanischen Wildnis. Die Outeniqua Mountains leuchten in der Morgensonne und wir sammeln unvergessliche Erinnerungen für die Heimreise."
                         },
                         {
-                            title: "Addo Elephant National Park Episode 2",
-                            image: "https://www.ventertours.de/fileadmin/_processed_/6/1/csm_Addo-Ludwig-Heilmaier_c371212f0b.jpg",
-                            meta: "Anfahrt: 10 Minuten · Aufenthalt: 17-19 Uhr",
-                            text: "Diesmal fahren wir selbst! Die Stunden vor Sonnenuntergang sind die eindrucksvollste Zeit im Addo Elephant Park: Wenn die Hitze nachlässt, werden Elefanten, Büffel und Antilopen ab 17 Uhr wieder aktiv – oft direkt an den Wasserlöchern. In warmem, goldenen Licht entstehen unvergessliche Fotos, während die Wege spürbar leerer werden. Weniger Fahrzeuge, mehr Natur, maximale Safari-Atmosphäre – perfekt für alle, die den Park bis zum letzten Lichtmoment erleben wollen."
+                            title: "Rückfahrt nach Kapstadt",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "ca. 4,5 Stunden (ca. 400 km)",
+                            text: "Nach der Abschieds-Morgensafari und einem letzten Frühstück in der Lodge fahren wir zurück nach Kapstadt. Die Route führt uns durch die malerische Western Cape Landschaft mit letzten Blicken auf die Berge und Küste. Wir nehmen unvergessliche Safari-Erinnerungen mit nach Hause."
                         },
                         {
-                            title: "Bloukrans Bungee Jump",
-                            image: "https://www.garden-route-entdecken.de/wp-content/uploads/bungee-jumping-bloukrans-bridge.jpg",
-                            meta: "216m direkt an der N2 | Ein Muss für Alle!",
-                            text: "Tipp: Der höchste kommerzielle Bungee-Sprung der Welt! Für alle, die es weniger extrem mögen, gibt es auch einen Skywalk. Reservierung der Sprungzeit empfohlen."
+                            title: "Kloof-Street-Viertel",
+                            image: "https://www.sa-venues.com/visit/kloofstreethotel/26g.jpg",
+                            meta: "",
+                            text: "Und Abends dann eintauchen ins City-Life im pulsierenden Kloof-Street-Viertel"
                         }
                         
                     ]
@@ -666,7 +677,7 @@ const tripData = {
             title: 'Rückreise: Abschied von Südafrika',
             name: 'Rückreise',
             icon: '🏠',
-            intro: 'Die letzten beiden Tage unserer unvergesslichen Südafrika-Reise. Wir fahren gemütlich von Addo zurück nach Kapstadt und genießen noch einmal die Highlights der Mother City, bevor es zum Flughafen geht.',
+            intro: 'Die letzten beiden Tage unserer unvergesslichen Südafrika-Reise. Wir fahren gemütlich von Gondwana zurück nach Kapstadt und genießen noch einmal die Highlights der Mother City, bevor es zum Flughafen geht.',
             tabs: [
                 {
                     name: 'Highlights',
@@ -693,16 +704,10 @@ const tripData = {
                     region: 'Rückreise',
                     cards: [
                         {
-                            title: "Rückfahrt nach Kapstadt",
-                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                            meta: "12 Stunden (ca. 800 km)",
-                            text: "Wir fahren nach <a href='https://maps.app.goo.gl/UBFypCyP8KYsoA6t8' target='_blank' class='underline'>Kapstadt</a> und übernachten dort ein letztes Mal in Südafrika.<br><br><table><thead><tr><th>Zeit</th><th>Ort</th><th>Aufenthalt</th><th>Zweck</th></tr></thead><tbody><tr><td>08:00</td><td>Start Colchester</td><td>—</td><td>Abfahrt</td></tr><tr><td>09:30</td><td>Humansdorp</td><td>15–20 min</td><td>Tanken, WC</td></tr><tr><td>12:00</td><td>Knysna Waterfront</td><td>30–45 min</td><td>Essen, Ausblick</td></tr><tr><td>14:30</td><td>Heidelberg</td><td>15 min</td><td>Tank, WC</td></tr><tr><td>16:30</td><td>Riviersonderend</td><td>15–30 min</td><td>Kaffee, Stretch</td></tr><tr><td>18:30</td><td>Ankunft Kapstadt</td><td>—</td><td>Ankunft</td></tr></tbody></table>"
-                        },
-                        {
-                            title: "Kloof-Street-Viertel",
-                            image: "https://www.sa-venues.com/visit/kloofstreethotel/26g.jpg",
-                            meta: "",
-                            text: "Abendessen und City-Life im pulsierenden Kloof-Street-Viertel"
+                            title: "Spontane Entdeckungen",
+                            image: "https://www.capetown.travel/wp-content/uploads/long-street-in-cape-town.jpg",
+                            meta: "Alles was uns Spaß macht",
+                            text: "Z.B Robben Island, Constantia Valley, Tafelberg, Kloof Street, etc."
                         }
                     ]
                 },
@@ -889,8 +894,8 @@ document.addEventListener('DOMContentLoaded', function() {
                      prompt += ` Einige der bereits erwähnten Restaurants sind Creation Wines, Burgundy Seafront Restaurant, Fisherman's Cottage, Hamilton Russell Vineyards. Bitte schlage ein anderes vor.`;
                 } else if (region.includes('Garden Route')) {
                      prompt += ` Einige der bereits erwähnten Restaurants sind 34 South, Nostalgie Restaurant, Tsitsikhaya Restaurant, The Plettenberg. Bitte schlage ein anderes vor.`;
-                } else if (region.includes('Addo')) {
-                     prompt += ` Einige der bereits erwähnten Restaurants sind Nina's Real Food, Walskipper, Cattle Baron, Ocean Basket. Bitte schlage ein anderes vor.`;
+                } else if (region.includes('Gondwana')) {
+                     prompt += ` Einige der bereits erwähnten Restaurants sind Gondwana Lodge Restaurant, Nina's Real Food, Walskipper, Ocean Basket. Bitte schlage ein anderes vor.`;
                 }
 
 
