@@ -125,8 +125,11 @@
                 <a href="#kapstadt-section" class="nav-link">Kapstadt</a>
                 <a href="#weinlande-section" class="nav-link">Weinlande</a>
                 <a href="#hermanus-section" class="nav-link">Hermanus</a>
-                <a href="#garden-route-section" class="nav-link">Garden Route</a>
-                <a href="#addo-section" class="nav-link">Addo</a>
+                <a href="#arniston-section" class="nav-link">Arniston</a>
+                <a href="#oudtshoorn-section" class="nav-link">Oudtshoorn</a>
+                <a href="#plettenberg-bay-section" class="nav-link">Plettenberg Bay</a>
+                <a href="#gondwana-section" class="nav-link">Gondwana</a>
+                <a href="#accommodations" class="nav-link">Übernachtungen</a>
             </div>
            
              <button id="mobile-menu-button" class="md:hidden p-2">
@@ -139,8 +142,11 @@
             <a href="#kapstadt-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Kapstadt</a>
             <a href="#weinlande-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Weinlande</a>
             <a href="#hermanus-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Hermanus</a>
-            <a href="#garden-route-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Garden Route</a>
-            <a href="#addo-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Addo</a>
+            <a href="#arniston-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Arniston</a>
+            <a href="#oudtshoorn-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Oudtshoorn</a>
+            <a href="#plettenberg-bay-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Plettenberg Bay</a>
+            <a href="#gondwana-section" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Gondwana</a>
+            <a href="#accommodations" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Übernachtungen</a>
             <a href="#budget" class="block text-center py-2 px-4 text-sm hover:bg-gray-100">Budget</a>
         </div>
     </header>
@@ -229,6 +235,18 @@
                
                 <div id="days-sections">
                     <!-- Tagessektionen werden hier durch JavaScript generiert -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Übernachtungs-Liste Section -->
+        <section id="accommodations" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-2">🏨 Übernachtungen der Reise</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Alle ausgewählten Hotels und Unterkünfte für die 17-tägige Südafrika-Reise</p>
+                
+                <div id="accommodations-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Übernachtungen werden hier durch JavaScript generiert -->
                 </div>
             </div>
         </section>
@@ -333,6 +351,113 @@
                 </div>
             `;
         }
+
+        // Funktion zur Generierung der Übernachtungs-Liste
+        function generateAccommodationsList() {
+            const accommodationsList = document.getElementById('accommodations-list');
+            if (!accommodationsList) return;
+
+            // Sammle alle starred Hotels aus tripData dynamisch
+            const starredHotels = {};
+            
+            tripData.sections.forEach(section => {
+                const hotelsTab = section.tabs.find(tab => tab.name === 'Hotels');
+                if (hotelsTab) {
+                    hotelsTab.content.forEach(hotel => {
+                        if (hotel.starred === true) {
+                            starredHotels[section.name] = {
+                                title: hotel.title,
+                                description: hotel.description,
+                                price: hotel.price,
+                                url: hotel.url
+                            };
+                        }
+                    });
+                }
+            });
+
+            // Generiere HTML für jeden Tag (1-17) dynamisch
+            const accommodationsHtml = [];
+            let totalCost = 0;
+            
+            for (let day = 1; day <= 17; day++) {
+                // Finde die entsprechende Region und Datum für diesen Tag
+                let region = '';
+                let date = '';
+                let dayName = '';
+                
+                // Durchsuche alle Sektionen nach dem Tag
+                for (const section of tripData.sections) {
+                    if (section.Days && section.Days[day]) {
+                        region = section.Days[day].region;
+                        date = section.Days[day].date;
+                        dayName = section.Days[day].dayName || '';
+                        break;
+                    }
+                }
+
+                const hotel = starredHotels[region];
+                
+                // Bestimme den Inhalt basierend auf Hotel
+                let title, description, price, url;
+                
+                // Spezialbehandlung für Tag 17 (Abflug)
+                if (day === 17) {
+                    title = '✈️ Flug';
+                    description = 'Abflug nach Deutschland';
+                    price = '';
+                    url = '';
+                } else if (hotel) {
+                    title = hotel.title;
+                    description = hotel.description;
+                    price = hotel.price;
+                    url = hotel.url;
+                    // Addiere zur Gesamtsumme (nur für echte Hotelübernachtungen)
+                    if (price && typeof price === 'number') {
+                        totalCost += price;
+                    }
+                } else {
+                    title = '❓';
+                    description = 'Kein Hotel ausgewählt';
+                    price = '';
+                    url = '';
+                }
+                
+                const hotelTitle = url ? `<a href="${url}" target="_blank" class="underline">${title}</a>` : title;
+                const dateWithDay = dayName ? `${dayName}, ${date}` : date;
+                
+                accommodationsHtml.push(`
+                    <div class="bg-white rounded-2xl shadow p-6 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center">
+                                <span class="bg-[#C89F93] text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Tag ${day}</span>
+                                <span class="text-gray-500 text-sm">${dateWithDay}</span>
+                            </div>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">${region}</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">${hotelTitle}</h3>
+                        ${description ? `<p class="text-gray-600 text-sm mb-2">${description}</p>` : ''}
+                        ${price ? `<p class="text-green-600 font-semibold">€${price}</p>` : ''}
+                    </div>
+                `);
+            }
+
+            // Füge Gesamtsumme hinzu
+            const totalHtml = `
+                <div class="col-span-full bg-gradient-to-r from-[#C89F93] to-[#E3CFC9] rounded-2xl p-6 text-white text-center shadow-xl">
+                    <h3 class="text-2xl font-bold mb-2">💰 Gesamtkosten Übernachtungen</h3>
+                    <p class="text-4xl font-bold mb-2">€${totalCost.toLocaleString()}</p>
+                    <p class="text-lg opacity-90">für 16 Nächte • Preise bereits für 2 Personen</p>
+                </div>
+            `;
+
+            accommodationsList.innerHTML = accommodationsHtml.join('') + totalHtml;
+        }
+
+        // Übernachtungs-Liste beim Laden der Seite generieren
+        document.addEventListener('DOMContentLoaded', function() {
+            generateAccommodationsList();
+        });
     </script>
 
 </body>

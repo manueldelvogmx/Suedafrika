@@ -2,59 +2,89 @@
 // Chart.js Budget Visualisierungen
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Extrahiere Hotels mit starred=true aus tripData
+    // Extrahiere Hotels mit starred=true aus tripData (aktualisierte Logik)
     function getStarredHotels() {
         const starredHotels = [];
         const regionTotals = {};
         const regionDays = {};
         const regionCostsPerDay = {};
         
+        // Sammle alle starred Hotels aus tripData dynamisch (wie in suedafrika.html)
+        const starredHotelsMap = {};
+        
         tripData.sections.forEach(section => {
-            // Berechne Anzahl der Tage pro Region
-            const days = section.Days ? Object.keys(section.Days).length : 0;
-            
-            // Berechne Anzahl der Übernachtungen (bei Rückreise eine weniger, da letzter Tag Abreisetag ist)
-            let nights = days;
-            if (section.id === 'rueckreise') {
-                nights = Math.max(0, days - 1); // Am letzten Tag wird nicht übernachtet
-            }
-            
-            regionDays[section.name] = nights;
-            
             const hotelsTab = section.tabs.find(tab => tab.name === 'Hotels');
             if (hotelsTab) {
-                const starred = hotelsTab.content.filter(hotel => hotel.starred === true);
-                starred.forEach(hotel => {
-                    const price = typeof hotel.price === 'number' ? hotel.price : 0;
-                    starredHotels.push({
-                        name: hotel.title,
-                        price: price,
-                        region: section.name,
-                        days: days
-                    });
-                    
-                    // Summiere nach Region
-                    if (!regionTotals[section.name]) regionTotals[section.name] = 0;
-                    regionTotals[section.name] += price;
+                hotelsTab.content.forEach(hotel => {
+                    if (hotel.starred === true) {
+                        starredHotelsMap[section.name] = {
+                            title: hotel.title,
+                            description: hotel.description,
+                            price: hotel.price,
+                            url: hotel.url
+                        };
+                    }
+                });
+            }
+        });
+
+        // Berechne Kosten für Tag 1-16 (Tag 17 ist Abflug)
+        let totalCost = 0;
+        const hotelDetails = [];
+        
+        for (let day = 1; day <= 16; day++) {
+            // Finde die entsprechende Region für diesen Tag
+            let region = '';
+            
+            // Durchsuche alle Sektionen nach dem Tag
+            for (const section of tripData.sections) {
+                if (section.Days && section.Days[day]) {
+                    region = section.Days[day].region;
+                    break;
+                }
+            }
+
+            const hotel = starredHotelsMap[region];
+            
+            if (hotel && hotel.price && typeof hotel.price === 'number') {
+                totalCost += hotel.price;
+                
+                // Sammle Hotel-Details für die Anzeige
+                hotelDetails.push({
+                    name: hotel.title,
+                    price: hotel.price,
+                    region: region,
+                    day: day
                 });
                 
-                // Berechne Kosten pro Tag
-                if (regionTotals[section.name] && days > 0) {
-                    regionCostsPerDay[section.name] = Math.round(regionTotals[section.name] / days);
-                }
+                // Summiere nach Region
+                if (!regionTotals[region]) regionTotals[region] = 0;
+                regionTotals[region] += hotel.price;
+                
+                // Zähle Tage pro Region
+                if (!regionDays[region]) regionDays[region] = 0;
+                regionDays[region]++;
+            }
+        }
+        
+        // Berechne Kosten pro Tag für jede Region
+        Object.keys(regionTotals).forEach(region => {
+            if (regionDays[region] > 0) {
+                regionCostsPerDay[region] = Math.round(regionTotals[region] / regionDays[region]);
             }
         });
         
         return { 
-            hotels: starredHotels, 
+            hotels: hotelDetails, 
             regionTotals, 
             regionDays, 
-            regionCostsPerDay 
+            regionCostsPerDay,
+            totalCost: totalCost
         };
     }
     
     const hotelData = getStarredHotels();
-    const totalHotelCost = hotelData.hotels.reduce((sum, hotel) => sum + hotel.price, 0);
+    const totalHotelCost = hotelData.totalCost; // Verwende die berechnete Gesamtsumme
     
     // Aktualisiere die Hotelkosten im Datenmodell
     tripData.totalCosts.accommodation.total = totalHotelCost;

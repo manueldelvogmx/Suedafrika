@@ -74,7 +74,7 @@ const tripData = {
                         { title: 'The Glen Boutique Hotel & Spa', description: '9.4/10 | Sea Point |  Boutique-Hotel mit exzellentem Spa.', starred: false },
                         { title: 'Sunsquare Cape Town City Bowl', description: '8.6/10 | City Centre |  Gutes Preis-Leistungs-Verhältnis und zentral gelegen.' },
                         { title: 'Protea Hotel Waterfront', description: '7.9/10 | V&A Waterfront |  Direkt an der belebten Waterfront.', url: 'https://www.marriott.com/en-us/hotels/cptbr-protea-hotel-cape-town-waterfront-breakwater-lodge/overview/' },
-                        { title: 'Breakwater Lodge', description: 'Tipp: 8.2/10 | V&A Waterfront | 823€ | Historisches 3-Sterne Hotel am Wasser mit einzigartigem Charme.', url: 'https://www.booking.com/hotel/za/breakwater-lodge.de.html?label=v3.cmcohng3r6xuh08783wf67hhw&aid=1607597&ucfs=1&checkin=2025-11-14&checkout=2025-11-18&dest_id=-1217214&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204&srpvid=252c351c506403e5&srepoch=1751614525&matching_block_id=1516310_369394327_0_42_0&atlas_src=sr_iw_title', starred: true, price: 330},
+                        { title: 'Breakwater Lodge', description: 'Tipp: 8.2/10 | V&A Waterfront | Historisches 3-Sterne Hotel am Wasser mit einzigartigem Charme.', url: 'https://www.booking.com/hotel/za/breakwater-lodge.de.html?label=v3.cmcohng3r6xuh08783wf67hhw&aid=1607597&ucfs=1&checkin=2025-11-14&checkout=2025-11-18&dest_id=-1217214&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204&srpvid=252c351c506403e5&srepoch=1751614525&matching_block_id=1516310_369394327_0_42_0&atlas_src=sr_iw_title', starred: true, price: 160},
                     ]
                 }
             ],
@@ -194,7 +194,7 @@ const tripData = {
                         { title: 'Petit Ermitage', description: '9.9/10 | Franschhoek |  Außergewöhnlich bewertet und zentral.' },
                         { title: 'Cultivar Guest Lodge', description: '9.0/10 | Stellenbosch |  4-Sterne-Lodge mit großem Pool.' },
                         { title: 'The Belmont', description: '9.3/10 | Franschhoek |  Hervorragendes Preis-Leistungs-Verhältnis.' },
-                        { title: '<a href="https://book.nightsbridge.com/15800?_ga=2.256709315.935787942.1751700526-2028448925.1751610940" target=_blank class="underline">Grande Provence Wine Estate (Franschhoek)</a> ', description: 'Tipp: Weingut mit Unterkunft.' , starred: true, price: 890},
+                        { title: '<a href="https://book.nightsbridge.com/15800?_ga=2.256709315.935787942.1751700526-2028448925.1751610940" target=_blank class="underline">Grande Provence Wine Estate (Franschhoek)</a> ', description: 'Tipp: Weingut mit Unterkunft.' , starred: true, price: 445},
                         { title: 'Avondrood Guesthouse (Franschhoek)', description: 'Tipp: Gemütliche Guesthouse-Atmosphäre.' },
                         { title: 'Maison Cabriere (Franschhoek)', description: 'Tipp: Weingut mit stilvollen Zimmern.' },
                         { title: 'Cape Vue Country House (Franschhoek)', description: 'Tipp: Country House mit schöner Aussicht.' },
@@ -279,7 +279,7 @@ const tripData = {
                     icon: '🏨',
                     content: [
                         { title: 'The Marine Hermanus', description: '9.6/10 | Hermanus |  Legendäres 5-Sterne-Hotel mit Walblick.' },
-                        { title: 'Esplanade Hotel', description: 'Hermanus | Charmes Hotel im Herzen von Hermanus mit toller Lage.', url: 'https://www.booking.com/hotel/za/esplanade-hermanus.de.html?aid=1607597&label=v3.cmcohng3r6xuh08783wf67hhw&sid=a3308e7bedd7d9bad072d19a351258bc&all_sr_blocks=1065716017_388139523_2_0_0&checkin=2025-11-18&checkout=2025-11-20&dest_id=-1236784&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=15&highlighted_blocks=1065716017_388139523_2_0_0&hpos=15&matching_block_id=1065716017_388139523_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1065716017_388139523_2_0_0__639000&srepoch=1751615945&srpvid=ca8437f52de5062d&type=total&ucfs=1&activeTab=main', starred: true, price: 385 },
+                        { title: 'Esplanade Hotel', description: 'Hermanus | Charmes Hotel im Herzen von Hermanus mit toller Lage.', url: 'https://www.booking.com/hotel/za/esplanade-hermanus.de.html?aid=1607597&label=v3.cmcohng3r6xuh08783wf67hhw&sid=a3308e7bedd7d9bad072d19a351258bc&all_sr_blocks=1065716017_388139523_2_0_0&checkin=2025-11-18&checkout=2025-11-20&dest_id=-1236784&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=15&highlighted_blocks=1065716017_388139523_2_0_0&hpos=15&matching_block_id=1065716017_388139523_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1065716017_388139523_2_0_0__639000&srepoch=1751615945&srpvid=ca8437f52de5062d&type=total&ucfs=1&activeTab=main', starred: true, price: 190 },
                         
                        
                     ]
@@ -339,30 +339,20 @@ const tripData = {
             }
         },
         {
-            id: 'garden-route',
-            title: 'Die Garden Route: Natur Pur & Abenteuer',
-            name: 'Garden Route',
-            icon: '🌿',
-            intro: 'Die Garden Route, eine traumhafte Küstenstraße zwischen Kapstadt und Port Elizabeth, ist unser Zuhause für die nächsten Nächte. Wir starten in Gansbaai mit Haikäfigtauchen, übernachten in Arniston, Oudtshoorn, Wilderness, Plettenberg Bay und Colchester. Diese Region ist ein Mosaik aus dichten Wäldern, ruhigen Lagunen, langen Sandstränden und dramatischen Küsten. Von den ikonischen Knysna Heads über die faszinierende Tierwelt bei Plettenberg Bay bis zum abenteuerlichen Tsitsikamma Nationalpark – die Garden Route ist ein Spielplatz für Naturliebhaber und Abenteurer und zeigt uns die schönsten Facetten Südafrikas.',
-             tabs: [
+            id: 'arniston',
+            title: 'Arniston: Fischerdorf & Haikäfigtauchen (20. - 21. November)',
+            name: 'Arniston',
+            icon: '🏖️',
+            intro: 'Arniston (auch Waenhuiskrans) ist ein authentisches Fischerdorf an der südafrikanischen Küste. Hier erleben wir die Ruhe eines traditionellen Dorfes mit weißen Sandstränden, historischem Leuchtturm und traditionellen Fischerbooten. Von hier aus starten wir auch zu unserem Haikäfigtauchen-Abenteuer in Gansbaai.',
+            tabs: [
                 {
                     name: 'Highlights',
                     icon: '🏞️',
                     content: [
                         { title: 'Gansbaai - Haikäfigtauchen', description: 'Erleben Sie das berühmte Haikäfigtauchen und beobachten Sie Weiße Haie hautnah in "Shark Alley".' },
                         { title: 'Dyer Island', description: 'Besuchen Sie die berühmte Insel der Seelöwen und Pinguine, auch bekannt als "Shark Alley".' },
-                        { title: 'Witsand', description: 'Bekannt für die Mündung des Breede River, Sandstrände und als Hotspot für Kitesurfer und Wale.' },
-                        { title: 'Mossel Bay', description: 'Historischer Hafen, schöne Strände und das berühmte Dias Museum.' },
-                        { title: 'Swartberg Pass', description: 'Eine der spektakulärsten Passstraßen Südafrikas – ein Muss für Abenteurer und Fotografen.' },
-                        { title: 'Prince Albert', description: 'Künstlerdorf am Swartberg Pass mit viel Karoo-Charme, Cafés und Galerien.' },
-                        { title: 'Knysna Heads', description: 'Zwei majestätische Sandsteinklippen, die die Lagune vom Ozean trennen. Atemberaubende Aussichtspunkte.' },
-                        { title: 'Robberg Nature Reserve', description: 'Wandern Sie auf einer Halbinsel mit dramatischen Klippen und einer großen Robbenkolonie.' },
-                        { title: 'Tsitsikamma Nationalpark', description: 'Überqueren Sie die spektakuläre Hängebrücke über die Storms River Mündung.' },
-                        { title: 'Bloukrans Bridge (Optional)', description: 'Der höchste kommerzielle Bungee-Sprung der Welt – oder ein Skywalk für die weniger Wagemutigen.' },
-                        { title: 'Oudtshoorn & Cango Caves', description: 'Erkunden Sie die "Straußenhauptstadt" und das unterirdische Wunderland der Cango Caves in der Kleinen Karoo.' },
-                        { title: 'Port Elizabeth', description: 'Die „freundliche Stadt" am Indischen Ozean – ideal für einen kurzen Stopp an der Promenade.' },
-                        { title: 'Stanford - Verstecktes Juwel', description: 'Tipp: Kleiner Ort abseits der Tourismuspfade. Superschöne restaurierte Straßen und Häuser mit kleinen Restaurants und Cafés. Eine Flussfahrt auf dem River zum Sonnenuntergang ist ganz besonders.' },
-                        { title: 'Elim - Fahrt ans Ende der Welt', description: 'Tipp: Das gesamte Dorf besteht aus bunt angestrichenen strohgedeckten Häusern, die alle unter Denkmalschutz stehen. Ein besonders stimmungsvoller Ort - die Fahrt dorthin ist schon ein Erlebnis.' },
+                        { title: 'Kap Agulhas - Südspitze Afrikas', description: 'Hier treffen Atlantik und Indischer Ozean aufeinander - der südlichste Punkt Afrikas.' },
+                        { title: 'Die Otter Beach Arniston', description: 'Wunderschöner, ruhiger Strandabschnitt – ideal zum Baden, Spazieren und Entspannen.' },
                     ]
                 },
                 {
@@ -370,17 +360,6 @@ const tripData = {
                     icon: '🍷',
                     content: [
                         { title: '<a href="https://www.kaai4.co.za/" target="_blank" class="underline">Kaai 4</a>', description: 'Ein Muss für alle, die echte südafrikanische Braai-Kultur direkt am Meer erleben wollen – mit rauchigem Grillduft in der Luft, fangfrischem Hake und fluffigem „roosterkoek" direkt vom Feuer!', starred: true },
-                        { title: '34 South (Knysna)', description: 'Lebhaftes Restaurant an der Waterfront mit Sushi, Austern und mehr.' },
-                        { title: 'Nostalgie Restaurant (Oudtshoorn)', description: 'Spezialisiert auf traditionelle Karoo-Küche und Straußengerichte.' },
-                        { title: 'Tsitsikhaya Restaurant (Storms River)', description: 'Unprätentiöse südafrikanische Gerichte in entspannter Atmosphäre.' },
-                        { title: 'The Plettenberg', description: 'Gehobene Küche mit fantastischem Meerblick in Plettenberg Bay.' },
-                        { title: 'Restaurant Cornuti (Knysna)', description: 'Tipp: Tolle Lage für Kaffee.' },
-                        { title: 'East Head Café (Knysna)', description: 'Tipp: Direkt an den Heads, moderate Preise.' },
-                        { title: 'The Olive Tree (Knysna)', description: 'Tipp: Tolles Essen, freundlicher Service.' },
-                        { title: 'Firefly Eating House (Knysna)', description: 'Tipp: Einzigartiges Geschmackserlebnis.' },
-                        { title: 'Restaurant Jemima\'s (Oudtshoorn)', description: 'Tipp: Gutes Essen, nette Atmosphäre.' },
-                        { title: 'Restaurant La Plume (Oudtshoorn)', description: 'Tipp: Harmonische Atmosphäre.' },
-                        { title: 'Galery Café (Prince Albert)', description: 'Tipp: Essen und Kunst kombiniert.' },
                     ]
                 },
                 {
@@ -388,15 +367,6 @@ const tripData = {
                     icon: '🏨',
                     content: [
                         { title: 'Arniston Hotel', description: '8.8/10 | Arniston |  Charmantes Hotel direkt am Strand mit Restaurant.', starred: true, price:207 },
-                        
-                        { title: 'Hlangana Lodge', description: '9.4/10 | Oudtshoorn |  Top-bewertete Lodge mit tollem Frühstück.', starred: true, price:180 },
-                        { title: 'Archrock Resort (Keurboomstrand)', description: 'Tipp: Resort in Keurboomstrand bei Plettenberg Bay.' },
-                        { title: 'Turbine Hotel und Spa (Knysna)', description: 'Tipp: In einem ehemaligen Kraftwerk gelegen.' },
-                        { title: 'DeZeekoe Guestfarm (Oudtshoorn)', description: 'Tipp: Authentische Guestfarm-Erfahrung.' },
-                        { title: 'The Pictures Guesthouse (Oudtshoorn)', description: 'Tipp: Sehr sauber.' },
-                        { title: 'African Relish (Prince Albert)', description: 'Tipp: Kochschule mit kleinen Unterkünften.' },
-                        { title: 'Deurdrift Cottage (Prince Albert)', description: 'Tipp: Gemütliches Cottage.' },
-                        { title: 'The Bungalow Plettenberg', description: 'Der perfekte Ort zum Abschalten und Genießen. Die Lage ist einfach unschlagbar – direkt am Strand', starred: true, price: 585 }
                     ]
                 }
             ],
@@ -404,7 +374,7 @@ const tripData = {
                 7: {
                     date: '20. November 2025',
                     dayName: 'Donnerstag',
-                    region: 'Garden Route',
+                    region: 'Arniston',
                     cards: [
                         {
                             title: "Weiterreise nach Arniston",
@@ -429,7 +399,7 @@ const tripData = {
                 8: {
                     date: '21. November 2025',
                     dayName: 'Freitag',
-                    region: 'Garden Route',
+                    region: 'Arniston',
                     cards: [
                         {
                             title: "Kap Agulhas - Südspitze Afrikas",
@@ -444,11 +414,55 @@ const tripData = {
                             text: "Wunderschöner, ruhiger Strandabschnitt – ideal zum Baden, Spazieren und Entspannen."
                         }
                     ]
+                }
+            }
+        },
+        {
+            id: 'oudtshoorn',
+            title: 'Oudtshoorn: Straußenhauptstadt & Karoo (22. - 23. November)',
+            name: 'Oudtshoorn',
+            icon: '🦘',
+            intro: 'Oudtshoorn ist die Straußenhauptstadt Südafrikas in der Kleinen Karoo. Hier erleben wir die faszinierende Welt der Straußenfarmen, erkunden die unterirdischen Wunder der Cango Caves und genießen die wilde Karoo-Landschaft mit dem spektakulären Swartberg Pass.',
+            tabs: [
+                {
+                    name: 'Highlights',
+                    icon: '🏞️',
+                    content: [
+                        { title: 'Oudtshoorn & Cango Caves', description: 'Erkunden Sie die "Straußenhauptstadt" und das unterirdische Wunderland der Cango Caves in der Kleinen Karoo.' },
+                        { title: 'Swartberg Pass', description: 'Eine der spektakulärsten Passstraßen Südafrikas – ein Muss für Abenteurer und Fotografen.' },
+                        { title: 'Prince Albert', description: 'Künstlerdorf am Swartberg Pass mit viel Karoo-Charme, Cafés und Galerien.' },
+                        { title: 'Witsand', description: 'Bekannt für die Mündung des Breede River, Sandstrände und als Hotspot für Kitesurfer und Wale.' },
+                        { title: 'Mossel Bay', description: 'Historischer Hafen, schöne Strände und das berühmte Dias Museum.' },
+                        { title: 'Elim - Fahrt ans Ende der Welt', description: 'Tipp: Das gesamte Dorf besteht aus bunt angestrichenen strohgedeckten Häusern, die alle unter Denkmalschutz stehen.' },
+                    ]
                 },
+                {
+                    name: 'Essen & Wein',
+                    icon: '🍷',
+                    content: [
+                        { title: 'Nostalgie Restaurant (Oudtshoorn)', description: 'Spezialisiert auf traditionelle Karoo-Küche und Straußengerichte.' },
+                        { title: 'Restaurant Jemima\'s (Oudtshoorn)', description: 'Tipp: Gutes Essen, nette Atmosphäre.' },
+                        { title: 'Restaurant La Plume (Oudtshoorn)', description: 'Tipp: Harmonische Atmosphäre.' },
+                        { title: 'Galery Café (Prince Albert)', description: 'Tipp: Essen und Kunst kombiniert.' },
+                    ]
+                },
+                {
+                    name: 'Hotels',
+                    icon: '🏨',
+                    content: [
+                        { title: 'Hlangana Lodge', url: 'https://book.nightsbridge.com/10108',  description: '9.4/10 | Oudtshoorn |  Top-bewertete Lodge mit tollem Frühstück.', starred: true, price:90 },
+                        { title: 'DeZeekoe Guestfarm (Oudtshoorn)', description: 'Tipp: Authentische Guestfarm-Erfahrung.' },
+                        { title: 'The Pictures Guesthouse (Oudtshoorn)', description: 'Tipp: Sehr sauber.' },
+                        { title: 'African Relish (Prince Albert)', description: 'Tipp: Kochschule mit kleinen Unterkünften.' },
+                        { title: 'Deurdrift Cottage (Prince Albert)', description: 'Tipp: Gemütliches Cottage.' },
+                    ]
+                }
+            ],
+            Days: {
                 9: {
                     date: '22. November 2025',
                     dayName: 'Samstag',
-                    region: 'Garden Route',
+                    region: 'Oudtshoorn',
                     cards: [
                         {
                             title: "Reise nach Oudtshoorn",
@@ -479,7 +493,7 @@ const tripData = {
                 10: {
                     date: '23. November 2025',
                     dayName: 'Sonntag',
-                    region: 'Garden Route',
+                    region: 'Oudtshoorn',
                     cards: [
                         {
                             title: "Oudtshoorn",
@@ -500,11 +514,54 @@ const tripData = {
                             text: "Das kleine Städtchen am Fuß des Swartberg Passes begeistert mit historischen Gebäuden, Galerien und echtem <a href='https://www.suedafrika-reise.net/westkap/karoo.htm' target='_blank' class='underline'>Karoo-Feeling</a>. Perfekt für einen Lunch-Stop oder einen Bummel durch die Hauptstraße."
                         }
                     ]
+                }
+            }
+        },
+        {
+            id: 'plettenberg-bay',
+            title: 'Plettenberg Bay: Küstenparadies & Natur (24. - 25. November)',
+            name: 'Plettenberg Bay',
+            icon: '🌊',
+            intro: 'Plettenberg Bay, auch "Plett" genannt, ist ein Küstenparadies an der Garden Route. Hier erleben wir kilometerlange Sandstrände, das Robberg Nature Reserve mit Robbenkolonien und die malerische Lagune. Von hier aus erkunden wir auch die berühmten Knysna Heads und den Tsitsikamma Nationalpark.',
+            tabs: [
+                {
+                    name: 'Highlights',
+                    icon: '🏞️',
+                    content: [
+                        { title: 'Plettenberg Bay Robberg Nature Reserve', description: 'Wandern Sie auf einer Halbinsel mit dramatischen Klippen und einer großen Robbenkolonie.' },
+                        { title: 'Knysna Heads', description: 'Zwei majestätische Sandsteinklippen, die die Lagune vom Ozean trennen. Atemberaubende Aussichtspunkte.' },
+                        { title: 'Tsitsikamma Nationalpark', description: 'Überqueren Sie die spektakuläre Hängebrücke über die Storms River Mündung.' },
+                        { title: 'Bloukrans Bridge (Optional)', description: 'Der höchste kommerzielle Bungee-Sprung der Welt – oder ein Skywalk für die weniger Wagemutigen.' },
+                        { title: 'Knysna Sunset Sailing Cruise', description: 'Entspannte Segelkreuzfahrt bei Sonnenuntergang mit Blick auf die spektakuläre Landschaft.' },
+                    ]
                 },
+                {
+                    name: 'Essen & Wein',
+                    icon: '🍷',
+                    content: [
+                        { title: '34 South (Knysna)', description: 'Lebhaftes Restaurant an der Waterfront mit Sushi, Austern und mehr.' },
+                        { title: 'The Plettenberg', description: 'Gehobene Küche mit fantastischem Meerblick in Plettenberg Bay.' },
+                        { title: 'Restaurant Cornuti (Knysna)', description: 'Tipp: Tolle Lage für Kaffee.' },
+                        { title: 'East Head Café (Knysna)', description: 'Tipp: Direkt an den Heads, moderate Preise.' },
+                        { title: 'The Olive Tree (Knysna)', description: 'Tipp: Tolles Essen, freundlicher Service.' },
+                        { title: 'Firefly Eating House (Knysna)', description: 'Tipp: Einzigartiges Geschmackserlebnis.' },
+                    ]
+                },
+                {
+                    name: 'Hotels',
+                    icon: '🏨',
+                    content: [
+                        { title: 'The Bungalow Plettenberg', url:'https://www.booking.com/hotel/za/the-bungalow.de.html?aid=1607597&label=v3.cmcohng3r6xuh08783wf67hhw&sid=4feda870b038ed10dbb8820fcde6f22a&all_sr_blocks=209862411_415613337_4_1_0&checkin=2025-11-24&checkout=2025-11-26&dest_id=2098624&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=209862411_415613337_4_1_0&hpos=1&matching_block_id=209862411_415613337_4_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=209862411_415613337_4_1_0__745524&srepoch=1753016508&srpvid=2bf15b96a79300a6&type=total&ucfs=1&#hotelTmpl', description: 'Der perfekte Ort zum Abschalten und Genießen. Die Lage ist einfach unschlagbar – direkt am Strand', starred: true, price: 200 },
+                        { title: 'Archrock Resort (Keurboomstrand)', description: 'Tipp: Resort in Keurboomstrand bei Plettenberg Bay.' },
+                        { title: 'Turbine Hotel und Spa (Knysna)', description: 'Tipp: In einem ehemaligen Kraftwerk gelegen.' },
+                    ]
+                }
+            ],
+            Days: {
                 11: {
                     date: '24. November 2025',
                     dayName: 'Montag',
-                    region: 'Garden Route',
+                    region: 'Plettenberg Bay',
                     cards: [
                         {
                             title: "Weiterreise nach Plettenberg Bay",
@@ -517,15 +574,20 @@ const tripData = {
                             image: "https://eu-images.contentstack.com/v3/assets/blte218090c2a6fb1e2/bltd0476eb7012a9555/65ee09194527a6040a6da3fe/suedafrika-garden-route-plettenberg-bay-robberg-luftaufnahme-g-622183942.jpg?auto=webp&width=1440&quality=45",
                             meta: "",
                             text: "Das 'Plett' - ein Küstenparadies! Wir wandern im Robberg Nature Reserve, beobachten Robben und genießen die traumhaften Strände. Die Lagune ist perfekt für Wassersport und die Restaurants servieren frische Meeresfrüchte."
+                        },
+                        {
+                            title: "Knysna Sunset Sailing Cruise",
+                            image: "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=620,height=400,dpr=2/tour_img/6203afeebfcf8.jpeg",
+                            meta: "Abends",
+                            text: "Wir bewundern die spektakuläre Landschaft von Knysna und den Sonnenuntergang an Bord einer entspannten <a href='https://www.getyourguide.de/knysna-sailing-cruise-t26361/' target='_blank' class='underline'>Segelkreuzfahrt</a> bei Sonnenuntergang. Genießen eine leckere Auswahl an Käse und Snacks, gepaart mit gekühltem Sekt."
                         }
                     ]
                 },
                 12: {
                     date: '25. November 2025',
                     dayName: 'Dienstag',
-                    region: 'Garden Route',
+                    region: 'Plettenberg Bay',
                     cards: [
-                        
                         {
                             title: "Tsitsikamma-Nationalpark",
                             image: "https://kommwirmachendaseinfach.de/wp-content/uploads/2020/02/Tsitsikamma-nationalpark-suedafrika-aussicht-haengebruecke.jpg",
@@ -543,16 +605,9 @@ const tripData = {
                             image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/7e/5b/93/photo6jpg.jpg?w=1400&h=800&s=1",
                             meta: "Direkt an den Heads | Moderate Preise",
                             text: "Tipp: Perfekte Lage direkt an den berühmten Knysna Heads mit toller Aussicht und moderaten Preisen."
-                        }  ,
-                        {
-                            title: "Knysna Sunset Sailing Cruise",
-                            image: "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=620,height=400,dpr=2/tour_img/6203afeebfcf8.jpeg",
-                            meta: "Abends",
-                            text: "Wir bewundern die spektakuläre Landschaft von Knysna und den Sonnenuntergang an Bord einer entspannten <a href='https://www.getyourguide.de/knysna-sailing-cruise-t26361/' target='_blank' class='underline'>Segelkreuzfahrt</a> bei Sonnenuntergang. Genießen eine leckere Auswahl an Käse und Snacks, gepaart mit gekühltem Sekt."
-                        }    
+                        }
                     ]
                 }
-                
             }
         },
         {
@@ -581,7 +636,7 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: '<a href="https://www.booking.com/hotel/za/gondwana-game-reserve.de.html?label=gog235jc-1DCAso-wFCFW1hcmF0YWJhLXNhZmFyaS1sb2RnZUgHWANoO4gBAZgBB7gBB8gBDdgBA-gBAfgBAogCAagCA7gCh5nUwwbAAgHSAiRjNTA3MTQ0Mi02YTUzLTQwMDEtOTI4Yy1iOTY5ZWFjM2M0MDnYAgTgAgE&sid=d8e72b6f4d23102b9f4d6d68baf6805d&aid=356980&ucfs=1&arphpl=1&checkin=2025-11-28&checkout=2025-11-30&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&all_sr_blocks=44385202_338413931_2_21_0&highlighted_blocks=44385202_338413931_2_21_0&matching_block_id=44385202_338413931_2_21_0&sr_pri_blocks=44385202_338413931_2_21_0&from_list=1" target="_blank" class="underline">Gondwana Game Reserve</a>', description: 'Luxuriöses Safari-Lodge mit Big 5 und atemberaubenden Bergausblicken. Vollpension inklusive geführter Pirschfahrten.', starred: true, price: 890 }
+                        { title: '<a href="https://www.booking.com/hotel/za/gondwana-game-reserve.de.html?label=gog235jc-1DCAso-wFCFW1hcmF0YWJhLXNhZmFyaS1sb2RnZUgHWANoO4gBAZgBB7gBB8gBDdgBA-gBAfgBAogCAagCA7gCh5nUwwbAAgHSAiRjNTA3MTQ0Mi02YTUzLTQwMDEtOTI4Yy1iOTY5ZWFjM2M0MDnYAgTgAgE&sid=d8e72b6f4d23102b9f4d6d68baf6805d&aid=356980&ucfs=1&arphpl=1&checkin=2025-11-28&checkout=2025-11-30&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&all_sr_blocks=44385202_338413931_2_21_0&highlighted_blocks=44385202_338413931_2_21_0&matching_block_id=44385202_338413931_2_21_0&sr_pri_blocks=44385202_338413931_2_21_0&from_list=1" target="_blank" class="underline">Gondwana Game Reserve</a>', description: 'Luxuriöses Safari-Lodge mit Big 5 und atemberaubenden Bergausblicken. Vollpension inklusive geführter Pirschfahrten.', starred: true, price: 900 }
                     ]
                 }
             ],
@@ -643,11 +698,39 @@ const tripData = {
                         }
                         
                     ]
+                }
+            }
+        },
+        {
+            id: 'Kapstadt2',
+            title: 'Kapstadt Teil 2',
+            name: 'Kapstadt Teil 2',
+            icon: '🏠',
+            intro: 'Die letzten Tage unserer unvergesslichen Südafrika-Reise. Wir fahren machen noch ein Morgensafari und fahren dann gemütlich von Gondwana zurück nach Kapstadt und genießen noch einmal die Highlights der Mother City, bevor es zum Flughafen geht.',
+            tabs: [
+                {
+                    name: 'Highlights',
+                    icon: '🐘',
+                    content: []
                 },
+                {
+                    name: 'Essen & Wein',
+                    icon: '🍷',
+                    content: []
+                },
+                {
+                    name: 'Hotels',
+                    icon: '🏨',
+                    content: [
+                        { title: 'Kloof Street Hotel - Lion Roars Hotels & Lodges', description: 'Mitten im pulsierenden Kloof-Street-Viertel gelegen, überzeugt das Hotel durch modernes, naturinspiriertes Design, freundlichen Service und beeindruckende Ausblicke auf den Tafelberg. Zur Ausstattung zählen Rooftop-Pool, stylishes Restaurant, Coworking-Bereich, sichere Parkplätze ', url: '', starred: true, price: 115 },
+                    ]
+                }
+            ],
+            Days: {
                 15: {
                     date: '28. November 2025',
                     dayName: 'Freitag',
-                    region: 'Gondwana',
+                    region: 'Kapstadt Teil 2',
                     cards: [
                         {
                             title: "Abschieds-Morgensafari",
@@ -670,6 +753,19 @@ const tripData = {
                         
                     ]
                 },
+                16: {
+                    date: '29. November 2025',
+                    dayName: 'Samstag',
+                    region: 'Kapstadt Teil 2',
+                    cards: [
+                        {
+                            title: "Spontane Entdeckungen",
+                            image: "https://www.capetown.travel/wp-content/uploads/long-street-in-cape-town.jpg",
+                            meta: "Alles was uns Spaß macht",
+                            text: "Z.B Robben Island, Constantia Valley, Tafelberg, Kloof Street, etc."
+                        }
+                    ]
+                }
             }
         },
         {
@@ -677,7 +773,7 @@ const tripData = {
             title: 'Rückreise: Abschied von Südafrika',
             name: 'Rückreise',
             icon: '🏠',
-            intro: 'Die letzten beiden Tage unserer unvergesslichen Südafrika-Reise. Wir fahren gemütlich von Gondwana zurück nach Kapstadt und genießen noch einmal die Highlights der Mother City, bevor es zum Flughafen geht.',
+            intro: 'Der letzte Tage unserer unvergesslichen Südafrika-Reise. Wir genießen noch einmal die afrikanische Atmosphäre, bevor es zum Flughafen geht.',
             tabs: [
                 {
                     name: 'Highlights',
@@ -692,25 +788,10 @@ const tripData = {
                 {
                     name: 'Hotels',
                     icon: '🏨',
-                    content: [
-                        { title: 'Kloof Street Hotel - Lion Roars Hotels & Lodges', description: 'Mitten im pulsierenden Kloof-Street-Viertel gelegen, überzeugt das Hotel durch modernes, naturinspiriertes Design, freundlichen Service und beeindruckende Ausblicke auf den Tafelberg. Zur Ausstattung zählen Rooftop-Pool, stylishes Restaurant, Coworking-Bereich, sichere Parkplätze ', url: '', starred: true, price: 115 },
-                    ]
+                    content: []
                 }
             ],
             Days: {
-                16: {
-                    date: '29. November 2025',
-                    dayName: 'Samstag',
-                    region: 'Rückreise',
-                    cards: [
-                        {
-                            title: "Spontane Entdeckungen",
-                            image: "https://www.capetown.travel/wp-content/uploads/long-street-in-cape-town.jpg",
-                            meta: "Alles was uns Spaß macht",
-                            text: "Z.B Robben Island, Constantia Valley, Tafelberg, Kloof Street, etc."
-                        }
-                    ]
-                },
                 17: {
                     date: '30. November 2025',
                     dayName: 'Sonntag',
