@@ -70,11 +70,11 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: 'Gorgeous George', description: '9.2/10 | City Centre |  Designhotel mit Rooftop-Pool.', starred: false },
-                        { title: 'The Glen Boutique Hotel & Spa', description: '9.4/10 | Sea Point |  Boutique-Hotel mit exzellentem Spa.', starred: false },
-                        { title: 'Sunsquare Cape Town City Bowl', description: '8.6/10 | City Centre |  Gutes Preis-Leistungs-Verhältnis und zentral gelegen.' },
-                        { title: 'Protea Hotel Waterfront', description: '7.9/10 | V&A Waterfront |  Direkt an der belebten Waterfront.', url: 'https://www.marriott.com/en-us/hotels/cptbr-protea-hotel-cape-town-waterfront-breakwater-lodge/overview/' },
-                        { title: 'Breakwater Lodge', description: 'Tipp: 8.2/10 | V&A Waterfront | Historisches 3-Sterne Hotel am Wasser mit einzigartigem Charme.', url: 'https://www.booking.com/hotel/za/breakwater-lodge.de.html?label=v3.cmcohng3r6xuh08783wf67hhw&aid=1607597&ucfs=1&checkin=2025-11-14&checkout=2025-11-18&dest_id=-1217214&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204&srpvid=252c351c506403e5&srepoch=1751614525&matching_block_id=1516310_369394327_0_42_0&atlas_src=sr_iw_title', starred: true, price: 160},
+                        { title: 'Sunsquare Cape Town City Bowl', description: '8.6/10 | City Centre | Gutes Preis-Leistungs-Verhältnis und zentral gelegen.', starred: true, price: 200, url: 'https://www.southernsun.com/sunsquare-cape-town-city-bowl' },
+                        { title: 'Gorgeous George', description: '9.2/10 | City Centre | Designhotel mit Rooftop-Pool.', starred: false },
+                        { title: 'The Glen Boutique Hotel & Spa', description: '9.4/10 | Sea Point | Boutique-Hotel mit exzellentem Spa.', starred: false },
+                        { title: 'Protea Hotel Waterfront', description: '7.9/10 | V&A Waterfront | Direkt an der belebten Waterfront.', url: 'https://www.marriott.com/en-us/hotels/cptbr-protea-hotel-cape-town-waterfront-breakwater-lodge/overview/' },
+                        { title: 'Breakwater Lodge', description: 'Tipp: 8.2/10 | V&A Waterfront | Historisches 3-Sterne Hotel am Wasser mit einzigartigem Charme.', url: 'https://www.booking.com/hotel/za/breakwater-lodge.de.html?label=v3.cmcohng3r6xuh08783wf67hhw&aid=1607597&ucfs=1&checkin=2025-11-14&checkout=2025-11-18&dest_id=-1217214&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204&srpvid=252c351c506403e5&srepoch=1751614525&matching_block_id=1516310_369394327_0_42_0&atlas_src=sr_iw_title'},
                     ]
                 }
             ],
@@ -132,13 +132,13 @@ const tripData = {
                     cards: [
                         {
                             title: "Kap Halbinsel",
-                            image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrBQmBHa2qsjVQXdpiMKVx9BaRWAEyiom46rpEznyAenmPhqKRWPXw3lt3k-1Y_4Uvd7saqbcI70yaetQwrrFiy1zpTZgM7PXXSR6uZdJtZO8vis-PfRAGPw3kpNjXHvvvOrnU=s1360-w1360-h1020",
+                            image: "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/5ef07b273c671.jpeg",
                             meta: "Tagesausflug: 150km Rundfahrt · Start: vormittags",
                             text: "Der ultimative Tagesausflug! Wir starten mit Kaffee in Muizenberg, stoppen bei Kalky's in Kalk Bay für traditionellen Fisch, besuchen die Pinguine am Boulders Beach und das berühmte Kap. Der Höhepunkt: Rückfahrt über den spektakulären Chapman's Peak Drive im goldenen Sonnenuntergangslicht – die Aussicht ist der Oberhammer!"
                         },
                         {
                             title: "Robben Island",
-                            image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTeP3n6nvedEAtGY_bRCcEgvkiQGgNgD7tJ4ysVcv78gi_YbIUhQZTzjatnNol8SaODGdcfYGJU_mcXCbWjIjcGJpL7qDDpw0ZEJm4LrQ",
+                            image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/a4/f2/14/robben-islandhas-been.jpg?w=1200&h=1200&s=1",
                             meta: "Dauer: ca. 3–4 h inkl. Boot (falls noch Zeit ist)",
                             text: "Eine bewegende Zeitreise in die Geschichte Südafrikas! Wir starten am Nelson Mandela Gateway und nehmen das Boot zur berühmten Gefängnisinsel. Die Tour wird oft von ehemaligen Häftlingen geführt – absolut beeindruckend und emotional. Unbedingt vorab reservieren!"
                         },
@@ -147,6 +147,25 @@ const tripData = {
                             image: "https://www.cometocapetown.com/wp-content/uploads/2019/05/Ultimate-Guide-to-Bay-Harbour-Market-Cape-Town.jpg",
                             meta: "Fr-So nachmittags | Optional",
                             text: "Tipp: Markt mit Live-Musik, leckerem Essen und Souvenirs. Perfekt um mit Einheimischen ins Gespräch zu kommen!"
+                        }
+                    ]
+                },
+                3: {
+                    date: '16. November 2025',
+                    dayName: 'Sonntag',
+                    region: 'Kapstadt',
+                    cards: [
+                        {
+                            title: "Franschhoek Wine Tram",
+                            image: "https://reise-rosinen.com/wp-content/uploads/2019/10/winetram-WL-A-2.jpg",
+                            meta: "Start: 10:00 Uhr",
+                            text: "Das perfekte Wein-Abenteuer! Wir hüpfen entspannt von Weingut zu Weingut mit der berühmten Wine Tram durch die traumhaften Weinlande. Keine Sorgen ums Fahren – einfach genießen und verkosten! Tickets buchen wir vorab online, denn das ist der Renner bei allen Weinliebhabern."
+                        },
+                        {
+                            title: "Stellenbosch Wanderung",
+                            image: "https://www.roxannereid.co.za/uploads/3/7/7/8/3778676/roxannereid-1l3a0009-2-20190917-2_orig.jpg",
+                            meta: "Nachmittags Anfahrt: 45 min · Aufenthalt: 2-3 h",
+                            text: "Zeitreise durch Südafrikas Weingeschichte! Wir flanieren durch die von majestätischen Eichen gesäumten Straßen der zweitältesten Stadt des Landes. Historische kapholländische Architektur, gemütliche Straßencafés und spannende Kunstgalerien warten darauf, von uns entdeckt zu werden."
                         }
                     ]
                 }
@@ -190,11 +209,11 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: "W-Collection L'Ermitage", description: '9.7/10 | Franschhoek |  Luxuriöse Villen mit Bergblick.' },
-                        { title: 'Petit Ermitage', description: '9.9/10 | Franschhoek |  Außergewöhnlich bewertet und zentral.' },
-                        { title: 'Cultivar Guest Lodge', description: '9.0/10 | Stellenbosch |  4-Sterne-Lodge mit großem Pool.' },
-                        { title: 'The Belmont', description: '9.3/10 | Franschhoek |  Hervorragendes Preis-Leistungs-Verhältnis.' },
-                        { title: '<a href="https://book.nightsbridge.com/15800?_ga=2.256709315.935787942.1751700526-2028448925.1751610940" target=_blank class="underline">Grande Provence Wine Estate (Franschhoek)</a> ', description: 'Tipp: Weingut mit Unterkunft.' , starred: true, price: 445},
+                        { title: 'Grande Provence Wine Estate (Franschhoek)', description: 'Weingut mit Unterkunft.', starred: true, price: 445, url: 'https://www.grandeprovence.co.za' },
+                        { title: "W-Collection L'Ermitage", description: '9.7/10 | Franschhoek | Luxuriöse Villen mit Bergblick.' },
+                        { title: 'Petit Ermitage', description: '9.9/10 | Franschhoek | Außergewöhnlich bewertet und zentral.' },
+                        { title: 'Cultivar Guest Lodge', description: '9.0/10 | Stellenbosch | 4-Sterne-Lodge mit großem Pool.' },
+                        { title: 'The Belmont', description: '9.3/10 | Franschhoek | Hervorragendes Preis-Leistungs-Verhältnis.' },
                         { title: 'Avondrood Guesthouse (Franschhoek)', description: 'Tipp: Gemütliche Guesthouse-Atmosphäre.' },
                         { title: 'Maison Cabriere (Franschhoek)', description: 'Tipp: Weingut mit stilvollen Zimmern.' },
                         { title: 'Cape Vue Country House (Franschhoek)', description: 'Tipp: Country House mit schöner Aussicht.' },
@@ -206,25 +225,6 @@ const tripData = {
                 }
             ],
             Days: {
-                3: {
-                    date: '16. November 2025',
-                    dayName: 'Sonntag',
-                    region: 'Weinlande',
-                    cards: [
-                        {
-                            title: "Franschhoek Wine Tram",
-                            image: "https://reise-rosinen.com/wp-content/uploads/2019/10/winetram-WL-A-2.jpg",
-                            meta: "Start: 10:00 Uhr",
-                            text: "Das perfekte Wein-Abenteuer! Wir hüpfen entspannt von Weingut zu Weingut mit der berühmten Wine Tram durch die traumhaften Weinlande. Keine Sorgen ums Fahren – einfach genießen und verkosten! Tickets buchen wir vorab online, denn das ist der Renner bei allen Weinliebhabern."
-                        },
-                        {
-                            title: "Stellenbosch Wanderung",
-                            image: "https://www.roxannereid.co.za/uploads/3/7/7/8/3778676/roxannereid-1l3a0009-2-20190917-2_orig.jpg",
-                            meta: "Nachmittags Anfahrt: 45 min · Aufenthalt: 2-3 h",
-                            text: "Zeitreise durch Südafrikas Weingeschichte! Wir flanieren durch die von majestätischen Eichen gesäumten Straßen der zweitältesten Stadt des Landes. Historische kapholländische Architektur, gemütliche Straßencafés und spannende Kunstgalerien warten darauf, von uns entdeckt zu werden."
-                        }
-                    ]
-                },
                 4: {
                     date: '17. November 2025',
                     dayName: 'Montag',
@@ -243,96 +243,17 @@ const tripData = {
                             text: "Luxus pur mit Aussicht! Wir gönnen uns das absolute Premium-Erlebnis mit atemberaubenden Panoramablicken über das Tal, Weltklasse-Weinen und einer beeindruckenden Kunstsammlung. Die exklusiven Verkostungen sind jeden Cent wert – wir werden diesen Ort nie vergessen!"
                         }
                     ]
-                }
-            }
-        },
-         {
-            id: 'hermanus',
-            title: 'Hermanus: Wale, Wein & Küstenpfade',
-            name: 'Hermanus',
-            icon: '🐋',
-            intro: 'Hermanus ist weltberühmt als eine der besten Destinationen für landbasierte Walbeobachtung. Wir kombinieren dieses einmalige Naturerlebnis mit Wanderungen entlang des malerischen Cliff Path und besuchen die preisgekrönten Weingüter des nahegelegenen Hemel-en-Aarde Tals, das für seinen Pinot Noir und Chardonnay bekannt ist.',
-            tabs: [
-                {
-                    name: 'Highlights',
-                    icon: '🐋',
-                    content: [
-                        { title: 'Walbeobachtung', description: 'Beobachten Sie Südkaper von Juni bis Dezember direkt vom Land aus. Der Whale Crier verkündet Sichtungen.' },
-                        { title: 'Cliff Path Wanderung', description: 'Ein 12 km langer Küstenpfad mit spektakulären Ausblicken und reicher Fynbos-Vegetation.' },
-                        { title: 'Hemel-en-Aarde Tal', description: 'Bedeutet "Himmel auf Erden" und ist ein Muss für Weinliebhaber.' },
-                        { title: 'Grotto Beach', description: 'Einer der schönsten Strände Südafrikas mit Blauer Flagge.' },
-                    ]
                 },
-                {
-                    name: 'Essen & Wein',
-                    icon: '🍷',
-                    content: [
-                        { title: 'Creation Wines', description: 'Hochgelobtes Weingut im Hemel-en-Aarde Tal, bekannt für seine Wein-Pairing-Erlebnisse.' },
-                        { title: 'Burgundy Seafront Restaurant', description: 'Frische Meeresfrüchte mit "Front-Row-Seats" für die Walbeobachtung.' },
-                        { title: 'Fisherman\'s Cottage', description: 'Authentische Meeresfrüchteküche in einem historischen Fischerhaus.' },
-                        { title: 'Hamilton Russell Vineyards', description: 'Ein Pionier des Weinbaus in der Region, spezialisiert auf Pinot Noir und Chardonnay.' },
-                        { title: 'Bientang\'s Cave', description: 'Tipp: Restaurant direkt an den Klippen, chillig.' },
-                    ]
-                },
-                {
-                    name: 'Hotels',
-                    icon: '🏨',
-                    content: [
-                        { title: 'The Marine Hermanus', description: '9.6/10 | Hermanus |  Legendäres 5-Sterne-Hotel mit Walblick.' },
-                        { title: 'Esplanade Hotel', description: 'Hermanus | Charmes Hotel im Herzen von Hermanus mit toller Lage.', url: 'https://www.booking.com/hotel/za/esplanade-hermanus.de.html?aid=1607597&label=v3.cmcohng3r6xuh08783wf67hhw&sid=a3308e7bedd7d9bad072d19a351258bc&all_sr_blocks=1065716017_388139523_2_0_0&checkin=2025-11-18&checkout=2025-11-20&dest_id=-1236784&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=15&highlighted_blocks=1065716017_388139523_2_0_0&hpos=15&matching_block_id=1065716017_388139523_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1065716017_388139523_2_0_0__639000&srepoch=1751615945&srpvid=ca8437f52de5062d&type=total&ucfs=1&activeTab=main', starred: true, price: 190 },
-                        
-                       
-                    ]
-                }
-            ],
-            Days: {
                 5: {
                     date: '18. November 2025',
                     dayName: 'Dienstag',
-                    region: 'Hermanus',
+                    region: 'Weinlande',
                     cards: [
                         {
-                            title: "Reise nach Hermanus",
-                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                            meta: "Anfahrt: ca. 1,5 Stunden",
-                            text: "Wir verlassen die Weinlande und fahren zur Walbeobachtung nach Hermanus. Wir bleiben 2 Nächte in Hermanus."
-                        },
-                        {
-                            title: "Walbeobachtung vom Ufer",
-                            image: "https://freedomdestinations.co.uk/wp-content/uploads/Hermanus-Whales.jpg",
-                            meta: "Beste Zeit: 11-15 Uhr",
-                            text: "Das absolute Highlight! Wir beobachten majestätische Südkaper direkt vom Land aus – einer der besten Orte weltweit dafür. Wenn der Whale Crier sein Horn bläst, wissen wir: Showtime! Grotto Beach und der Cliff Path bieten uns die perfekten Aussichtsplätze für dieses unvergessliche Naturschauspiel."
-                        },
-                        {
-                            title: "Cliff Path Wanderung",
-                            image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/b3/9e/41/hermanus-cliff-path-sudafrika.jpg?w=900&h=500&s=1",
-                            meta: "Dauer: 2-4 h · Schwierigkeit: leicht-mittel",
-                            text: "Wandern mit Wow-Faktor! Wir erobern den spektakulären 12 km langen Küstenpfad mit atemberaubenden Ausblicken und entdecken dabei die einzigartige Fynbos-Vegetation. Dank mehrerer Einstiegspunkte können wir flexibel planen. Früh starten lohnt sich – dann ist der Wind noch sanft!"
-                        }
-                    ]
-                },
-                6: {
-                    date: '19. November 2025',
-                    dayName: 'Mittwoch',
-                    region: 'Hermanus',
-                    cards: [
-                        {
-                            title: "Hemel-en-Aarde Tal",
+                            title: "Weitere Weinlande Erkundung",
                             image: "https://www.wine-searcher.com/images/region/hemel-en-aarde-valley-7121-1-1.jpg",
-                            meta: "Anfahrt: 15 min · Aufenthalt: halber Tag",
-                            text: "Willkommen im 'Himmel auf Erden'! Wir schwelgen in Weltklasse-Weinen in diesem malerischen Tal. Die Pinot Noirs und Chardonnays hier sind absolute Spitzenklasse. Creation Wines und Hamilton Russell sind unsere absoluten Favoriten – hier entstehen wahre Geschmackswunder!"
-                        },
-                        {
-                            title: "Grotto Beach",
-                            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Grotto_Beach_-_Hermanus.jpg/1200px-Grotto_Beach_-_Hermanus.jpg",
-                            meta: "Anfahrt: 10 min · Aufenthalt: beliebig",
-                            text: "Traumstrand mit Blaue-Flagge-Garantie! Wir genießen 18 km makellosen weißen Sandstrand – perfekt zum Schwimmen, Entspannen und natürlich für die Walbeobachtung. Mit Restaurants und Parkplätzen direkt vor Ort können wir hier problemlos den ganzen Tag verbringen."
-                        },
-                        {
-                            title: "Stanford - Verstecktes Juwel",
-                            image: "https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/blteb0398644c893caf/61c17d31c52c5b292ce23dc9/US_Stanford_ZA_Header.jpg",
-                            meta: "Zwischen Hermanus und Gansbaai | Tagesausflug",
-                            text: "Tipp: Kleiner Ort abseits der Tourismuspfade. Superschöne restaurierte Straßen und Häuser mit kleinen Restaurants und Cafés. Eine Flussfahrt auf dem River zum Sonnenuntergang ist ganz besonders."
+                            meta: "Genuss pur",
+                            text: "Weiterer Tag in den wunderschönen Weinlanden mit zusätzlichen Verkostungen und kulinarischen Entdeckungen."
                         }
                     ]
                 }
@@ -340,10 +261,76 @@ const tripData = {
         },
         {
             id: 'arniston',
-            title: 'Arniston: Fischerdorf & Haikäfigtauchen (20. - 21. November)',
+            title: 'Arniston: Fischerdorf & entspannte Küstentage (19. - 20. November)',
             name: 'Arniston',
             icon: '🏖️',
-            intro: 'Arniston (auch Waenhuiskrans) ist ein authentisches Fischerdorf an der südafrikanischen Küste. Hier erleben wir die Ruhe eines traditionellen Dorfes mit weißen Sandstränden, historischem Leuchtturm und traditionellen Fischerbooten. Von hier aus starten wir auch zu unserem Haikäfigtauchen-Abenteuer in Gansbaai.',
+            intro: 'Arniston (auch Waenhuiskrans) ist ein authentisches Fischerdorf an der südafrikanischen Küste. Hier erleben wir die Ruhe eines traditionellen Dorfes mit weißen Sandstränden, historischem Leuchtturm und traditionellen Fischerbooten.',
+            tabs: [
+                {
+                    name: 'Highlights',
+                    icon: '🏞️',
+                    content: [
+                        { title: 'Kap Agulhas - Südspitze Afrikas', description: 'Hier treffen Atlantik und Indischer Ozean aufeinander - der südlichste Punkt Afrikas.' },
+                        { title: 'Die Otter Beach Arniston', description: 'Wunderschöner, ruhiger Strandabschnitt – ideal zum Baden, Spazieren und Entspannen.' },
+                        { title: 'Traditionelles Fischerdorf', description: 'Authentisches südafrikanisches Fischerdorf mit historischem Charme.' },
+                    ]
+                },
+                {
+                    name: 'Essen & Wein',
+                    icon: '🍷',
+                    content: [
+                        { title: 'Arniston Hotel Restaurant', description: 'Frische Meeresfrüchte direkt am Strand mit traditioneller südafrikanischer Küche.' },
+                    ]
+                },
+                {
+                    name: 'Hotels',
+                    icon: '🏨',
+                    content: [
+                        { title: 'Arniston Hotel', description: 'Charmantes Hotel direkt am Strand mit Restaurant.', starred: true, price: 104, url: 'https://www.arnistonhotel.com/' },
+                    ]
+                }
+            ],
+            Days: {
+                6: {
+                    date: '19. November 2025',
+                    dayName: 'Mittwoch',
+                    region: 'Arniston',
+                    cards: [
+                        {
+                            title: "Weiterreise nach Arniston",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "Anfahrt: ca. 2:15 Stunden (ca. 160 km)",
+                            text: "Wir verlassen die Weinlande und fahren entlang der Küste nach Arniston. Eine Zeitreise in ein authentisches Fischerdorf! Arniston (auch Waenhuiskrans) bezaubert mit seinem weißen Sandstrand, dem historischen Leuchtturm und traditionellen Fischerbooten."
+                        },
+                        {
+                            title: "Kap Agulhas - Südspitze Afrikas",
+                            image: "https://img.welt.de/img/reise/Fern/mobile205570597/1940310137-ci16x9-w1200/Africa-South-Africa-Western-Cape-Cape-Agulhas-shipwreck-2.jpg",
+                            meta: "Von Arniston aus | Tagesausflug",
+                            text: "Hier treffen Atlantik und Indischer Ozean aufeinander! Wir besuchen den südlichsten Punkt Afrikas und genießen den Blick vom Leuchtturm."
+                        }
+                    ]
+                },
+                7: {
+                    date: '20. November 2025',
+                    dayName: 'Donnerstag',
+                    region: 'Arniston',
+                    cards: [
+                        {
+                            title: "Die Otter Beach Arniston",
+                            image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6m58jbQZCzyxGfhVoj6RNbVcgPFrhnTx3ZgCrfBdaPlijTt8EWvyEFhZDMgArVFHIXK8RtAxfHMD1LLXTfERFa9RWrY2QVSptEVYj-iPQpMsTWOoNEfwFh4EKtNQOspxlB5ET4OELDBM/s5184/20210308_091204200_iOS.jpg",
+                            meta: "Direkt bei Arniston",
+                            text: "Wunderschöner, ruhiger Strandabschnitt – ideal zum Baden, Spazieren und Entspannen."
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            id: 'gansbaai',
+            title: 'Gansbaai: Haikäfigtauchen & Meeresabenteuer (21. - 22. November)',
+            name: 'Gansbaai',
+            icon: '🦈',
+            intro: 'Gansbaai ist weltberühmt für das Haikäfigtauchen mit Weißen Haien. Hier erleben wir ein unvergessliches Abenteuer in der "Shark Alley" und besuchen die berühmte Dyer Island mit ihrer Robbenkolonie.',
             tabs: [
                 {
                     name: 'Highlights',
@@ -351,8 +338,7 @@ const tripData = {
                     content: [
                         { title: 'Gansbaai - Haikäfigtauchen', description: 'Erleben Sie das berühmte Haikäfigtauchen und beobachten Sie Weiße Haie hautnah in "Shark Alley".' },
                         { title: 'Dyer Island', description: 'Besuchen Sie die berühmte Insel der Seelöwen und Pinguine, auch bekannt als "Shark Alley".' },
-                        { title: 'Kap Agulhas - Südspitze Afrikas', description: 'Hier treffen Atlantik und Indischer Ozean aufeinander - der südlichste Punkt Afrikas.' },
-                        { title: 'Die Otter Beach Arniston', description: 'Wunderschöner, ruhiger Strandabschnitt – ideal zum Baden, Spazieren und Entspannen.' },
+                        { title: 'Hermanus', description: 'Walbeobachtung von der Küste aus - eine der besten Orte weltweit dafür.' },
                     ]
                 },
                 {
@@ -366,52 +352,40 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: 'Arniston Hotel', description: '8.8/10 | Arniston |  Charmantes Hotel direkt am Strand mit Restaurant.', starred: true, price:207 },
+                        { title: 'The Bay Lodge', description: 'Komfortables Hotel in Gansbaai, ideal für Haikäfigtauchen-Ausflüge.', starred: true, price: 92, url: 'https://www.thebaylodge.co.za/' },
                     ]
                 }
             ],
             Days: {
-                7: {
-                    date: '20. November 2025',
-                    dayName: 'Donnerstag',
-                    region: 'Arniston',
+                8: {
+                    date: '21. November 2025',
+                    dayName: 'Freitag',
+                    region: 'Gansbaai',
                     cards: [
                         {
-                            title: "Weiterreise nach Arniston",
+                            title: "Weiterreise nach Gansbaai",
                             image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                            meta: "Anfahrt: ca. 2:15 Stunden (ca. 160 km)",
-                            text: "Wir verlassen Hermanus und fahren entlang der Küste und durch die Overberg-Region nach Arniston. Eine Zeitreise in ein authentisches Fischerdorf! Arniston (auch Waenhuiskrans) bezaubert mit seinem weißen Sandstrand, dem historischen Leuchtturm und traditionellen Fischerbooten. Perfekt für einen ruhigen Zwischenstopp zwischen Hermanus und Oudtshoorn."
+                            meta: "Anfahrt von Arniston",
+                            text: "Wir verlassen Arniston und fahren nach Gansbaai, der Hai-Hauptstadt Südafrikas."
                         },
                         {
                             title: "Gansbaai - Haikäfigtauchen",
                             image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/58/89.jpg",
-                            meta: "Start der Garden Route | Tagesausflug",
-                            text: "Adrenalin pur! In Gansbaai erleben wir das berühmte Haikäfigtauchen und beobachten Weiße Haie hautnah. Ein unvergessliches Abenteuer für Mutige! Die Garden Route beginnt hier mit einem echten Highlight.", starred: false
-                        },
-                        {
-                            title: "Gansbaai - Dyer Island",
-                            image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
-                            meta: "Bootstour zur Insel der Seelöwen",
-                            text: "Wir besuchen die berühmte Dyer Island, auch bekannt als 'Shark Alley'. Hier können wir Seelöwen, Pinguine und mit etwas Glück auch Weiße Haie beobachten. Eine einzigartige Meereswildnis!"
+                            meta: "Adrenalin pur!",
+                            text: "Adrenalin pur! In Gansbaai erleben wir das berühmte Haikäfigtauchen und beobachten Weiße Haie hautnau. Ein unvergessliches Abenteuer für Mutige!"
                         }
                     ]
                 },
-                8: {
-                    date: '21. November 2025',
-                    dayName: 'Freitag',
-                    region: 'Arniston',
+                9: {
+                    date: '22. November 2025',
+                    dayName: 'Samstag',
+                    region: 'Gansbaai',
                     cards: [
                         {
-                            title: "Kap Agulhas - Südspitze Afrikas",
-                            image: "https://img.welt.de/img/reise/Fern/mobile205570597/1940310137-ci16x9-w1200/Africa-South-Africa-Western-Cape-Cape-Agulhas-shipwreck-2.jpg",
-                            meta: "Von Arniston aus | Tagesausflug",
-                            text: "Hier treffen Atlantik und Indischer Ozean aufeinander! Wir besuchen den südlichsten Punkt Afrikas und genießen den Blick vom Leuchtturm."
-                        },
-                        {
-                            title: "Die Otter Beach Arniston",
-                            image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6m58jbQZCzyxGfhVoj6RNbVcgPFrhnTx3ZgCrfBdaPlijTt8EWvyEFhZDMgArVFHIXK8RtAxfHMD1LLXTfERFa9RWrY2QVSptEVYj-iPQpMsTWOoNEfwFh4EKtNQOspxlB5ET4OELDBM/s5184/20210308_091204200_iOS.jpg",
-                            meta: "Direkt bei Arniston",
-                            text: "Wunderschöner, ruhiger Strandabschnitt – ideal zum Baden, Spazieren und Entspannen."
+                            title: "Dyer Island",
+                            image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop",
+                            meta: "Bootstour zur Insel der Seelöwen",
+                            text: "Wir besuchen die berühmte Dyer Island, auch bekannt als 'Shark Alley'. Hier können wir Seelöwen, Pinguine und mit etwas Glück auch Weiße Haie beobachten. Eine einzigartige Meereswildnis!"
                         }
                     ]
                 }
@@ -450,7 +424,8 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: 'Hlangana Lodge', url: 'https://book.nightsbridge.com/10108',  description: '9.4/10 | Oudtshoorn |  Top-bewertete Lodge mit tollem Frühstück.', starred: true, price:90 },
+                        { title: 'Berluda Farmhouse and Cottages', description: 'Straussenfarm', starred: true, price: 85, url: 'https://www.berluda.co.za/' },
+                        { title: 'Hlangana Lodge', url: 'https://book.nightsbridge.com/10108', description: '9.4/10 | Oudtshoorn | Top-bewertete Lodge mit tollem Frühstück.' },
                         { title: 'DeZeekoe Guestfarm (Oudtshoorn)', description: 'Tipp: Authentische Guestfarm-Erfahrung.' },
                         { title: 'The Pictures Guesthouse (Oudtshoorn)', description: 'Tipp: Sehr sauber.' },
                         { title: 'African Relish (Prince Albert)', description: 'Tipp: Kochschule mit kleinen Unterkünften.' },
@@ -459,59 +434,41 @@ const tripData = {
                 }
             ],
             Days: {
-                9: {
-                    date: '22. November 2025',
-                    dayName: 'Samstag',
-                    region: 'Oudtshoorn',
-                    cards: [
-                        {
-                            title: "Reise nach Oudtshoorn",
-                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                            meta: "Anfahrt: ca. 4 Stunden (ca. 300 km)",
-                            text: "Von Arniston geht es ins Landesinnere nach Oudtshoorn, der Straußenhauptstadt Südafrikas in der Kleinen Karoo."
-                        },
-                        {
-                            title: "Witsand – Mündung des Breede River",
-                            image: "https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00367-021-00686-8/MediaObjects/367_2021_686_Fig2_HTML.png",
-                            meta: "Zwischenstopp auf dem Weg nach Oudtshoorn",
-                            text: "Witsand ist bekannt für seine endlosen Sandstrände und die beeindruckende Mündung des Breede River. Perfekt für einen Spaziergang am Wasser oder eine kleine Pause mit Blick auf das Meer."
-                        },
-                        {
-                            title: "Mossel Bay – Historischer Hafen & Strände",
-                            image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSJnrVv-Rf6d55rPOqz1DmrmPOs_0XP31f-RVDpW4o4C1eG6mqCypRRm3wD5g9u7NbfxZIcsL-mMFQ9kVQr-vasMgilulv7wNHPVydtxQ",
-                            meta: "Zwischenstopp auf dem Weg nach Oudtshoorn",
-                            text: "Mossel Bay bietet eine charmante Mischung aus Geschichte, Stränden und leckerem Seafood. Ein Spaziergang am Hafen oder ein Besuch des Dias Museums lohnen sich!"
-                        },
-                        {
-                            title: "Elim - Fahrt ans Ende der Welt",
-                            image: "https://capeagulhas.gov.za/wp-content/uploads/2022/10/Elim.jpg",
-                            meta: "Hinterland der Wal-Küste | Tagesausflug",
-                            text: "Tipp: Das gesamte Dorf besteht aus bunt angestrichenen strohgedeckten Häusern, die alle unter Denkmalschutz stehen. Ein besonders stimmungsvoller Ort - die Fahrt dorthin ist schon ein Erlebnis."
-                        }
-                    ]
-                },
                 10: {
                     date: '23. November 2025',
                     dayName: 'Sonntag',
                     region: 'Oudtshoorn',
                     cards: [
                         {
-                            title: "Oudtshoorn",
-                            image: "https://cdn2.rhinoafrica.com/thumbnails/media/_en/destinations/root/africa/southern-africa/south-africa/garden-route/route-62/oudtshoorn/_img/57324/image-thumb__57324__background-cover/winding-road-through-mountain-in-oudtshoorn-western-cape-south-africa.cbd16995.jpg",
-                            meta: "Erkundung der Straußenfarmen und Cango Caves",
-                            text: "Weitere Erkundung der Straußenfarmen und der Cango Caves. Die Kleine Karoo bietet einzigartige Einblicke in die südafrikanische Kultur und Geschichte."
+                            title: "Reise nach Oudtshoorn",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "Anfahrt von Gansbaai",
+                            text: "Von Gansbaai geht es ins Landesinnere nach Oudtshoorn, der Straußenhauptstadt Südafrikas in der Kleinen Karoo."
                         },
                         {
-                            title: "Swartberg Pass – Spektakuläre Gebirgsstraße",
+                            title: "Cango Caves",
+                            image: "https://ltf09.parkteam.de/08/05/a4dadafc20857f63-Cango-Caves-Cango-Caves.jpg",
+                            meta: "Unterirdische Wunderwelt",
+                            text: "Erkundung der spektakulären Cango Caves - ein unterirdisches Wunderland aus Tropfsteinen und beeindruckenden Höhlensystemen."
+                        }
+                    ]
+                },
+                11: {
+                    date: '24. November 2025',
+                    dayName: 'Montag',
+                    region: 'Oudtshoorn',
+                    cards: [
+                        {
+                            title: "Straußenfarmen",
+                            image: "https://as2.ftcdn.net/jpg/01/04/52/39/1000_F_104523930_ew3zV2gQlweJzT51yBUGSTLSsye1eOu8.jpg",
+                            meta: "Erkundung der Straußenfarmen",
+                            text: "Besuch auf den berühmten Straußenfarmen von Oudtshoorn. Wir lernen alles über diese faszinierenden Vögel und die Geschichte der Region."
+                        },
+                        {
+                            title: "Swartberg Pass",
                             image: "https://www.kapstadt.de/images/stories/kapstadt-de/reisefuehrer/karoo/oudtshoorn/swartberg-pass.jpg",
-                            meta: "Tagesausflug von Oudtshoorn",
+                            meta: "Spektakuläre Gebirgsstraße",
                             text: "Eine der schönsten Passstraßen Südafrikas! Wir fahren über den Swartberg Pass nach Prince Albert und genießen atemberaubende Ausblicke, Serpentinen und die wilde Karoo-Landschaft."
-                        },
-                        {
-                            title: "Prince Albert – Karoo-Charme",
-                            image: "https://www.suedafrika-reise.net/westkap/bilder/1r.jpg",
-                            meta: "Abstecher nach Swartberg Pass",
-                            text: "Das kleine Städtchen am Fuß des Swartberg Passes begeistert mit historischen Gebäuden, Galerien und echtem <a href='https://www.suedafrika-reise.net/westkap/karoo.htm' target='_blank' class='underline'>Karoo-Feeling</a>. Perfekt für einen Lunch-Stop oder einen Bummel durch die Hauptstraße."
                         }
                     ]
                 }
@@ -551,60 +508,49 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: 'The Bungalow Plettenberg', url:'https://www.booking.com/hotel/za/the-bungalow.de.html?aid=1607597&label=v3.cmcohng3r6xuh08783wf67hhw&sid=4feda870b038ed10dbb8820fcde6f22a&all_sr_blocks=209862411_415613337_4_1_0&checkin=2025-11-24&checkout=2025-11-26&dest_id=2098624&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=209862411_415613337_4_1_0&hpos=1&matching_block_id=209862411_415613337_4_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=209862411_415613337_4_1_0__745524&srepoch=1753016508&srpvid=2bf15b96a79300a6&type=total&ucfs=1&#hotelTmpl', description: 'Der perfekte Ort zum Abschalten und Genießen. Die Lage ist einfach unschlagbar – direkt am Strand', starred: true, price: 200 },
+                        { title: 'Sky Villa Boutique Hotel', description: 'Luxuriöses Boutique-Hotel mit spektakulärer Aussicht über Plettenberg Bay.', starred: true, price: 253, url: 'https://skyvilla.co.za' },
+                        { title: 'The Bungalow Plettenberg', url:'https://www.booking.com/hotel/za/the-bungalow.de.html?aid=1607597&label=v3.cmcohng3r6xuh08783wf67hhw&sid=4feda870b038ed10dbb8820fcde6f22a&all_sr_blocks=209862411_415613337_4_1_0&checkin=2025-11-24&checkout=2025-11-26&dest_id=2098624&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=209862411_415613337_4_1_0&hpos=1&matching_block_id=209862411_415613337_4_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=209862411_415613337_4_1_0__745524&srepoch=1753016508&srpvid=2bf15b96a79300a6&type=total&ucfs=1&#hotelTmpl', description: 'Der perfekte Ort zum Abschalten und Genießen. Die Lage ist einfach unschlagbar – direkt am Strand' },
                         { title: 'Archrock Resort (Keurboomstrand)', description: 'Tipp: Resort in Keurboomstrand bei Plettenberg Bay.' },
                         { title: 'Turbine Hotel und Spa (Knysna)', description: 'Tipp: In einem ehemaligen Kraftwerk gelegen.' },
                     ]
                 }
             ],
             Days: {
-                11: {
-                    date: '24. November 2025',
-                    dayName: 'Montag',
-                    region: 'Plettenberg Bay',
-                    cards: [
-                        {
-                            title: "Weiterreise nach Plettenberg Bay",
-                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                            meta: "Anfahrt: ca. 2:15 Stunden (ca. 150 km)",
-                            text: "Wir verlassen die Karoo und fahren über den Outeniqua Pass zurück an die Küste nach Plettenberg Bay – ein Paradies für Strandliebhaber und Naturliebhaber."
-                        },
-                        {
-                            title: "Plettenberg Bay Robberg Nature Reserve",
-                            image: "https://eu-images.contentstack.com/v3/assets/blte218090c2a6fb1e2/bltd0476eb7012a9555/65ee09194527a6040a6da3fe/suedafrika-garden-route-plettenberg-bay-robberg-luftaufnahme-g-622183942.jpg?auto=webp&width=1440&quality=45",
-                            meta: "",
-                            text: "Das 'Plett' - ein Küstenparadies! Wir wandern im Robberg Nature Reserve, beobachten Robben und genießen die traumhaften Strände. Die Lagune ist perfekt für Wassersport und die Restaurants servieren frische Meeresfrüchte."
-                        },
-                        {
-                            title: "Knysna Sunset Sailing Cruise",
-                            image: "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=620,height=400,dpr=2/tour_img/6203afeebfcf8.jpeg",
-                            meta: "Abends",
-                            text: "Wir bewundern die spektakuläre Landschaft von Knysna und den Sonnenuntergang an Bord einer entspannten <a href='https://www.getyourguide.de/knysna-sailing-cruise-t26361/' target='_blank' class='underline'>Segelkreuzfahrt</a> bei Sonnenuntergang. Genießen eine leckere Auswahl an Käse und Snacks, gepaart mit gekühltem Sekt."
-                        }
-                    ]
-                },
                 12: {
                     date: '25. November 2025',
                     dayName: 'Dienstag',
                     region: 'Plettenberg Bay',
                     cards: [
                         {
+                            title: "Weiterreise nach Plettenberg Bay",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "Anfahrt von Oudtshoorn",
+                            text: "Wir verlassen die Karoo und fahren über den Outeniqua Pass zurück an die Küste nach Plettenberg Bay – ein Paradies für Strandliebhaber und Naturliebhaber."
+                        },
+                        {
+                            title: "Plettenberg Bay Robberg Nature Reserve",
+                            image: "https://eu-images.contentstack.com/v3/assets/blte218090c2a6fb1e2/bltd0476eb7012a9555/65ee09194527a6040a6da3fe/suedafrika-garden-route-plettenberg-bay-robberg-luftaufnahme-g-622183942.jpg?auto=webp&width=1440&quality=45",
+                            meta: "",
+                            text: "Das 'Plett' - ein Küstenparadies! Wir wandern im Robberg Nature Reserve, beobachten Robben und genießen die traumhaften Strände."
+                        }
+                    ]
+                },
+                13: {
+                    date: '26. November 2025',
+                    dayName: 'Mittwoch',
+                    region: 'Plettenberg Bay',
+                    cards: [
+                        {
                             title: "Tsitsikamma-Nationalpark",
                             image: "https://kommwirmachendaseinfach.de/wp-content/uploads/2020/02/Tsitsikamma-nationalpark-suedafrika-aussicht-haengebruecke.jpg",
-                            meta: "Von Colchester aus | Tagesausflug",
+                            meta: "Tagesausflug",
                             text: "Abenteuer im Urwald! Wir wandern durch den Tsitsikamma Nationalpark, überqueren die berühmte Hängebrücke und genießen die wilde Küste."
                         },
                         {
-                            title: "Knysna Austern",
+                            title: "Knysna Heads",
                             image: "https://www.ambiente-mediterran.de/wp-content/uploads/schema-and-structured-data-for-wp/Austern-Knysna-Oyster-Holzbild-756x756.jpg",
-                            meta: "Auf dem Weg nach Plett",
-                            text: "Die berühmten Knysna Heads, Waterfront und Austern – <a href='https://kommwirmachendaseinfach.de/knysna-in-suedafrika-sehenswuerdigkeiten-reisetipps/' target='_blank' class='underline'>Knysna</a> ist ein Muss auf der Garden Route!"
-                        },
-                        {
-                            title: "East Head Café",
-                            image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/7e/5b/93/photo6jpg.jpg?w=1400&h=800&s=1",
-                            meta: "Direkt an den Heads | Moderate Preise",
-                            text: "Tipp: Perfekte Lage direkt an den berühmten Knysna Heads mit toller Aussicht und moderaten Preisen."
+                            meta: "Auf dem Weg",
+                            text: "Die berühmten Knysna Heads, Waterfront und Austern – Knysna ist ein Muss auf der Garden Route!"
                         }
                     ]
                 }
@@ -636,77 +582,57 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: '<a href="https://www.booking.com/hotel/za/gondwana-game-reserve.de.html?label=gog235jc-1DCAso-wFCFW1hcmF0YWJhLXNhZmFyaS1sb2RnZUgHWANoO4gBAZgBB7gBB8gBDdgBA-gBAfgBAogCAagCA7gCh5nUwwbAAgHSAiRjNTA3MTQ0Mi02YTUzLTQwMDEtOTI4Yy1iOTY5ZWFjM2M0MDnYAgTgAgE&sid=d8e72b6f4d23102b9f4d6d68baf6805d&aid=356980&ucfs=1&arphpl=1&checkin=2025-11-28&checkout=2025-11-30&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&all_sr_blocks=44385202_338413931_2_21_0&highlighted_blocks=44385202_338413931_2_21_0&matching_block_id=44385202_338413931_2_21_0&sr_pri_blocks=44385202_338413931_2_21_0&from_list=1" target="_blank" class="underline">Gondwana Game Reserve</a>', description: 'Luxuriöses Safari-Lodge mit Big 5 und atemberaubenden Bergausblicken. Vollpension inklusive geführter Pirschfahrten.', starred: true, price: 900 }
+                        { title: 'Gondwana Game Reserve', description: 'Luxuriöse Safari-Lodge mit Big 5 und Vollpension.', starred: true, price: 915, url: 'https://gondwanagr.co.za/' }
                     ]
                 }
             ],
             Days: {
-                13: {
-                    date: '26. November 2025',
-                    dayName: 'Mittwoch',
-                    region: 'Gondwana',
-                    cards: [
-                        {
-                            title: "Weiterreise nach Gondwana",
-                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                            meta: "ca. 2 Stunden (ca. 160 km)",
-                            text: "Wir verlassen Plettenberg Bay und nehmen eine spektakuläre Route ins Landesinnere zum Gondwana Game Reserve. Über Wilderness, Oudtshoorn und die Cango Caves führt uns der Weg durch die faszinierende Western Cape Landschaft mit atemberaubenden Bergausblicken."
-                        },
-                        {
-                            title: "Wilderness - Strandparadies",
-                            image: "https://elelaafrica.com/wp-content/uploads/2024/04/Wilderness-Beach-Elela-Africa.jpg",
-                            meta: "Zwischenstop für Strandspaziergang",
-                            text: "Tipp: Letzter Strandstopp! Wilderness ist ein verstecktes Juwel mit kilometerlangen Sandstränden und der malerischen Kaaiman's River Lagune. Perfekt für einen letzten Spaziergang am Meer vor der Safari."
-                        },                        {
-                            title: "Gondwana Game Reserve - Ankunft",
-                            image: "https://cdn2.rhinoafrica.com/thumbnails/objects/service-providers/gondwana-game-reserve/_img/2024/58573/image-thumb__58573__background-cover/gondwana-game-reserve-kwena-lodge-aerial-view-01.37f1c984.jpg",
-                            meta: "Check-in und Lodge-Entdeckung",
-                            text: "Willkommen im Safari-Paradies! Nach dem Check-in in der luxuriösen Gondwana Lodge erkunden wir unsere neue Heimat für die nächsten zwei Tage. Die Lodge bietet atemberaubende Ausblicke auf die Outeniqua Mountains und wir genießen die ersten Momente in der afrikanischen Savanne."
-                        },
-                        {
-                            title: "Abendliche Pirschfahrt",
-                            image: "https://www.perfectgolftravel.de/pglive/wp-content/uploads/2019/03/pgt-big5-sa-gondwana.jpg",
-                            meta: "17:00 - 19:30 Uhr",
-                            text: "Die Abendsafari im Gondwana ist ein magisches Erlebnis! Wir starten mit Sundowner-Getränken und beobachten, wie die Sonne hinter den Outeniqua Mountains versinkt. Die Tiere werden wieder aktiv – Löwen erwachen aus ihrem Tagesschlaf, Elefantenherden ziehen zu den Wasserlöchern und mit etwas Glück sehen wir Leoparden auf der Jagd. Die dramatische Abendstimmung mit dem afrikanischen Sternenhimmel macht diese Safari unvergesslich."
-                        }
-                       
-                    ]
-                },
                 14: {
                     date: '27. November 2025',
                     dayName: 'Donnerstag',
                     region: 'Gondwana',
                     cards: [
-                        
+                        {
+                            title: "Weiterreise nach Gondwana",
+                            image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
+                            meta: "ca. 2 Stunden",
+                            text: "Wir verlassen Plettenberg Bay und fahren ins Landesinnere zum Gondwana Game Reserve für unser großes Safari-Finale."
+                        },
+                        {
+                            title: "Abendliche Pirschfahrt",
+                            image: "https://www.perfectgolftravel.de/pglive/wp-content/uploads/2019/03/pgt-big5-sa-gondwana.jpg",
+                            meta: "17:00 - 19:30 Uhr",
+                            text: "Die Abendsafari im Gondwana ist ein magisches Erlebnis! Wir starten mit Sundowner-Getränken und beobachten, wie die Sonne hinter den Outeniqua Mountains versinkt."
+                        }
+                    ]
+                },
+                15: {
+                    date: '28. November 2025',
+                    dayName: 'Freitag',
+                    region: 'Gondwana',
+                    cards: [
                         {
                             title: "Frühmorgendliche Pirschfahrt",
                             image: "https://viel-unterwegs.de/wp-content/uploads/2024/09/gondwana-game-reserve-pirschfahrten-1200x750.jpg",
                             meta: "06:00 - 09:00 Uhr",
-                            text: "Erleben wir die besondere Atmosphäre der Morgendämmerung im Gondwana! Wir starten bei Sonnenaufgang mit heißem Kaffee und frischen Muffins. Die Morgensafari führt uns durch die Fynbos-Vegetation und offene Savanne. Mit etwas Glück beobachten wir Löwen beim Jagen, Elefanten an den Wasserlöchern oder Nashörner in der goldenen Morgensonne. Die Outeniqua Mountains bilden einen dramatischen Hintergrund für unvergessliche Fotos."
-                        },
-                        {
-                            title: "Nachmittag im Reservat",
-                            image: "https://y.cdrst.com/foto/hotel-sf/12dcbd11/granderesp/foto-hotel-12dcb267.jpg",
-                            meta: "Nachmittags - Entspannung",
-                            text: "Nach der Safari genießen wir die luxuriösen Annehmlichkeiten der Lodge. Entspannen am Infinity-Pool mit Bergblick, Wellness-Behandlungen oder ein Buch im Schatten der alten Bäume. Die Lodge bietet auch geführte Wanderungen oder Vogelbeobachtung an."
+                            text: "Erleben wir die besondere Atmosphäre der Morgendämmerung im Gondwana! Wir starten bei Sonnenaufgang mit heißem Kaffee und frischen Muffins."
                         },
                         {
                             title: "African Dinner",
                             image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/490279409.jpg?k=759d23a05a39577ade61b19b6630ffdda561c4b593872d7b642a7c36d2b1b038&o=&hp=1",
                             meta: "19:30 Uhr - Abendessen",
-                            text: "Gourmet-Erlebnis unter afrikanischem Himmel! Das Abendessen in der Lodge ist ein kulinarisches Highlight mit lokalen Zutaten und atemberaubendem Bergblick. Bei klarem Himmel können wir die Sterne der Südhalbkugel bewundern."
+                            text: "Gourmet-Erlebnis unter afrikanischem Himmel! Das Abendessen in der Lodge ist ein kulinarisches Highlight mit lokalen Zutaten und atemberaubendem Bergblick."
                         }
-                        
                     ]
                 }
             }
         },
         {
-            id: 'Kapstadt2',
-            title: 'Kapstadt Teil 2',
+            id: 'kapstadt2',
+            title: 'Kapstadt Teil 2: Abschied (29. November)',
             name: 'Kapstadt Teil 2',
             icon: '🏠',
-            intro: 'Die letzten Tage unserer unvergesslichen Südafrika-Reise. Wir fahren machen noch ein Morgensafari und fahren dann gemütlich von Gondwana zurück nach Kapstadt und genießen noch einmal die Highlights der Mother City, bevor es zum Flughafen geht.',
+            intro: 'Der letzte Tag unserer unvergesslichen Südafrika-Reise. Wir fahren von Gondwana zurück nach Kapstadt und genießen noch einmal die Highlights der Mother City.',
             tabs: [
                 {
                     name: 'Highlights',
@@ -722,42 +648,28 @@ const tripData = {
                     name: 'Hotels',
                     icon: '🏨',
                     content: [
-                        { title: 'Kloof Street Hotel - Lion Roars Hotels & Lodges', description: 'Mitten im pulsierenden Kloof-Street-Viertel gelegen, überzeugt das Hotel durch modernes, naturinspiriertes Design, freundlichen Service und beeindruckende Ausblicke auf den Tafelberg. Zur Ausstattung zählen Rooftop-Pool, stylishes Restaurant, Coworking-Bereich, sichere Parkplätze ', url: '', starred: true, price: 115 },
+                        { title: 'Ocean View Hotel', description: 'Hotel mit Blick aufs Meer für die letzte Nacht in Südafrika.', starred: true, price: 241, url: 'https://www.oceanview.co.za' },
                     ]
                 }
             ],
             Days: {
-                15: {
-                    date: '28. November 2025',
-                    dayName: 'Freitag',
+                16: {
+                    date: '29. November 2025',
+                    dayName: 'Samstag',
                     region: 'Kapstadt Teil 2',
                     cards: [
                         {
                             title: "Abschieds-Morgensafari",
                             image: "https://viel-unterwegs.de/wp-content/uploads/2024/09/unterschied-nationalparks-game-reserves-suedafrika-1200x729.jpg",
                             meta: "06:00 - 09:00 Uhr",
-                            text: "Unser letztes Safari-Erlebnis im Gondwana! Bei der Abschieds-Morgensafari erleben wir die Savanne ein letztes Mal im goldenen Morgenlicht. Mit erfahrenen Guides suchen wir nach den Big 5 und genießen die letzten Momente in der afrikanischen Wildnis. Die Outeniqua Mountains leuchten in der Morgensonne und wir sammeln unvergessliche Erinnerungen für die Heimreise."
+                            text: "Unser letztes Safari-Erlebnis im Gondwana! Bei der Abschieds-Morgensafari erleben wir die Savanne ein letztes Mal im goldenen Morgenlicht."
                         },
                         {
                             title: "Rückfahrt nach Kapstadt",
                             image: "https://media.istockphoto.com/id/165693915/de/vektor/landschaft-szene.jpg?s=612x612&w=0&k=20&c=f7hBHjVj62f9TKWCKSPNafyl1zrpnSGS9ouHYOiF2lY=",
-                            meta: "ca. 4,5 Stunden (ca. 400 km)",
-                            text: "Nach der Abschieds-Morgensafari und einem letzten Frühstück in der Lodge fahren wir zurück nach Kapstadt. Die Route führt uns durch die malerische Western Cape Landschaft mit letzten Blicken auf die Berge und Küste. Wir nehmen unvergessliche Safari-Erinnerungen mit nach Hause."
+                            meta: "ca. 4,5 Stunden",
+                            text: "Nach der Abschieds-Morgensafari fahren wir zurück nach Kapstadt. Die Route führt uns durch die malerische Western Cape Landschaft mit letzten Blicken auf die Berge und Küste."
                         },
-                        {
-                            title: "Kloof-Street-Viertel",
-                            image: "https://www.sa-venues.com/visit/kloofstreethotel/26g.jpg",
-                            meta: "",
-                            text: "Und Abends dann eintauchen ins City-Life im pulsierenden Kloof-Street-Viertel"
-                        }
-                        
-                    ]
-                },
-                16: {
-                    date: '29. November 2025',
-                    dayName: 'Samstag',
-                    region: 'Kapstadt Teil 2',
-                    cards: [
                         {
                             title: "Spontane Entdeckungen",
                             image: "https://www.capetown.travel/wp-content/uploads/long-street-in-cape-town.jpg",
@@ -770,10 +682,10 @@ const tripData = {
         },
         {
             id: 'rueckreise',
-            title: 'Rückreise: Abschied von Südafrika',
+            title: 'Rückreise: Abschied von Südafrika (30. November)',
             name: 'Rückreise',
-            icon: '🏠',
-            intro: 'Der letzte Tage unserer unvergesslichen Südafrika-Reise. Wir genießen noch einmal die afrikanische Atmosphäre, bevor es zum Flughafen geht.',
+            icon: '✈️',
+            intro: 'Der letzte Tag unserer unvergesslichen Südafrika-Reise. Wir genießen noch einmal die afrikanische Atmosphäre, bevor es zum Flughafen geht.',
             tabs: [
                 {
                     name: 'Highlights',
@@ -798,22 +710,16 @@ const tripData = {
                     region: 'Rückreise',
                     cards: [
                         {
-                            title: "Highlights Kapstadt",
-                            image: "https://www.capetown.travel/wp-content/uploads/long-street-in-cape-town.jpg",
-                            meta: "Noch einmal eintauchen in die Stadt",
-                            text: "Z.B Longstreet, St. George's Mall"
-                        },
-                        {
                             title: "Company's Garden",
                             image: "https://www.capetown.travel/wp-content/uploads/2022/10/Companys-Garden.png",
-                            meta: "Gärten der Holländisch - Ostindischen Handelskompanie.",
-                            text: "<a href='https://www.kapstadt.de/reisefuehrer/stadtgebiet/company-garden' target='_blank' class='underline'>Hier</a> können wir im Schatten unter großen Bäumen auf einer der vielen Bänke die flanierenden Menschen beobachten bzw. den kleinen grauen Eichhörnchen zusehen, wie sie auf den Ästen herumtoben und neugierig auf einen zukommen. Beeindruckend sind zudem der Rosengarten und die zahlreichen Skulpturen. Von hier hat man einen schönen Blick auf die 'Spitze' des Table Mountain."
+                            meta: "Gärten der Holländisch - Ostindischen Handelskompanie",
+                            text: "Hier können wir im Schatten unter großen Bäumen auf einer der vielen Bänke die flanierenden Menschen beobachten bzw. den kleinen grauen Eichhörnchen zusehen."
                         },
                         {
                             title: "Heimflug",
                             image: "https://www.condor.com/de/fileadmin/dam/_processed_/e/5/csm_condor_airbus_A321_200_neo_sunshine_724_7d6ee5b6bd.jpg",
-                            meta: "16:15",
-                            text: "Ab zu FlughafenMietwagen zurückgeben, einchecken und Heimflug 18:15 Uhr."
+                            meta: "18:15 Uhr",
+                            text: "Mietwagen zurückgeben, einchecken und Heimflug um 18:15 Uhr."
                         }
                     ]
                 }
